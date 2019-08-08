@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchtool.nn package &mdash; IPRS 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
+        <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="torchtool.evaluation package" href="torchtool.evaluation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IPRS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchtool</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchtool.html">torchtool package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchtool.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.evaluation.html">torchtool.evaluation package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchtool.nn package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchtool.html#module-torchtool">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPRS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">torchtool</a> &raquo;</li>
+        
+          <li><a href="torchtool.html">torchtool package</a> &raquo;</li>
+        
+      <li>torchtool.nn package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchtool.nn.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchtool-nn-package">
+<h1>torchtool.nn package<a class="headerlink" href="#torchtool-nn-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchtool.nn.cnn">
+<span id="torchtool-nn-cnn-module"></span><h2>torchtool.nn.cnn module<a class="headerlink" href="#module-torchtool.nn.cnn" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.nn.cnn.Conv2d">
+<code class="descclassname">torchtool.nn.cnn.</code><code class="descname">Conv2d</code><span class="sig-paren">(</span><em>CHWi</em>, <em>Co</em>, <em>K</em>, <em>S</em>, <em>P</em>, <em>D=(1</em>, <em>1)</em>, <em>groups=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.cnn.Conv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute shape after 2D-Convolution</p>
+<div class="math" id="equation-equ-dilationconv2dsize">
+<span class="eqno">(1)<a class="headerlink" href="#equation-equ-dilationconv2dsize" title="Permalink to this equation">¶</a></span>\[\begin{array}{l}
+H_{o} &= \left\lfloor\frac{H_{i}  + 2 \times P_h - D_h \times (K_h - 1) - 1}{S_h} + 1\right\rfloor \\
+W_{o} &= \left\lfloor\frac{W_{i}  + 2 \times P_w - D_w \times (K_w - 1) - 1}{S_w} + 1\right\rfloor
+\end{array}
+
+\]</div>
+<dl class="docutils">
+<dt>CHWi<span class="classifier">{tulpe or list}</span></dt><dd>input data shape (C, H, W)</dd>
+<dt>Co<span class="classifier">{integer number}</span></dt><dd>number of output chanels.</dd>
+<dt>K<span class="classifier">{tulpe}</span></dt><dd>kernel size</dd>
+<dt>S<span class="classifier">{tulpe}</span></dt><dd>stride size</dd>
+<dt>P<span class="classifier">{tulpe}</span></dt><dd>padding size</dd>
+<dt>D<span class="classifier">{tuple}, optional</span></dt><dd>dilation size (the default is (1, 1))</dd>
+<dt>groups<span class="classifier">{number}, optional</span></dt><dd>[description] (the default is 1, which [default_description])</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">shape after 2D-Convolution</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tulpe</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – [description]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.cnn.ConvT2d">
+<code class="descclassname">torchtool.nn.cnn.</code><code class="descname">ConvT2d</code><span class="sig-paren">(</span><em>CHWi</em>, <em>Co</em>, <em>K</em>, <em>S</em>, <em>P</em>, <em>D=(1</em>, <em>1)</em>, <em>OP=(0</em>, <em>0)</em>, <em>groups=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.cnn.ConvT2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute shape after Transpose Convolution</p>
+<div class="math" id="equation-equ-transposeconv2dsize">
+<span class="eqno">(2)<a class="headerlink" href="#equation-equ-transposeconv2dsize" title="Permalink to this equation">¶</a></span>\[\begin{array}{l}
+H_{o} &= (H_{i} - 1) \times S_h - 2 \times P_h + D_h \times (K_h - 1) + OP_h + 1 \\
+W_{o} &= (W_{i} - 1) \times S_w - 2 \times P_w + D_w \times (K_w - 1) + OP_w + 1
+\end{array}
+
+\]</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>CHWi</strong> (<em>{tulpe</em><em> or </em><em>list}</em>) – input data shape (C, H, W)</li>
+<li><strong>Co</strong> (<em>{integer number}</em>) – number of output chanels.</li>
+<li><strong>K</strong> (<em>{tulpe}</em>) – kernel size</li>
+<li><strong>S</strong> (<em>{tulpe}</em>) – stride size</li>
+<li><strong>P</strong> (<em>{tulpe}</em>) – padding size</li>
+<li><strong>D</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – dilation size (the default is (1, 1))</li>
+<li><strong>OP</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – output padding size (the default is (0, 0))</li>
+<li><strong>groups</strong> (<em>{integer number}</em><em>, </em><em>optional</em>) – one group (the default is 1)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">shape after 2D-Transpose Convolution</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first">tulpe</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – output padding must be smaller than either stride or dilation</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.cnn.Pool2d">
+<code class="descclassname">torchtool.nn.cnn.</code><code class="descname">Pool2d</code><span class="sig-paren">(</span><em>CHWi</em>, <em>K</em>, <em>S</em>, <em>P</em>, <em>D=(1</em>, <em>1)</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.cnn.Pool2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.cnn.UnPool2d">
+<code class="descclassname">torchtool.nn.cnn.</code><code class="descname">UnPool2d</code><span class="sig-paren">(</span><em>CHWi</em>, <em>K</em>, <em>S</em>, <em>P</em>, <em>D=(1</em>, <em>1)</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.cnn.UnPool2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.loss">
+<span id="torchtool-nn-loss-module"></span><h2>torchtool.nn.loss module<a class="headerlink" href="#module-torchtool.nn.loss" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.loss.CDLoss">
+<em class="property">class </em><code class="descclassname">torchtool.nn.loss.</code><code class="descname">CDLoss</code><a class="headerlink" href="#torchtool.nn.loss.CDLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.loss.CDLoss.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>P</em>, <em>G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.loss.CDLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.loss.DCLoss">
+<em class="property">class </em><code class="descclassname">torchtool.nn.loss.</code><code class="descname">DCLoss</code><a class="headerlink" href="#torchtool.nn.loss.DCLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.loss.DCLoss.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>P</em>, <em>G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.loss.DCLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.loss.F1Loss">
+<em class="property">class </em><code class="descclassname">torchtool.nn.loss.</code><code class="descname">F1Loss</code><a class="headerlink" href="#torchtool.nn.loss.F1Loss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>F1 distance Loss</p>
+<div class="math">
+\[F_{\beta} = 1 -\frac{(1+\beta^2)⋅P⋅R}{\beta^2⋅P + R}
+
+\]</div>
+<p>where,</p>
+<div class="math">
+\[{\rm PPV} = {P} = \frac{\rm TP}{{\rm TP} + {\rm FP}}
+
+\]</div>
+<div class="math">
+\[{\rm TPR} = {R} = \frac{\rm TP}{{\rm TP} + {\rm FN}}
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.nn.loss.F1Loss.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>P</em>, <em>G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.loss.F1Loss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.loss.IridescentLoss">
+<em class="property">class </em><code class="descclassname">torchtool.nn.loss.</code><code class="descname">IridescentLoss</code><a class="headerlink" href="#torchtool.nn.loss.IridescentLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Iridescent Distance Loss</p>
+<div class="math">
+\[d_{J}({\mathbb A}, {\mathbb B})=1-J({\mathbb A}, {\mathbb B})=\frac{|{\mathbb A} \cup {\mathbb B}|-|{\mathbb A} \cap {\mathbb B}|}{|{\mathbb A} \cup {\mathbb B}|}
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.nn.loss.IridescentLoss.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>P</em>, <em>G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.loss.IridescentLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.loss.JaccardLoss">
+<em class="property">class </em><code class="descclassname">torchtool.nn.loss.</code><code class="descname">JaccardLoss</code><a class="headerlink" href="#torchtool.nn.loss.JaccardLoss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Jaccard distance</p>
+<div class="math">
+\[d_{J}({\mathbb A}, {\mathbb B})=1-J({\mathbb A}, {\mathbb B})=\frac{|{\mathbb A} \cup {\mathbb B}|-|{\mathbb A} \cap {\mathbb B}|}{|{\mathbb A} \cup {\mathbb B}|}
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.nn.loss.JaccardLoss.forward">
+<code class="descname">forward</code><span class="sig-paren">(</span><em>P</em>, <em>G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.loss.JaccardLoss.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchtool.nn" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="torchtool.evaluation.html" class="btn btn-neutral float-left" title="torchtool.evaluation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018-2019, Zhi Liu
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
