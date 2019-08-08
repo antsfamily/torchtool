@@ -204,7 +204,7 @@ W_{o} &= \left\lfloor\frac{W_{i}  + 2 \times P_w - D_w \times (K_w - 1) - 1}{S_w
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">tulpe</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – [description]</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.7)"><strong>ValueError</strong></a> – dilation should be greater than zero.</td>
 </tr>
 </tbody>
 </table>
@@ -309,7 +309,7 @@ registered hooks while the latter silently ignores them.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
 <p>F1 distance Loss</p>
 <div class="math">
-\[F_{\beta} = 1 -\frac{(1+\beta^2)⋅P⋅R}{\beta^2⋅P + R}
+\[F_{\beta} = 1 -\frac{(1+\beta^2)鈰匬鈰匯}{\beta^2鈰匬 + R}
 
 \]</div>
 <p>where,</p>
