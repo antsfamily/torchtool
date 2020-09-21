@@ -6,16 +6,18 @@ Subpackages
 
 .. toctree::
 
-    torchtool.base
-    torchtool.dip
-    torchtool.dsp
-    torchtool.evaluation
-    torchtool.nn
+   torchtool.base
+   torchtool.diagnose
+   torchtool.dip
+   torchtool.dsp
+   torchtool.evaluation
+   torchtool.nn
+   torchtool.spl
 
 Module contents
 ---------------
 
 .. automodule:: torchtool
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,32 +11,34 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-        <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchtool.nn package" href="torchtool.nn.html" />
@@ -55,7 +56,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> IPRS
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
           
 
           
@@ -78,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,10 +93,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="torchtool.html">torchtool package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchtool.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchtool.evaluation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.spl.html">torchtool.spl package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchtool.html#module-torchtool">Module contents</a></li>
@@ -107,6 +111,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -145,7 +150,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="modules.html">torchtool</a> &raquo;</li>
         
@@ -179,21 +184,17 @@
 <span id="torchtool-evaluation-classification-module"></span><h2>torchtool.evaluation.classification module<a class="headerlink" href="#module-torchtool.evaluation.classification" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="torchtool.evaluation.classification.accuracy">
-<code class="descclassname">torchtool.evaluation.classification.</code><code class="descname">accuracy</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.classification.accuracy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.classification.</code><code class="sig-name descname">accuracy</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.classification.accuracy" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute accuracy</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – Predicted one hot matrix</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – Referenced one hot matrix</li>
-<li><strong>TH</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.7)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – threshold: X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – Predicted one hot matrix, <span class="math">\(\{0, 1\}\)</span></p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – Referenced one hot matrix, <span class="math">\(\{0, 1\}\)</span></p></li>
+<li><p><strong>TH</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.8)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – threshold: X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -201,314 +202,270 @@
 <span id="torchtool-evaluation-retrieval-module"></span><h2>torchtool.evaluation.retrieval module<a class="headerlink" href="#module-torchtool.evaluation.retrieval" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.false_alarm_rate">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">false_alarm_rate</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.false_alarm_rate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">false_alarm_rate</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.false_alarm_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute false alarm rate or False Discovery Rate</p>
 <div class="math" id="equation-equ-falsediscoveryrate">
 <span class="eqno">(1)<a class="headerlink" href="#equation-equ-falsediscoveryrate" title="Permalink to this equation">¶</a></span>\[{\rm FDR} = \frac{\rm FP}{{\rm TP} + {\rm FP}} = 1 - P
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>FDR</strong> – False Discovery Rate</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>FDR</strong> – False Discovery Rate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.false_negative">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">false_negative</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.false_negative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">false_negative</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.false_negative" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find false negative elements</p>
 <p>true_negative(X, Y) returns elements that are positive classes in Y
 and retrieved as negative in X.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>FN</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>FN</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
 In FN, false negative elements are ones, while others are zeros.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{Torch Tensor}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{Torch Tensor}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.false_positive">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">false_positive</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.false_positive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">false_positive</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.false_positive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find false positive elements</p>
 <p>false_positive(X, Y) returns elements that are negative classes in Y
 and retrieved as positive in X.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>FP</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>FP</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
 In FP, false positive elements are ones, while others are zeros.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{Torch Tensor}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{Torch Tensor}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.fmeasure">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">fmeasure</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em>, <em>beta=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.fmeasure" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">fmeasure</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em>, <em class="sig-param">beta=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.fmeasure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute F-measure</p>
 <div class="math" id="equation-equ-f-measure">
 <span class="eqno">(2)<a class="headerlink" href="#equation-equ-f-measure" title="Permalink to this equation">¶</a></span>\[F_{\beta} = \frac{(1+\beta^2)鈰匬鈰匯}{\beta^2鈰匬 + R}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
-<li><strong>beta</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
+<li><p><strong>beta</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>F</strong> – F-measure</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>F</strong> – F-measure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.miss_alarm_rate">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">miss_alarm_rate</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.miss_alarm_rate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">miss_alarm_rate</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.miss_alarm_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute miss alarm rate or False Negative Rate</p>
 <div class="math" id="equation-equ-falsenegativerate">
 <span class="eqno">(3)<a class="headerlink" href="#equation-equ-falsenegativerate" title="Permalink to this equation">¶</a></span>\[{\rm FNR} = \frac{\rm FN}{{\rm FN} + {\rm TP}} = 1 - R
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>FNR</strong> – False Negative Rate</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>FNR</strong> – False Negative Rate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.precision">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">precision</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.precision" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">precision</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.precision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute precision</p>
 <div class="math" id="equation-equ-precision">
 <span class="eqno">(4)<a class="headerlink" href="#equation-equ-precision" title="Permalink to this equation">¶</a></span>\[{\rm PPV} = {P} = \frac{\rm TP}{{\rm TP} + {\rm FP}}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>P</strong> – precision</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>P</strong> – precision</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.recall">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">recall</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.recall" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">recall</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.recall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute recall(sensitivity)</p>
 <div class="math" id="equation-equ-recall">
 <span class="eqno">(5)<a class="headerlink" href="#equation-equ-recall" title="Permalink to this equation">¶</a></span>\[{\rm TPR} = {R} = \frac{\rm TP}{{\rm TP} + {\rm FN}}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>R</strong> – recall</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>R</strong> – recall</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.selectivity">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">selectivity</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.selectivity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">selectivity</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.selectivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute selectivity or specificity</p>
 <div class="math" id="equation-equ-selectivity">
 <span class="eqno">(6)<a class="headerlink" href="#equation-equ-selectivity" title="Permalink to this equation">¶</a></span>\[{\rm TNR} = {S} = \frac{\rm TN}{{\rm TN} + {\rm FP}}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>S</strong> – selectivity</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>S</strong> – selectivity</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.sensitivity">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">sensitivity</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.sensitivity" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">sensitivity</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.sensitivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute sensitivity(recall)</p>
-<div class="math">
-\[{\rm TPR} = {R} = \frac{\rm TP}{{\rm TP} + {\rm FN}}
+<div class="math" id="equation-equ-recall">
+<span class="eqno">(7)<a class="headerlink" href="#equation-equ-recall" title="Permalink to this equation">¶</a></span>\[{\rm TPR} = {R} = \frac{\rm TP}{{\rm TP} + {\rm FN}}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>R</strong> – recall</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>R</strong> – recall</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.true_negative">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">true_negative</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.true_negative" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">true_negative</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.true_negative" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find true negative elements</p>
 <p>true_negative(X, Y) returns elements that are negative classes in Y
 and retrieved as negative in X.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>TN</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>TN</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
 In TN, true negative elements are ones, while others are zeros.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{Torch Tensor}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{Torch Tensor}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.retrieval.true_positive">
-<code class="descclassname">torchtool.evaluation.retrieval.</code><code class="descname">true_positive</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.true_positive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.retrieval.</code><code class="sig-name descname">true_positive</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.retrieval.true_positive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find true positive elements</p>
 <p>true_positive(X, Y) returns those elements that are positive classes in Y
 and retrieved as positive in X.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>TP</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>TP</strong> – a torch tensor which has the same type with <code class="xref py py-attr docutils literal notranslate"><span class="pre">X</span></code> or <code class="xref py py-attr docutils literal notranslate"><span class="pre">Y</span></code>.
 In TP, true positive elements are ones, while others are zeros.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{Torch Tensor}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{Torch Tensor}</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -516,60 +473,117 @@ In TP, true positive elements are ones, while others are zeros.</p>
 <span id="torchtool-evaluation-similarity-module"></span><h2>torchtool.evaluation.similarity module<a class="headerlink" href="#module-torchtool.evaluation.similarity" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="torchtool.evaluation.similarity.dice_coeff">
-<code class="descclassname">torchtool.evaluation.similarity.</code><code class="descname">dice_coeff</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.similarity.dice_coeff" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.similarity.</code><code class="sig-name descname">dice_coeff</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.similarity.dice_coeff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dice coefficient</p>
 <div class="math">
 \[s = \frac{2|Y \cap X|}{|X|+|Y|}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>DC</strong> – the dice coefficient.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>DC</strong> – the dice coefficient.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchtool.evaluation.similarity.jaccard_index">
-<code class="descclassname">torchtool.evaluation.similarity.</code><code class="descname">jaccard_index</code><span class="sig-paren">(</span><em>X</em>, <em>Y</em>, <em>TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.similarity.jaccard_index" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.evaluation.similarity.</code><code class="sig-name descname">jaccard_index</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">TH=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.similarity.jaccard_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Jaccard similarity coefficient</p>
 <div class="math">
 \[\mathrm{J}(\mathrm{A}, \mathrm{B})=\frac{|A \cap B|}{|A \cup B|}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</li>
-<li><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</li>
-<li><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – retrieval results, retrieved–&gt;1, not retrieved–&gt;0</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – referenced, positive–&gt;1, negative–&gt;0</p></li>
+<li><p><strong>TH</strong> (<em>{float number}</em>) – X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>JS</strong> – the jaccard similarity coefficient.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">{float number}</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>JS</strong> – the jaccard similarity coefficient.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{float number}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.evaluation.ssims">
+<span id="torchtool-evaluation-ssims-module"></span><h2>torchtool.evaluation.ssims module<a class="headerlink" href="#module-torchtool.evaluation.ssims" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.evaluation.ssims.create_window">
+<code class="sig-prename descclassname">torchtool.evaluation.ssims.</code><code class="sig-name descname">create_window</code><span class="sig-paren">(</span><em class="sig-param">winsize</em>, <em class="sig-param">channel</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.ssims.create_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.evaluation.ssims.gaussian">
+<code class="sig-prename descclassname">torchtool.evaluation.ssims.</code><code class="sig-name descname">gaussian</code><span class="sig-paren">(</span><em class="sig-param">winsize</em>, <em class="sig-param">sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.ssims.gaussian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.evaluation.ssims.msssim">
+<code class="sig-prename descclassname">torchtool.evaluation.ssims.</code><code class="sig-name descname">msssim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">L=255</em>, <em class="sig-param">alpha=1</em>, <em class="sig-param">beta=1</em>, <em class="sig-param">gamma=1</em>, <em class="sig-param">normalize=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.ssims.msssim" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.evaluation.ssims.ssim">
+<code class="sig-prename descclassname">torchtool.evaluation.ssims.</code><code class="sig-name descname">ssim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">L=255</em>, <em class="sig-param">alpha=1</em>, <em class="sig-param">beta=1</em>, <em class="sig-param">gamma=1</em>, <em class="sig-param">full=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.evaluation.ssims.ssim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structural similarity</p>
+<div class="math">
+\[\begin{aligned} l(x, y) &=\frac{2 \mu_{x} \mu_{y}+c_{1}}{\mu_{x}^{2}+\mu_{y}^{2}+c_{1}} \\
+c(x, y) &=\frac{2 \sigma_{x} \sigma_{y}+c_{2}}{\sigma_{x}^{2}+\sigma_{y}^{2}+c_{2}} \\
+s(x, y) &=\frac{\sigma_{x y}+c_{3}}{\sigma_{x} \sigma_{y}+c_{3}} \end{aligned}
+
+\]</div>
+<p>where, <span class="math">\(c_1 = (k_1 L)^2, c_2 = (k_2 L)^2, c_3 = c_2 / 2\)</span>,
+<span class="math">\(L\)</span> is the dynamic range of the pixel-values (typically this is <span class="math">\(2 ^{\# \text { bits per pixel }}-1\)</span>.
+The structure similarity index is expressed as</p>
+<div class="math">
+\[\operatorname{SSIM}(x, y)=\left[l(x, y)^{\alpha} \cdot c(x, y)^{\beta} \cdot s(x, y)^{\gamma}\right].
+
+\]</div>
+<p>When <span class="math">\(\alpha=\beta=\gamma=1\)</span>, SSIM is equal to</p>
+<div class="math">
+\[\operatorname{SSIM}(x, y)=\frac{\left(2 \mu_{x} \mu_{y}+c_{1}\right)\left(2 \sigma_{x y}+
+c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\sigma_{y}^{2}+c_{2}\right)}
+
+\]</div>
+<p>see <a class="reference external" href="http://wikipedia.moesalih.com/SSIM">http://wikipedia.moesalih.com/SSIM</a> for more details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – data 1</p></li>
+<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – data 2</p></li>
+<li><p><strong>winsize</strong> (<em>{int}</em>) – window size</p></li>
+<li><p><strong>sizeavg</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – whether to average (the default is True, which average the result)</p></li>
+<li><p><strong>L</strong> (<em>{integer}</em><em>, </em><em>optional</em>) – the dynamic range of the pixel-values (typically this is <span class="math">\(2 ^{\# \text { bits per pixel }}-1\)</span>. (the default is 255)</p></li>
+<li><p><strong>alpha</strong> (<em>{number}</em><em>, </em><em>optional</em>) – luminance weight (the default is 1)</p></li>
+<li><p><strong>beta</strong> (<em>{number}</em><em>, </em><em>optional</em>) – contrast weight (the default is 1)</p></li>
+<li><p><strong>gamma</strong> (<em>{number}</em><em>, </em><em>optional</em>) – structure weight (the default is 1)</p></li>
+<li><p><strong>full</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – IF True, return SSIM, luminance, contrast and structure index (the default is False, which only return SSIM)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>IF <code class="docutils literal notranslate"><span class="pre">full</span></code> is True, returns SSIM, luminance, contrast and structure index, otherwise, only returns SSIM.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -598,11 +612,19 @@ In TP, true positive elements are ones, while others are zeros.</p>
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018-2019, Zhi Liu
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -613,7 +635,6 @@ In TP, true positive elements are ones, while others are zeros.</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,32 +11,34 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-        <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchtool.evaluation package" href="torchtool.evaluation.html" />
@@ -55,7 +56,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> IPRS
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
           
 
           
@@ -78,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,10 +93,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="torchtool.html">torchtool package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchtool.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchtool.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.evaluation.html">torchtool.evaluation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.spl.html">torchtool.spl package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchtool.html#module-torchtool">Module contents</a></li>
@@ -107,6 +111,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -145,7 +150,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="modules.html">torchtool</a> &raquo;</li>
         
@@ -172,6 +177,404 @@
             
   <div class="section" id="torchtool-dsp-package">
 <h1>torchtool.dsp package<a class="headerlink" href="#torchtool-dsp-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchtool.dsp.convolution">
+<span id="torchtool-dsp-convolution-module"></span><h2>torchtool.dsp.convolution module<a class="headerlink" href="#module-torchtool.dsp.convolution" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.dsp.convolution.cutfftconv1">
+<code class="sig-prename descclassname">torchtool.dsp.convolution.</code><code class="sig-name descname">cutfftconv1</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">nfft</em>, <em class="sig-param">Nx</em>, <em class="sig-param">Nh</em>, <em class="sig-param">shape='same'</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">ftshift=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.convolution.cutfftconv1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throwaway boundary elements to get convolution results.</p>
+<p>Throwaway boundary elements to get convolution results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> (<em>{numpy.ndarray}</em>) – array after <code class="docutils literal notranslate"><span class="pre">iff</span></code>.</p></li>
+<li><p><strong>nfft</strong> (<em>{number}</em>) – number of fft points.</p></li>
+<li><p><strong>Nx</strong> (<em>{number}</em>) – signal length</p></li>
+<li><p><strong>Nh</strong> (<em>{number}</em>) – filter length</p></li>
+<li><p><strong>shape</strong> (<em>{str}</em>) – output shape:
+1. <code class="docutils literal notranslate"><span class="pre">'same'</span> <span class="pre">--&gt;</span> <span class="pre">same</span> <span class="pre">size</span> <span class="pre">as</span> <span class="pre">input</span> <span class="pre">x</span></code>, <span class="math">\(N_x\)</span>
+2. <code class="docutils literal notranslate"><span class="pre">'valid'</span> <span class="pre">--&gt;</span> <span class="pre">valid</span> <span class="pre">convolution</span> <span class="pre">output</span></code>
+3. <code class="docutils literal notranslate"><span class="pre">'full'</span> <span class="pre">--&gt;</span> <span class="pre">full</span> <span class="pre">convolution</span> <span class="pre">output</span></code>, <span class="math">\(N_x+N_h-1\)</span>
+(the default is ‘same’)</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em>) – convolution axis (the default is 0)</p></li>
+<li><p><strong>ftshift</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.8)"><em>type</em></a><em>]</em><em>}</em>) – whether to shift the frequencies (the default is False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – array with shape specified by <code class="xref py py-attr docutils literal notranslate"><span class="pre">same</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{numpy.ndarray}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.convolution.fftconv1">
+<code class="sig-prename descclassname">torchtool.dsp.convolution.</code><code class="sig-name descname">fftconv1</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">h</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">nfft=None</em>, <em class="sig-param">shape='same'</em>, <em class="sig-param">ftshift=False</em>, <em class="sig-param">eps=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.convolution.fftconv1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convolution using Fast Fourier Transformation</p>
+<p>Convolution using Fast Fourier Transformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>{numpy.ndarray}</em>) – data to be convolved.</p></li>
+<li><p><strong>h</strong> (<em>{numpy.ndarray}</em>) – filter array</p></li>
+<li><p><strong>shape</strong> (<em>{str}</em><em>, </em><em>optional</em>) – output shape:
+1. <code class="docutils literal notranslate"><span class="pre">'same'</span> <span class="pre">--&gt;</span> <span class="pre">same</span> <span class="pre">size</span> <span class="pre">as</span> <span class="pre">input</span> <span class="pre">x</span></code>, <span class="math">\(N_x\)</span>
+2. <code class="docutils literal notranslate"><span class="pre">'valid'</span> <span class="pre">--&gt;</span> <span class="pre">valid</span> <span class="pre">convolution</span> <span class="pre">output</span></code>
+3. <code class="docutils literal notranslate"><span class="pre">'full'</span> <span class="pre">--&gt;</span> <span class="pre">full</span> <span class="pre">convolution</span> <span class="pre">output</span></code>, <span class="math">\(N_x+N_h-1\)</span>
+(the default is ‘same’)</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – convolution axis (the default is 0)</p></li>
+<li><p><strong>nfft</strong> (<em>{number}</em><em>, </em><em>optional</em>) – number of fft points (the default is <span class="math">\(2^nextpow2(N_x+N_h-1)\)</span>),
+note that <code class="xref py py-attr docutils literal notranslate"><span class="pre">nfft</span></code> can not be smaller than <span class="math">\(N_x+N_h-1\)</span>.</p></li>
+<li><p><strong>ftshift</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – whether shift frequencies (the default is False)</p></li>
+<li><p><strong>eps</strong> (<em>{None</em><em> or </em><em>float}</em><em>, </em><em>optional</em>) – x[abs(x)&lt;eps] = 0 (the default is None, does nothing)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – Convolution result array.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{numpy.ndarray}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.dsp.entropy">
+<span id="torchtool-dsp-entropy-module"></span><h2>torchtool.dsp.entropy module<a class="headerlink" href="#module-torchtool.dsp.entropy" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.dsp.entropy.natural_entropy">
+<code class="sig-prename descclassname">torchtool.dsp.entropy.</code><code class="sig-name descname">natural_entropy</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.entropy.natural_entropy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.entropy.shannon_entropy">
+<code class="sig-prename descclassname">torchtool.dsp.entropy.</code><code class="sig-name descname">shannon_entropy</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.entropy.shannon_entropy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.dsp.ffts">
+<span id="torchtool-dsp-ffts-module"></span><h2>torchtool.dsp.ffts module<a class="headerlink" href="#module-torchtool.dsp.ffts" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.dsp.ffts.fft">
+<code class="sig-prename descclassname">torchtool.dsp.ffts.</code><code class="sig-name descname">fft</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">nfft=None</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">norm=False</em>, <em class="sig-param">shift=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.ffts.fft" title="Permalink to this definition">¶</a></dt>
+<dd><p>FFT in torchtool</p>
+<p>IFFT in torchtool, since ifft in torch only supports complex-complex transformation,
+for real ifft, we insert imaginary part with zeros (torch.stack((x,torch.zeros_like(x), dim=-1))),
+also you can use torch’s rifft.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>{torch array}</em>) – both complex and real representation are supported. Since torch does not
+support complex array, when <code class="xref py py-attr docutils literal notranslate"><span class="pre">x</span></code> is complex, we will change the representation
+in real formation(last dimension is 2, real, imag), after FFT, it will be change back.</p></li>
+<li><p><strong>nfft</strong> (<em>{integer}</em><em>, </em><em>optional</em>) – number of fft points (the default is None –&gt; equals to signal dimension)</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – axis of fft (the default is 0, which the first dimension)</p></li>
+<li><p><strong>norm</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – normalization (the default is False)</p></li>
+<li><p><strong>shift</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – shift the zero frequency to center (the default is False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – fft results torch array with the same type as <code class="xref py py-attr docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch array}</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – nfft is small than signal dimension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.ffts.fftfreq">
+<code class="sig-prename descclassname">torchtool.dsp.ffts.</code><code class="sig-name descname">fftfreq</code><span class="sig-paren">(</span><em class="sig-param">fs</em>, <em class="sig-param">n</em>, <em class="sig-param">shift</em>, <em class="sig-param">norm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.ffts.fftfreq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Discrete Fourier Transform sample frequencies</p>
+<p>Return the Discrete Fourier Transform sample frequencies.</p>
+<p>The returned float array <cite>f</cite> contains the frequency bin centers in cycles
+per unit of the sample spacing (with zero at the start).  For instance, if
+the sample spacing is in seconds, then the frequency unit is cycles/second.</p>
+<p>Given a window length <cite>n</cite> and a sample spacing <cite>d</cite>, if shift is <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">norm</span></code> is True:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>     <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span>   <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>   <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">even</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>   <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">odd</span>
+</pre></div>
+</div>
+<p>Given a window length <cite>n</cite> and a sample spacing <cite>d</cite>, if shift is <code class="docutils literal notranslate"><span class="pre">False</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span>   <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>     <span class="o">-</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>   <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">even</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>   <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">odd</span>
+</pre></div>
+</div>
+<p>where <span class="math">\(d = 1/f_s\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fs</strong> (<em>{float}</em>) – Sampling rate.</p></li>
+<li><p><strong>n</strong> (<em>{integer}</em>) – Number of samples.</p></li>
+<li><p><strong>shift</strong> (<em>{bool}</em>) – Does shift the zero frequency to center.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>frequency array with size <span class="math">\(n×1\)</span>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.ffts.ifft">
+<code class="sig-prename descclassname">torchtool.dsp.ffts.</code><code class="sig-name descname">ifft</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">nfft=None</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">norm=False</em>, <em class="sig-param">shift=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.ffts.ifft" title="Permalink to this definition">¶</a></dt>
+<dd><p>IFFT in torchtool</p>
+<p>IFFT in torchtool, since ifft in torch only supports complex-complex transformation,
+for real ifft, we insert imaginary part with zeros (torch.stack((x,torch.zeros_like(x), dim=-1))),
+also you can use torch’s rifft.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>{torch array}</em>) – both complex and real representation are supported. Since torch does not
+support complex array, when <code class="xref py py-attr docutils literal notranslate"><span class="pre">x</span></code> is complex, we will change the representation
+in real formation(last dimension is 2, real, imag), after IFFT, it will be change back.</p></li>
+<li><p><strong>nfft</strong> (<em>{integer}</em><em>, </em><em>optional</em>) – number of ifft points (the default is None –&gt; equals to signal dimension)</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – axis of ifft (the default is 0, which the first dimension)</p></li>
+<li><p><strong>norm</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – normalization (the default is False)</p></li>
+<li><p><strong>shift</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – shift the zero frequency to center (the default is False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – ifft results torch array with the same type as <code class="xref py py-attr docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch array}</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – nfft is small than signal dimension.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.ffts.padfft">
+<code class="sig-prename descclassname">torchtool.dsp.ffts.</code><code class="sig-name descname">padfft</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">nfft=None</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">shift=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.ffts.padfft" title="Permalink to this definition">¶</a></dt>
+<dd><p>PADFT Pad array for doing FFT or IFFT</p>
+<p>PADFT Pad array for doing FFT or IFFT</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{torch.ndarray}</em>) – Data to be padded.</p></li>
+<li><p><strong>nfft</strong> (<em>{number</em><em> or </em><em>None}</em>) – Padding size.</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – Padding dimension. (the default is 0)</p></li>
+<li><p><strong>shift</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – Whether to shift the frequency (the default is False)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.dsp.filters">
+<span id="torchtool-dsp-filters-module"></span><h2>torchtool.dsp.filters module<a class="headerlink" href="#module-torchtool.dsp.filters" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.dsp.filters.sobelfilter">
+<code class="sig-prename descclassname">torchtool.dsp.filters.</code><code class="sig-name descname">sobelfilter</code><span class="sig-paren">(</span><em class="sig-param">A</em>, <em class="sig-param">dtype=torch.float32</em>, <em class="sig-param">gmod='absadd'</em>, <em class="sig-param">full=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.filters.sobelfilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>sobel filtering</p>
+<p>filter A with sobel operator</p>
+<div class="math">
+\[G_v=\left[\begin{array}{ccc}{-1} & {-2} & {-1} \\ {0} & {0} & {0} \\ {+1} & {+2} & {+1}\end{array}\right] * A
+
+\]</div>
+<div class="math">
+\[G_h=\left[\begin{array}{ccc}{-1} & {0} & {+1} \\ {-2} & {0} & {+2} \\ {-1} & {0} & {+1}\end{array}\right] * A
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>{2d</em><em> or </em><em>3d array}</em>) – image to be filtered <span class="math">\(H×W×C\)</span>.</p></li>
+<li><p><strong>gmod</strong> (<em>{str}</em>) – <ul>
+<li><p>‘add’ –&gt; <span class="math">\(G=G_h+G_v\)</span>,</p></li>
+<li><p>’absadd’ –&gt; <span class="math">\(G=|G_h|+|G_v|\)</span>,</p></li>
+<li><p>’squaddsqrt’ –&gt; <span class="math">\(G=\sqrt{G_h^2 + G_v^2}\)</span>,</p></li>
+<li><p><cite>hvfilt</cite> –&gt; apply sobel filter on hrizontal and vertical</p></li>
+<li><p><cite>vhfilt</cite> –&gt; apply sobel filter on vertical and hrizontal</p></li>
+<li><p>default <cite>absadd</cite></p></li>
+</ul>
+</p></li>
+<li><p><strong>full</strong> (<em>{bool}</em>) – If True, then return Gh+Gv, Gh, Gv else return Gh+Gv</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>G</strong> (<em>{2d or 3d array}</em>) – 2d-gradient</p></li>
+<li><p><strong>Gh</strong> (<em>{2d or 3d array}</em>) – gradient in hrizontal</p></li>
+<li><p><strong>Gv</strong> (<em>{2d or 3d array}</em>) – gradient in vertical</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.dsp.interpolation">
+<span id="torchtool-dsp-interpolation-module"></span><h2>torchtool.dsp.interpolation module<a class="headerlink" href="#module-torchtool.dsp.interpolation" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.dsp.interpolation.Interp1">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.dsp.interpolation.</code><code class="sig-name descname">Interp1</code><a class="headerlink" href="#torchtool.dsp.interpolation.Interp1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.autograd.function.Function</span></code></p>
+<dl class="method">
+<dt id="torchtool.dsp.interpolation.Interp1.backward">
+<em class="property">static </em><code class="sig-name descname">backward</code><span class="sig-paren">(</span><em class="sig-param">ctx</em>, <em class="sig-param">grad_out</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.interpolation.Interp1.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines a formula for differentiating the operation.</p>
+<p>This function is to be overridden by all subclasses.</p>
+<p>It must accept a context <code class="xref py py-attr docutils literal notranslate"><span class="pre">ctx</span></code> as the first argument, followed by
+as many outputs did <a class="reference internal" href="#torchtool.dsp.interpolation.Interp1.forward" title="torchtool.dsp.interpolation.Interp1.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> return, and it should return as many
+tensors, as there were inputs to <a class="reference internal" href="#torchtool.dsp.interpolation.Interp1.forward" title="torchtool.dsp.interpolation.Interp1.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a>. Each argument is the
+gradient w.r.t the given output, and each returned value should be the
+gradient w.r.t. the corresponding input.</p>
+<p>The context can be used to retrieve tensors saved during the forward
+pass. It also has an attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">ctx.needs_input_grad</span></code> as a tuple
+of booleans representing whether each input needs gradient. E.g.,
+<a class="reference internal" href="#torchtool.dsp.interpolation.Interp1.backward" title="torchtool.dsp.interpolation.Interp1.backward"><code class="xref py py-func docutils literal notranslate"><span class="pre">backward()</span></code></a> will have <code class="docutils literal notranslate"><span class="pre">ctx.needs_input_grad[0]</span> <span class="pre">=</span> <span class="pre">True</span></code> if the
+first input to <a class="reference internal" href="#torchtool.dsp.interpolation.Interp1.forward" title="torchtool.dsp.interpolation.Interp1.forward"><code class="xref py py-func docutils literal notranslate"><span class="pre">forward()</span></code></a> needs gradient computated w.r.t. the
+output.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="torchtool.dsp.interpolation.Interp1.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">xnew</em>, <em class="sig-param">out=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.interpolation.Interp1.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear 1D interpolation linke <code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.interp()</span></code> on the GPU for Pyth.
+This function returns interpolated values of a set of 1-D functions at
+the desired query points <cite>xnew</cite>.
+This function is working similarly to Matlab™ or scipy functions with
+the <cite>linear</cite> interpolation mode on, except that it parallelises over
+any number of desired interpolation problems.
+The code will run on GPU if all the tensors provided are on a cuda
+device.
+:param x: A 1-D or 2-D tensor of real values.
+:type x: (N, ) or (D, N) Pytorch Tensor
+:param y: A 1-D or 2-D tensor of real values. The length of <cite>y</cite> along its</p>
+<blockquote>
+<div><p>last dimension must be the same as that of <cite>x</cite></p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xnew</strong> (<em>(</em><em>P</em><em>,</em><em>) or </em><em>(</em><em>D</em><em>, </em><em>P</em><em>) </em><em>Pytorch Tensor</em>) – A 1-D or 2-D tensor of real values. <cite>xnew</cite> can only be 1-D if
+_both_ <cite>x</cite> and <cite>y</cite> are 1-D. Otherwise, its length along the first
+dimension must be the same as that of whichever <cite>x</cite> and <cite>y</cite> is 2-D.</p></li>
+<li><p><strong>out</strong> (Pytorch Tensor, same shape as <cite>xnew</cite>) – Tensor for the output. If None: allocated automatically.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.interpolation.interpolate">
+<code class="sig-prename descclassname">torchtool.dsp.interpolation.</code><code class="sig-name descname">interpolate</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">size=None</em>, <em class="sig-param">scale_factor=None</em>, <em class="sig-param">mode='nearest'</em>, <em class="sig-param">align_corners=None</em>, <em class="sig-param">recompute_scale_factor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.interpolation.interpolate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Down/up samples the input to either the given <code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code> or the given
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">scale_factor</span></code></p>
+<p>The algorithm used for interpolation is determined by <code class="xref py py-attr docutils literal notranslate"><span class="pre">mode</span></code>.</p>
+<p>Currently temporal, spatial and volumetric sampling are supported, i.e.
+expected inputs are 3-D, 4-D or 5-D in shape.</p>
+<p>The input dimensions are interpreted in the form:
+<cite>mini-batch x channels x [optional depth] x [optional height] x width</cite>.</p>
+<p>The modes available for resizing are: <cite>nearest</cite>, <cite>linear</cite> (3D-only),
+<cite>bilinear</cite>, <cite>bicubic</cite> (4D-only), <cite>trilinear</cite> (5D-only), <cite>area</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>Tensor</em>) – the input tensor</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>]</em>) – output spatial size.</p></li>
+<li><p><strong>scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>]</em>) – multiplier for spatial size. Has to match input size if it is a tuple.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – algorithm used for upsampling:
+<code class="docutils literal notranslate"><span class="pre">'nearest'</span></code> | <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'bilinear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'bicubic'</span></code> |
+<code class="docutils literal notranslate"><span class="pre">'trilinear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'area'</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">'nearest'</span></code></p></li>
+<li><p><strong>align_corners</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Geometrically, we consider the pixels of the
+input and output as squares rather than points.
+If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the input and output tensors are aligned by the
+center points of their corner pixels, preserving the values at the corner pixels.
+If set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, the input and output tensors are aligned by the corner
+points of their corner pixels, and the interpolation uses edge value padding
+for out-of-boundary values, making this operation <em>independent</em> of input size
+when <code class="xref py py-attr docutils literal notranslate"><span class="pre">scale_factor</span></code> is kept the same. This only has an effect when <code class="xref py py-attr docutils literal notranslate"><span class="pre">mode</span></code>
+is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bilinear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bicubic'</span></code> or <code class="docutils literal notranslate"><span class="pre">'trilinear'</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong>recompute_scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – recompute the scale_factor for use in the
+interpolation calculation.  When <cite>scale_factor</cite> is passed as a parameter, it is used
+to compute the <cite>output_size</cite>.  If <cite>recompute_scale_factor</cite> is <code class="docutils literal notranslate"><span class="pre">`False</span></code> or not specified,
+the passed-in <cite>scale_factor</cite> will be used in the interpolation computation.
+Otherwise, a new <cite>scale_factor</cite> will be computed based on the output and input sizes for
+use in the interpolation computation (i.e. the computation will be identical to if the computed
+<cite>output_size</cite> were passed-in explicitly).  Note that when <cite>scale_factor</cite> is floating-point,
+the recomputed scale_factor may differ from the one passed in due to rounding and precision
+issues.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">mode='bicubic'</span></code>, it’s possible to cause overshoot, in other words it can produce
+negative values or values greater than 255 for images.
+Explicitly call <code class="docutils literal notranslate"><span class="pre">result.clamp(min=0,</span> <span class="pre">max=255)</span></code> if you want to reduce the overshoot
+when displaying the image.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">align_corners</span> <span class="pre">=</span> <span class="pre">True</span></code>, the linearly interpolating modes
+(<cite>linear</cite>, <cite>bilinear</cite>, and <cite>trilinear</cite>) don’t proportionally align the
+output and input pixels, and thus the output values can depend on the
+input size. This was the default behavior for these modes up to version
+0.3.1. Since then, the default behavior is <code class="docutils literal notranslate"><span class="pre">align_corners</span> <span class="pre">=</span> <span class="pre">False</span></code>.
+See <code class="xref py py-class docutils literal notranslate"><span class="pre">Upsample</span></code> for concrete examples on how this
+affects the outputs.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When scale_factor is specified, if recompute_scale_factor=True,
+scale_factor is used to compute the output_size which will then
+be used to infer new scales for the interpolation.
+The default behavior for recompute_scale_factor changed to False
+in 1.6.0, and scale_factor is used in the interpolation
+calculation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using the CUDA backend, this operation may induce nondeterministic
+behaviour in its backward pass that is not easily switched off.
+Please see the notes on <span class="xref std std-doc">/notes/randomness</span> for background.</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.dsp.kernels">
+<span id="torchtool-dsp-kernels-module"></span><h2>torchtool.dsp.kernels module<a class="headerlink" href="#module-torchtool.dsp.kernels" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchtool.dsp.normalsignals">
+<span id="torchtool-dsp-normalsignals-module"></span><h2>torchtool.dsp.normalsignals module<a class="headerlink" href="#module-torchtool.dsp.normalsignals" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.dsp.normalsignals.chirp">
+<code class="sig-prename descclassname">torchtool.dsp.normalsignals.</code><code class="sig-name descname">chirp</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">T</em>, <em class="sig-param">Kr</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.normalsignals.chirp" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Create a chirp signal :</dt><dd><p>S_{tx}(t) = rect(t/T) * exp(1j*pi*Kr*t^2)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.dsp.normalsignals.rect">
+<code class="sig-prename descclassname">torchtool.dsp.normalsignals.</code><code class="sig-name descname">rect</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dsp.normalsignals.rect" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Rectangle function:</dt><dd><p>rect(x) = {1, if <a href="#id1"><span class="problematic" id="id2">|</span></a>x|&lt;= 0.5; 0, otherwise}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-torchtool.dsp">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchtool.dsp" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -197,11 +600,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018-2019, Zhi Liu
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -212,7 +623,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

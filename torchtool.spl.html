@@ -1,0 +1,566 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchtool.spl package &mdash; IPRS 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="torchtool.nn.module package" href="torchtool.nn.module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchtool</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchtool.html">torchtool package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchtool.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.evaluation.html">torchtool.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchtool.spl package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchtool.html#module-torchtool">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPRS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">torchtool</a> &raquo;</li>
+        
+          <li><a href="torchtool.html">torchtool package</a> &raquo;</li>
+        
+      <li>torchtool.spl package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchtool.spl.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchtool-spl-package">
+<h1>torchtool.spl package<a class="headerlink" href="#torchtool-spl-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchtool.spl.spfunction">
+<span id="torchtool-spl-spfunction-module"></span><h2>torchtool.spl.spfunction module<a class="headerlink" href="#module-torchtool.spl.spfunction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.spl.spfunction.Binary">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.spfunction.</code><code class="sig-name descname">Binary</code><a class="headerlink" href="#torchtool.spl.spfunction.Binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>binary function</p>
+<p>The binary SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-binaryfunction">
+<span class="eqno">(1)<a class="headerlink" href="#equation-equ-spl-binaryfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, k) =  = -λ\|{\bm v}\|_1 = -λ\sum_{n=1}^N v_n
+
+\]</div>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-binaryupdate">
+<span class="eqno">(2)<a class="headerlink" href="#equation-equ-spl-binaryupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = \left\{\begin{array}{ll}{1,} & {l_{n}<\lambda} \\ {0,} & {l_{n}>=\lambda}\end{array}\right.
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.spfunction.Binary.eval">
+<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">v</em>, <em class="sig-param">lmbd</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.spfunction.Binary.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>eval SP function</p>
+<p>The binary SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-binaryfunction">
+<span class="eqno">(3)<a class="headerlink" href="#equation-equ-spl-binaryfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, k) =  = -λ\|{\bm v}\|_1 = -λ\sum_{n=1}^N v_n
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<em>{Torch Tensor}</em>) – The easy degree of N samples. (<span class="math">\(N×1\)</span> tensor)</p></li>
+<li><p><strong>lmbd</strong> (<em>{float}</em>) – balance factor</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.spl.spfunction.Linear">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.spfunction.</code><code class="sig-name descname">Linear</code><a class="headerlink" href="#torchtool.spl.spfunction.Linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Linear function</p>
+<p>The Linear SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-linearfunction">
+<span class="eqno">(4)<a class="headerlink" href="#equation-equ-spl-linearfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, \lambda)=\lambda\left(\frac{1}{2}\|\bm{v}\|_{2}^{2}-\sum_{n=1}^{N} v_{n}\right)
+
+\]</div>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-linearupdate">
+<span class="eqno">(5)<a class="headerlink" href="#equation-equ-spl-linearupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = {\rm max}\{1-l_n/\lambda, 0\}
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.spfunction.Linear.eval">
+<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">v</em>, <em class="sig-param">lmbd</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.spfunction.Linear.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>eval SP function</p>
+<p>The Linear SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-linearfunction">
+<span class="eqno">(6)<a class="headerlink" href="#equation-equ-spl-linearfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, \lambda)=\lambda\left(\frac{1}{2}\|\bm{v}\|_{2}^{2}-\sum_{n=1}^{N} v_{n}\right)
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<em>{Torch Tensor}</em>) – The easy degree of N samples. (<span class="math">\(N×1\)</span> tensor)</p></li>
+<li><p><strong>lmbd</strong> (<em>{float}</em>) – balance factor</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.spl.spfunction.Logarithmic">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.spfunction.</code><code class="sig-name descname">Logarithmic</code><a class="headerlink" href="#torchtool.spl.spfunction.Logarithmic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Logarithmic function</p>
+<p>The Logarithmic SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-logarithmicfunction">
+<span class="eqno">(7)<a class="headerlink" href="#equation-equ-spl-logarithmicfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, \lambda) = \sum_{n=1}^{N}\left(\zeta v_{n}-\frac{\zeta^{v_{n}}}{{\rm log} \zeta}\right)
+
+\]</div>
+<p>where, <span class="math">\(\zeta=1-\lambda, 0&lt;\lambda&lt;1\)</span></p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-logarithmicupdate">
+<span class="eqno">(8)<a class="headerlink" href="#equation-equ-spl-logarithmicupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^{*}=\left\{\begin{array}{ll}{0,} & {l_{n}>=\lambda} \\ {\log \left(l_{n}+\zeta\right) / \log \xi,} & {l_{n}<\lambda}\end{array}\right.
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.spfunction.Logarithmic.eval">
+<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">v</em>, <em class="sig-param">lmbd</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.spfunction.Logarithmic.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>eval SP function</p>
+<p>The Logarithmic SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-logarithmicfunction">
+<span class="eqno">(9)<a class="headerlink" href="#equation-equ-spl-logarithmicfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, \lambda) = \sum_{n=1}^{N}\left(\zeta v_{n}-\frac{\zeta^{v_{n}}}{{\rm log} \zeta}\right)
+
+\]</div>
+<p>where, <span class="math">\(\zeta=1-\lambda, 0&lt;\lambda&lt;1\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<em>{Torch Tensor}</em>) – The easy degree of N samples. (<span class="math">\(N×1\)</span> tensor)</p></li>
+<li><p><strong>lmbd</strong> (<em>{float}</em>) – balance factor</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.spl.spfunction.Mixture">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.spfunction.</code><code class="sig-name descname">Mixture</code><a class="headerlink" href="#torchtool.spl.spfunction.Mixture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Mixture function</p>
+<p>The Mixture SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-mixturefunction">
+<span class="eqno">(10)<a class="headerlink" href="#equation-equ-spl-mixturefunction" title="Permalink to this equation">¶</a></span>\[f\left(\bm{v}, λ \right)=-\zeta \sum_{n=1}^{N} \log \left(v_{n}+\zeta / λ \right)
+
+\]</div>
+<p>where, <span class="math">\(ζ= \frac{1}{k^{\prime} - k} = \frac{\lambda^{\prime}\lambda}{\lambda-\lambda^{\prime}}\)</span></p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-mixtureupdate">
+<span class="eqno">(11)<a class="headerlink" href="#equation-equ-spl-mixtureupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^{*}=\left\{\begin{array}{ll}{1,} & {l_{n} \leq \lambda^{\prime}} \\ {0,} & {l_{n} \geq \lambda} \\ {\zeta / l_{n}-\zeta / \lambda,} & {\text { otherwise }}\end{array}\right.
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.spfunction.Mixture.eval">
+<code class="sig-name descname">eval</code><span class="sig-paren">(</span><em class="sig-param">v</em>, <em class="sig-param">lmbd1</em>, <em class="sig-param">lmbd2</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.spfunction.Mixture.eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>eval SP function</p>
+<p>The Mixture SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-mixturefunction">
+<span class="eqno">(12)<a class="headerlink" href="#equation-equ-spl-mixturefunction" title="Permalink to this equation">¶</a></span>\[f\left(\bm{v}, λ \right)=-\zeta \sum_{n=1}^{N} \log \left(v_{n}+\zeta / λ \right)
+
+\]</div>
+<p>where, <span class="math">\(ζ= \frac{1}{k^{\prime} - k} = \frac{\lambda^{\prime}\lambda}{\lambda-\lambda^{\prime}}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>v</strong> (<em>{Torch Tensor}</em>) – The easy degree of N samples. (<span class="math">\(N×1\)</span> tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.spl.voptimizer">
+<span id="torchtool-spl-voptimizer-module"></span><h2>torchtool.spl.voptimizer module<a class="headerlink" href="#module-torchtool.spl.voptimizer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.spl.voptimizer.Binary">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.voptimizer.</code><code class="sig-name descname">Binary</code><span class="sig-paren">(</span><em class="sig-param">rankr=0.6</em>, <em class="sig-param">maxrankr=1</em>, <em class="sig-param">mu=1.003</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>binary function</p>
+<p>The binary SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-binaryfunction">
+<span class="eqno">(13)<a class="headerlink" href="#equation-equ-spl-binaryfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, k) =  = -λ\|{\bm v}\|_1 = -λ\sum_{n=1}^N v_n
+
+\]</div>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-binaryupdate">
+<span class="eqno">(14)<a class="headerlink" href="#equation-equ-spl-binaryupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = \left\{\begin{array}{ll}{1,} & {l_{n}<\lambda} \\ {0,} & {l_{n}>=\lambda}\end{array}\right.
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Binary.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">loss</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Binary.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>one step of optimization</p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-binaryupdate">
+<span class="eqno">(15)<a class="headerlink" href="#equation-equ-spl-binaryupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = \left\{\begin{array}{ll}{1,} & {l_{n}<\lambda} \\ {0,} & {l_{n}>=\lambda}\end{array}\right.
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>loss</strong> (<em>{Torch Tensor}</em>) – The loss values of N samples. (<span class="math">\(N×1\)</span> tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Binary.update_rankr">
+<code class="sig-name descname">update_rankr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Binary.update_rankr" title="Permalink to this definition">¶</a></dt>
+<dd><p>update rank ratio</p>
+<div class="math">
+\[r = {\rm min}\{r*\mu, r_{max}\}
+
+\]</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.spl.voptimizer.Linear">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.voptimizer.</code><code class="sig-name descname">Linear</code><span class="sig-paren">(</span><em class="sig-param">rankr=0.6</em>, <em class="sig-param">maxrankr=1</em>, <em class="sig-param">mu=1.003</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Linear function</p>
+<p>The Linear SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-linearfunction">
+<span class="eqno">(16)<a class="headerlink" href="#equation-equ-spl-linearfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, \lambda)=\lambda\left(\frac{1}{2}\|\bm{v}\|_{2}^{2}-\sum_{n=1}^{N} v_{n}\right)
+
+\]</div>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-linearupdate">
+<span class="eqno">(17)<a class="headerlink" href="#equation-equ-spl-linearupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = {\rm max}\{1-l_n/\lambda, 0\}
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Linear.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">loss</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Linear.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>one step of optimization</p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-binaryupdate">
+<span class="eqno">(18)<a class="headerlink" href="#equation-equ-spl-binaryupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = \left\{\begin{array}{ll}{1,} & {l_{n}<\lambda} \\ {0,} & {l_{n}>=\lambda}\end{array}\right.
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>loss</strong> (<em>{Torch Tensor}</em>) – The loss values of N samples. (<span class="math">\(N×1\)</span> tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Linear.update_rankr">
+<code class="sig-name descname">update_rankr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Linear.update_rankr" title="Permalink to this definition">¶</a></dt>
+<dd><p>update rank ratio</p>
+<div class="math">
+\[r = {\rm min}\{r*\mu, r_{max}\}
+
+\]</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.spl.voptimizer.Logarithmic">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.voptimizer.</code><code class="sig-name descname">Logarithmic</code><span class="sig-paren">(</span><em class="sig-param">rankr=0.6</em>, <em class="sig-param">maxrankr=1</em>, <em class="sig-param">mu=1.003</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Logarithmic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Logarithmic function</p>
+<p>The Logarithmic SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-logarithmicfunction">
+<span class="eqno">(19)<a class="headerlink" href="#equation-equ-spl-logarithmicfunction" title="Permalink to this equation">¶</a></span>\[f(\bm{v}, \lambda) = \sum_{n=1}^{N}\left(\zeta v_{n}-\frac{\zeta^{v_{n}}}{{\rm log} \zeta}\right)
+
+\]</div>
+<p>where, <span class="math">\(\zeta=1-\lambda, 0&lt;\lambda&lt;1\)</span></p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-logarithmicupdate">
+<span class="eqno">(20)<a class="headerlink" href="#equation-equ-spl-logarithmicupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^{*}=\left\{\begin{array}{ll}{0,} & {l_{n}>=\lambda} \\ {\log \left(l_{n}+\zeta\right) / \log \xi,} & {l_{n}<\lambda}\end{array}\right.
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Logarithmic.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">loss</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Logarithmic.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>one step of optimization</p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-binaryupdate">
+<span class="eqno">(21)<a class="headerlink" href="#equation-equ-spl-binaryupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = \left\{\begin{array}{ll}{1,} & {l_{n}<\lambda} \\ {0,} & {l_{n}>=\lambda}\end{array}\right.
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>loss</strong> (<em>{Torch Tensor}</em>) – The loss values of N samples. (<span class="math">\(N×1\)</span> tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Logarithmic.update_rankr">
+<code class="sig-name descname">update_rankr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Logarithmic.update_rankr" title="Permalink to this definition">¶</a></dt>
+<dd><p>update rank ratio</p>
+<div class="math">
+\[r = {\rm min}\{r*\mu, r_{max}\}
+
+\]</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.spl.voptimizer.Mixture">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.spl.voptimizer.</code><code class="sig-name descname">Mixture</code><span class="sig-paren">(</span><em class="sig-param">rankr=0.6</em>, <em class="sig-param">maxrankr=1</em>, <em class="sig-param">mu=1.003</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Mixture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Mixture function</p>
+<p>The Mixture SPL function can be expressed as</p>
+<div class="math" id="equation-equ-spl-mixturefunction">
+<span class="eqno">(22)<a class="headerlink" href="#equation-equ-spl-mixturefunction" title="Permalink to this equation">¶</a></span>\[f\left(\bm{v}, λ \right)=-\zeta \sum_{n=1}^{N} \log \left(v_{n}+\zeta / λ \right)
+
+\]</div>
+<p>where, <span class="math">\(ζ= \frac{1}{k^{\prime} - k} = \frac{\lambda^{\prime}\lambda}{\lambda-\lambda^{\prime}}\)</span></p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-mixtureupdate">
+<span class="eqno">(23)<a class="headerlink" href="#equation-equ-spl-mixtureupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^{*}=\left\{\begin{array}{ll}{1,} & {l_{n} \leq \lambda^{\prime}} \\ {0,} & {l_{n} \geq \lambda} \\ {\zeta / l_{n}-\zeta / \lambda,} & {\text { otherwise }}\end{array}\right.
+
+\]</div>
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Mixture.step">
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">loss</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Mixture.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>one step of optimization</p>
+<p>The optimal solution is</p>
+<div class="math" id="equation-equ-spl-binaryupdate">
+<span class="eqno">(24)<a class="headerlink" href="#equation-equ-spl-binaryupdate" title="Permalink to this equation">¶</a></span>\[v_{n}^* = \left\{\begin{array}{ll}{1,} & {l_{n}<\lambda} \\ {0,} & {l_{n}>=\lambda}\end{array}\right.
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>loss</strong> (<em>{Torch Tensor}</em>) – The loss values of N samples. (<span class="math">\(N×1\)</span> tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="torchtool.spl.voptimizer.Mixture.update_rankr">
+<code class="sig-name descname">update_rankr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.spl.voptimizer.Mixture.update_rankr" title="Permalink to this definition">¶</a></dt>
+<dd><p>update rank ratio</p>
+<div class="math">
+\[r = {\rm min}\{r*\mu, r_{max}\}
+
+\]</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.spl">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchtool.spl" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="torchtool.nn.module.html" class="btn btn-neutral float-left" title="torchtool.nn.module package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2019, Zhi Liu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

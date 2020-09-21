@@ -1,0 +1,1204 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchtool.nn.module package &mdash; IPRS 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="torchtool.spl package" href="torchtool.spl.html" />
+    <link rel="prev" title="torchtool.nn.loss package" href="torchtool.nn.loss.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchtool</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchtool.html">torchtool package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchtool.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.evaluation.html">torchtool.evaluation package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.spl.html">torchtool.spl package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchtool.html#module-torchtool">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPRS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">torchtool</a> &raquo;</li>
+        
+          <li><a href="torchtool.html">torchtool package</a> &raquo;</li>
+        
+          <li><a href="torchtool.nn.html">torchtool.nn package</a> &raquo;</li>
+        
+      <li>torchtool.nn.module package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchtool.nn.module.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchtool-nn-module-package">
+<h1>torchtool.nn.module package<a class="headerlink" href="#torchtool-nn-module-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchtool.nn.module.balanceconv2d">
+<span id="torchtool-nn-module-balanceconv2d-module"></span><h2>torchtool.nn.module.balanceconv2d module<a class="headerlink" href="#module-torchtool.nn.module.balanceconv2d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.balanceconv2d.</code><code class="sig-name descname">BalaConv2d</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=False</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.conv._ConvNd</span></code></p>
+<p>Applies a 2D Balanced convolution over an input signal composed of several input
+planes.</p>
+<p>In the simplest case, the output value of the layer with input size
+<span class="math">\((N, C_{\text{in}}, H, W)\)</span> and output <span class="math">\((N, C_{\text{out}}, H_{\text{out}}, W_{\text{out}})\)</span>
+can be precisely described as:</p>
+<div class="math" id="equation-equ-balancedconv2d">
+<span class="eqno">(1)<a class="headerlink" href="#equation-equ-balancedconv2d" title="Permalink to this equation">¶</a></span>\[{\bm Z}_{n_o, c_i, h_o, w_o} = \sum_{h=0}^{H_k-1}\sum_{w=0}^{W_k-1} \left[{\bm I}_{n_o, c_i, h_o + h - 1, w_o + w - 1} + {\bm K}_{c_o, h, w}
+- {\bm I}_{n_o, c_i, h_o + h - 1, w_o + w - 1} \cdot {\bm K}_{c_o, h, w}\right].
+
+\]</div>
+<p>where <span class="math">\(\star\)</span> is the valid 2D <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-correlation">cross-correlation</a> operator,
+<span class="math">\(N\)</span> is a batch size, <span class="math">\(C\)</span> denotes a number of channels,
+<span class="math">\(H\)</span> is a height of input planes in pixels, and <span class="math">\(W\)</span> is
+width in pixels.</p>
+<ul>
+<li><p><a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.stride" title="torchtool.nn.module.balanceconv2d.BalaConv2d.stride"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stride</span></code></a> controls the stride for the cross-correlation, a single
+number or a tuple.</p></li>
+<li><p><a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.padding" title="torchtool.nn.module.balanceconv2d.BalaConv2d.padding"><code class="xref py py-attr docutils literal notranslate"><span class="pre">padding</span></code></a> controls the amount of implicit zero-paddings on both
+sides for <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.padding" title="torchtool.nn.module.balanceconv2d.BalaConv2d.padding"><code class="xref py py-attr docutils literal notranslate"><span class="pre">padding</span></code></a> number of points for each dimension.</p></li>
+<li><p><a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.dilation" title="torchtool.nn.module.balanceconv2d.BalaConv2d.dilation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dilation</span></code></a> controls the spacing between the kernel points; also
+known as the à trous algorithm. It is harder to describe, but this <a href="#id1"><span class="problematic" id="id2">`link`_</span></a>
+has a nice visualization of what <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.dilation" title="torchtool.nn.module.balanceconv2d.BalaConv2d.dilation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dilation</span></code></a> does.</p></li>
+<li><p><a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.groups" title="torchtool.nn.module.balanceconv2d.BalaConv2d.groups"><code class="xref py py-attr docutils literal notranslate"><span class="pre">groups</span></code></a> controls the connections between inputs and outputs.
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">in_channels</span></code> and <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.out_channels" title="torchtool.nn.module.balanceconv2d.BalaConv2d.out_channels"><code class="xref py py-attr docutils literal notranslate"><span class="pre">out_channels</span></code></a> must both be divisible by
+<a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.groups" title="torchtool.nn.module.balanceconv2d.BalaConv2d.groups"><code class="xref py py-attr docutils literal notranslate"><span class="pre">groups</span></code></a>. For example,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>At groups=1, all inputs are convolved to all outputs.</p></li>
+<li><p>At groups=2, the operation becomes equivalent to having two conv
+layers side by side, each seeing half the input channels,
+and producing half the output channels, and both subsequently
+concatenated.</p></li>
+<li><p>At groups= <code class="xref py py-attr docutils literal notranslate"><span class="pre">in_channels</span></code>, each input channel is convolved with
+its own set of filters, of size:
+<span class="math">\(\left\lfloor\frac{out\_channels}{in\_channels}\right\rfloor\)</span>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>The parameters <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.kernel_size" title="torchtool.nn.module.balanceconv2d.BalaConv2d.kernel_size"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kernel_size</span></code></a>, <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.stride" title="torchtool.nn.module.balanceconv2d.BalaConv2d.stride"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stride</span></code></a>, <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.padding" title="torchtool.nn.module.balanceconv2d.BalaConv2d.padding"><code class="xref py py-attr docutils literal notranslate"><span class="pre">padding</span></code></a>, <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.dilation" title="torchtool.nn.module.balanceconv2d.BalaConv2d.dilation"><code class="xref py py-attr docutils literal notranslate"><span class="pre">dilation</span></code></a> can either be:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>a single <code class="docutils literal notranslate"><span class="pre">int</span></code> – in which case the same value is used for the height and width dimension</p></li>
+<li><p>a <code class="docutils literal notranslate"><span class="pre">tuple</span></code> of two ints – in which case, the first <cite>int</cite> is used for the height dimension,
+and the second <cite>int</cite> for the width dimension</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending of the size of your kernel, several (of the last)
+columns of the input might be lost, because it is a valid <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-correlation">cross-correlation</a>,
+and not a full <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-correlation">cross-correlation</a>.
+It is up to the user to add proper padding.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When <cite>groups == in_channels</cite> and <cite>out_channels == K * in_channels</cite>,
+where <cite>K</cite> is a positive integer, this operation is also termed in
+literature as depthwise convolution.</p>
+<p>In other words, for an input of size <span class="math">\((N, C_{in}, H_{in}, W_{in})\)</span>,
+a depthwise convolution with a depthwise multiplier <cite>K</cite>, can be constructed by arguments
+<span class="math">\((in\_channels=C_{in}, out\_channels=C_{in} \times K, ..., groups=C_{in})\)</span>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_channels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Number of channels in the input image</p></li>
+<li><p><strong>out_channels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Number of channels produced by the convolution</p></li>
+<li><p><strong>kernel_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a>) – Size of the convolving kernel</p></li>
+<li><p><strong>stride</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em>, </em><em>optional</em>) – Stride of the convolution. Default: 1</p></li>
+<li><p><strong>padding</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em>, </em><em>optional</em>) – Zero-padding added to both sides of the input. Default: 0</p></li>
+<li><p><strong>padding_mode</strong> (<em>string</em><em>, </em><em>optional</em>) – <cite>zeros</cite></p></li>
+<li><p><strong>dilation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a><em>, </em><em>optional</em>) – Spacing between kernel elements. Default: 1</p></li>
+<li><p><strong>groups</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><em>optional</em>) – Number of blocked connections from input channels to output channels. Default: 1</p></li>
+<li><p><strong>bias</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, adds a learnable bias to the output. Default: <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Shape:</dt><dd><ul>
+<li><p>Input: <span class="math">\((N, C_{in}, H_{in}, W_{in})\)</span></p></li>
+<li><p>Output: <span class="math">\((N, C_{out}, H_{out}, W_{out})\)</span> where</p>
+<div class="math">
+\[H_{out} = \left\lfloor\frac{H_{in}  + 2 \times \text{padding}[0] - \text{dilation}[0]
+          \times (\text{kernel\_size}[0] - 1) - 1}{\text{stride}[0]} + 1\right\rfloor
+
+\]</div>
+<div class="math">
+\[W_{out} = \left\lfloor\frac{W_{in}  + 2 \times \text{padding}[1] - \text{dilation}[1]
+          \times (\text{kernel\_size}[1] - 1) - 1}{\text{stride}[1]} + 1\right\rfloor
+
+\]</div>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>the learnable weights of the module of shape
+<span class="math">\((\text{out\_channels}, \frac{\text{in\_channels}}{\text{groups}},\)</span>
+<span class="math">\(\text{kernel\_size[0]}, \text{kernel\_size[1]})\)</span>.
+The values of these weights are sampled from
+<span class="math">\(\mathcal{U}(-\sqrt{k}, \sqrt{k})\)</span> where
+<span class="math">\(k = \frac{1}{C_\text{in} * \prod_{i=0}^{1}\text{kernel\_size}[i]}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.bias">
+<code class="sig-name descname">bias</code><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>the learnable bias of the module of shape (out_channels). If <a class="reference internal" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.bias" title="torchtool.nn.module.balanceconv2d.BalaConv2d.bias"><code class="xref py py-attr docutils literal notranslate"><span class="pre">bias</span></code></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>,
+then the values of these weights are
+sampled from <span class="math">\(\mathcal{U}(-\sqrt{k}, \sqrt{k})\)</span> where
+<span class="math">\(k = \frac{1}{C_\text{in} * \prod_{i=0}^{1}\text{kernel\_size}[i]}\)</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="c1"># With square kernels and equal stride</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># non-square kernels and unequal stride and with padding</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">stride</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># non-square kernels and unequal stride and with padding and dilation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">stride</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dilation</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">bias</code><em class="property"> = None</em></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.dilation">
+<code class="sig-name descname">dilation</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.dilation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.groups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.kernel_size">
+<code class="sig-name descname">kernel_size</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.kernel_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.out_channels">
+<code class="sig-name descname">out_channels</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.out_channels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.output_padding">
+<code class="sig-name descname">output_padding</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.output_padding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.padding">
+<code class="sig-name descname">padding</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.padding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.padding_mode">
+<code class="sig-name descname">padding_mode</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.padding_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.stride">
+<code class="sig-name descname">stride</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.stride" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.balanceconv2d.BalaConv2d.transposed">
+<code class="sig-name descname">transposed</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.balanceconv2d.BalaConv2d.transposed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">weight</code><em class="property"> = None</em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.cnnsize">
+<span id="torchtool-nn-module-cnnsize-module"></span><h2>torchtool.nn.module.cnnsize module<a class="headerlink" href="#module-torchtool.nn.module.cnnsize" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.ConvSize1d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">ConvSize1d</code><span class="sig-paren">(</span><em class="sig-param">CLi</em>, <em class="sig-param">Co</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=1</em>, <em class="sig-param">groups=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.ConvSize1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute shape after 2D-Convolution</p>
+<div class="math" id="equation-equ-dilationconv2dsize">
+<span class="eqno">(2)<a class="headerlink" href="#equation-equ-dilationconv2dsize" title="Permalink to this equation">¶</a></span>\[\begin{array}{l}
+L_{o} &= \left\lfloor\frac{L_{i}  + 2 \times P_l - D_l \times (K_l - 1) - 1}{S_l} + 1\right\rfloor \\
+\end{array}
+
+\]</div>
+<dl class="simple">
+<dt>CLi<span class="classifier">{tulpe or list}</span></dt><dd><p>input data shape (C, L)</p>
+</dd>
+<dt>Co<span class="classifier">{integer number}</span></dt><dd><p>number of output chanels.</p>
+</dd>
+<dt>K<span class="classifier">{tulpe}</span></dt><dd><p>kernel size</p>
+</dd>
+<dt>S<span class="classifier">{tulpe}</span></dt><dd><p>stride size</p>
+</dd>
+<dt>P<span class="classifier">{tulpe}</span></dt><dd><p>padding size</p>
+</dd>
+<dt>D<span class="classifier">{tuple}, optional</span></dt><dd><p>dilation size (the default is 1)</p>
+</dd>
+<dt>groups<span class="classifier">{number}, optional</span></dt><dd><p>[description] (the default is 1, which [default_description])</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>shape after 2D-Convolution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tulpe</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – dilation should be greater than zero.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.ConvSize2d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">ConvSize2d</code><span class="sig-paren">(</span><em class="sig-param">CHWi</em>, <em class="sig-param">Co</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">groups=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.ConvSize2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute shape after 2D-Convolution</p>
+<div class="math" id="equation-equ-dilationconv2dsize">
+<span class="eqno">(3)<a class="headerlink" href="#equation-equ-dilationconv2dsize" title="Permalink to this equation">¶</a></span>\[\begin{array}{l}
+H_{o} &= \left\lfloor\frac{H_{i}  + 2 \times P_h - D_h \times (K_h - 1) - 1}{S_h} + 1\right\rfloor \\
+W_{o} &= \left\lfloor\frac{W_{i}  + 2 \times P_w - D_w \times (K_w - 1) - 1}{S_w} + 1\right\rfloor
+\end{array}
+
+\]</div>
+<dl class="simple">
+<dt>CHWi<span class="classifier">{tulpe or list}</span></dt><dd><p>input data shape (C, H, W)</p>
+</dd>
+<dt>Co<span class="classifier">{integer number}</span></dt><dd><p>number of output chanels.</p>
+</dd>
+<dt>K<span class="classifier">{tulpe}</span></dt><dd><p>kernel size</p>
+</dd>
+<dt>S<span class="classifier">{tulpe}</span></dt><dd><p>stride size</p>
+</dd>
+<dt>P<span class="classifier">{tulpe}</span></dt><dd><p>padding size</p>
+</dd>
+<dt>D<span class="classifier">{tuple}, optional</span></dt><dd><p>dilation size (the default is (1, 1))</p>
+</dd>
+<dt>groups<span class="classifier">{number}, optional</span></dt><dd><p>[description] (the default is 1, which [default_description])</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>shape after 2D-Convolution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tulpe</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – dilation should be greater than zero.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.ConvTransposeSize1d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">ConvTransposeSize1d</code><span class="sig-paren">(</span><em class="sig-param">CLi</em>, <em class="sig-param">Co</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=1</em>, <em class="sig-param">OP=0</em>, <em class="sig-param">groups=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.ConvTransposeSize1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute shape after Transpose Convolution</p>
+<div class="math" id="equation-equ-transposeconv2dsize">
+<span class="eqno">(4)<a class="headerlink" href="#equation-equ-transposeconv2dsize" title="Permalink to this equation">¶</a></span>\[\begin{array}{l}
+L_{o} &= (L_{i} - 1) \times S_l - 2 \times P_l + D_l \times (K_l - 1) + OP_l + 1 \\
+\end{array}
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>CLi</strong> (<em>{tulpe</em><em> or </em><em>list}</em>) – input data shape (C, H, W)</p></li>
+<li><p><strong>Co</strong> (<em>{integer number}</em>) – number of output chanels.</p></li>
+<li><p><strong>K</strong> (<em>{tulpe}</em>) – kernel size</p></li>
+<li><p><strong>S</strong> (<em>{tulpe}</em>) – stride size</p></li>
+<li><p><strong>P</strong> (<em>{tulpe}</em>) – padding size</p></li>
+<li><p><strong>D</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – dilation size (the default is 1)</p></li>
+<li><p><strong>OP</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – output padding size (the default is 0)</p></li>
+<li><p><strong>groups</strong> (<em>{integer number}</em><em>, </em><em>optional</em>) – one group (the default is 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>shape after 2D-Transpose Convolution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tulpe</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – output padding must be smaller than either stride or dilation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.ConvTransposeSize2d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">ConvTransposeSize2d</code><span class="sig-paren">(</span><em class="sig-param">CHWi</em>, <em class="sig-param">Co</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">OP=(0</em>, <em class="sig-param">0)</em>, <em class="sig-param">groups=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.ConvTransposeSize2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute shape after Transpose Convolution</p>
+<div class="math" id="equation-equ-transposeconv2dsize">
+<span class="eqno">(5)<a class="headerlink" href="#equation-equ-transposeconv2dsize" title="Permalink to this equation">¶</a></span>\[\begin{array}{l}
+H_{o} &= (H_{i} - 1) \times S_h - 2 \times P_h + D_h \times (K_h - 1) + OP_h + 1 \\
+W_{o} &= (W_{i} - 1) \times S_w - 2 \times P_w + D_w \times (K_w - 1) + OP_w + 1
+\end{array}
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>CHWi</strong> (<em>{tulpe</em><em> or </em><em>list}</em>) – input data shape (C, H, W)</p></li>
+<li><p><strong>Co</strong> (<em>{integer number}</em>) – number of output chanels.</p></li>
+<li><p><strong>K</strong> (<em>{tulpe}</em>) – kernel size</p></li>
+<li><p><strong>S</strong> (<em>{tulpe}</em>) – stride size</p></li>
+<li><p><strong>P</strong> (<em>{tulpe}</em>) – padding size</p></li>
+<li><p><strong>D</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – dilation size (the default is (1, 1))</p></li>
+<li><p><strong>OP</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – output padding size (the default is (0, 0))</p></li>
+<li><p><strong>groups</strong> (<em>{integer number}</em><em>, </em><em>optional</em>) – one group (the default is 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>shape after 2D-Transpose Convolution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tulpe</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – output padding must be smaller than either stride or dilation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.PoolSize1d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">PoolSize1d</code><span class="sig-paren">(</span><em class="sig-param">CLi</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.PoolSize1d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.PoolSize2d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">PoolSize2d</code><span class="sig-paren">(</span><em class="sig-param">CHWi</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=(1</em>, <em class="sig-param">1)</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.PoolSize2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.UnPoolSize1d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">UnPoolSize1d</code><span class="sig-paren">(</span><em class="sig-param">CLi</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.UnPoolSize1d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.cnnsize.UnPoolSize2d">
+<code class="sig-prename descclassname">torchtool.nn.module.cnnsize.</code><code class="sig-name descname">UnPoolSize2d</code><span class="sig-paren">(</span><em class="sig-param">CHWi</em>, <em class="sig-param">K</em>, <em class="sig-param">S</em>, <em class="sig-param">P</em>, <em class="sig-param">D=(1</em>, <em class="sig-param">1)</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.cnnsize.UnPoolSize2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.complex_functions">
+<span id="torchtool-nn-module-complex-functions-module"></span><h2>torchtool.nn.module.complex_functions module<a class="headerlink" href="#module-torchtool.nn.module.complex_functions" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: spopoff</p>
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_dropout">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_dropout</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">p=0.5</em>, <em class="sig-param">training=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_dropout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_dropout2d">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_dropout2d</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">p=0.5</em>, <em class="sig-param">training=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_dropout2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_leaky_relu">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_leaky_relu</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">negative_slope_r=0.01</em>, <em class="sig-param">negative_slope_i=0.01</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_leaky_relu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_max_pool1d">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_max_pool1d</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">ceil_mode=False</em>, <em class="sig-param">return_indices=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_max_pool1d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_max_pool2d">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_max_pool2d</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">ceil_mode=False</em>, <em class="sig-param">return_indices=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_max_pool2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_relu">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_relu</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_relu" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.complex_functions.complex_upsample">
+<code class="sig-prename descclassname">torchtool.nn.module.complex_functions.</code><code class="sig-name descname">complex_upsample</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em>, <em class="sig-param">size=None</em>, <em class="sig-param">scale_factor=None</em>, <em class="sig-param">mode='nearest'</em>, <em class="sig-param">align_corners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_functions.complex_upsample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.complex_layers">
+<span id="torchtool-nn-module-complex-layers-module"></span><h2>torchtool.nn.module.complex_layers module<a class="headerlink" href="#module-torchtool.nn.module.complex_layers" title="Permalink to this headline">¶</a></h2>
+<p>Created on Tue Mar 19 10:30:02 2019</p>
+<p>&#64;author: Sebastien M. Popoff</p>
+<p>Based on <a class="reference external" href="https://openreview.net/forum?id=H1T2hmZAb">https://openreview.net/forum?id=H1T2hmZAb</a></p>
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexBatchNorm1d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexBatchNorm1d</code><span class="sig-paren">(</span><em class="sig-param">num_features</em>, <em class="sig-param">eps=1e-05</em>, <em class="sig-param">momentum=0.1</em>, <em class="sig-param">affine=True</em>, <em class="sig-param">track_running_stats=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexBatchNorm1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchtool.nn.module.complex_layers._ComplexBatchNorm</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexBatchNorm1d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexBatchNorm1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexBatchNorm1d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexBatchNorm1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexBatchNorm2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexBatchNorm2d</code><span class="sig-paren">(</span><em class="sig-param">num_features</em>, <em class="sig-param">eps=1e-05</em>, <em class="sig-param">momentum=0.1</em>, <em class="sig-param">affine=True</em>, <em class="sig-param">track_running_stats=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexBatchNorm2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torchtool.nn.module.complex_layers._ComplexBatchNorm</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexBatchNorm2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexBatchNorm2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexBatchNorm2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexBatchNorm2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv1">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexConv1</code><span class="sig-paren">(</span><em class="sig-param">axis</em>, <em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv1.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">Xr</em>, <em class="sig-param">Xi</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv1.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv1.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv1.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv1d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexConv1d</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv1d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv1d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv2">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexConv2</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv2.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">Xr</em>, <em class="sig-param">Xi</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv2.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv2.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv2.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexConv2d</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexConv2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConv2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexConvTranspose1d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexConvTranspose1d</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">output_padding=0</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConvTranspose1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexConvTranspose1d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConvTranspose1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexConvTranspose1d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConvTranspose1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexConvTranspose2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexConvTranspose2d</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">output_padding=0</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConvTranspose2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexConvTranspose2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConvTranspose2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexConvTranspose2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexConvTranspose2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexDropout">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexDropout</code><span class="sig-paren">(</span><em class="sig-param">p=0.5</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexDropout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexDropout.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexDropout.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexDropout.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexDropout.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexDropout2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexDropout2d</code><span class="sig-paren">(</span><em class="sig-param">p=0.5</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexDropout2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexDropout2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexDropout2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexDropout2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexDropout2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexLeakyReLU">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexLeakyReLU</code><span class="sig-paren">(</span><em class="sig-param">negative_slope_r=0.01</em>, <em class="sig-param">negative_slope_i=0.01</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexLeakyReLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexLeakyReLU.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexLeakyReLU.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexLeakyReLU.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexLeakyReLU.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexLinear">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexLinear</code><span class="sig-paren">(</span><em class="sig-param">in_features</em>, <em class="sig-param">out_features</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexLinear.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexLinear.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexLinear.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexLinear.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool1">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexMaxPool1</code><span class="sig-paren">(</span><em class="sig-param">axis</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">return_indices=False</em>, <em class="sig-param">ceil_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool1.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">Xr</em>, <em class="sig-param">Xi</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool1.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool1.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool1.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool1d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexMaxPool1d</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">return_indices=False</em>, <em class="sig-param">ceil_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool1d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool1d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool2">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexMaxPool2</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">return_indices=False</em>, <em class="sig-param">ceil_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool2.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">Xr</em>, <em class="sig-param">Xi</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool2.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool2.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool2.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexMaxPool2d</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">return_indices=False</em>, <em class="sig-param">ceil_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexMaxPool2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexMaxPool2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexReLU">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexReLU</code><span class="sig-paren">(</span><em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexReLU" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexReLU.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexReLU.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexReLU.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexReLU.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexSequential">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexSequential</code><span class="sig-paren">(</span><em class="sig-param">*args: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexSequential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.container.Sequential</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexSequential.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_t</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexSequential.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexSequential.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexSequential.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.ComplexUpsample">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">ComplexUpsample</code><span class="sig-paren">(</span><em class="sig-param">size=None</em>, <em class="sig-param">scale_factor=None</em>, <em class="sig-param">mode='nearest'</em>, <em class="sig-param">align_corners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexUpsample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.ComplexUpsample.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexUpsample.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.ComplexUpsample.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.ComplexUpsample.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.NaiveComplexBatchNorm1d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">NaiveComplexBatchNorm1d</code><span class="sig-paren">(</span><em class="sig-param">num_features</em>, <em class="sig-param">eps=1e-05</em>, <em class="sig-param">momentum=0.1</em>, <em class="sig-param">affine=True</em>, <em class="sig-param">track_running_stats=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.NaiveComplexBatchNorm1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Naive approach to complex batch norm, perform batch norm independently on real and imaginary part.</p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.NaiveComplexBatchNorm1d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.NaiveComplexBatchNorm1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.NaiveComplexBatchNorm1d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.NaiveComplexBatchNorm1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.complex_layers.NaiveComplexBatchNorm2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.complex_layers.</code><code class="sig-name descname">NaiveComplexBatchNorm2d</code><span class="sig-paren">(</span><em class="sig-param">num_features</em>, <em class="sig-param">eps=1e-05</em>, <em class="sig-param">momentum=0.1</em>, <em class="sig-param">affine=True</em>, <em class="sig-param">track_running_stats=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.NaiveComplexBatchNorm2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<p>Naive approach to complex batch norm, perform batch norm independently on real and imaginary part.</p>
+<dl class="method">
+<dt id="torchtool.nn.module.complex_layers.NaiveComplexBatchNorm2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">input_r</em>, <em class="sig-param">input_i</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.complex_layers.NaiveComplexBatchNorm2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.complex_layers.NaiveComplexBatchNorm2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.complex_layers.NaiveComplexBatchNorm2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.convolution">
+<span id="torchtool-nn-module-convolution-module"></span><h2>torchtool.nn.module.convolution module<a class="headerlink" href="#module-torchtool.nn.module.convolution" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.module.convolution.Conv1">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.convolution.</code><code class="sig-name descname">Conv1</code><span class="sig-paren">(</span><em class="sig-param">axis</em>, <em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.Conv1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.convolution.Conv1.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.Conv1.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.convolution.Conv1.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.convolution.Conv1.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.convolution.Conv2">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.convolution.</code><code class="sig-name descname">Conv2</code><span class="sig-paren">(</span><em class="sig-param">in_channels</em>, <em class="sig-param">out_channels</em>, <em class="sig-param">kernel_size=3</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">bias=True</em>, <em class="sig-param">padding_mode='zeros'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.Conv2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.convolution.Conv2.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.Conv2.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.convolution.Conv2.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.convolution.Conv2.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.convolution.FFTConv1">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.convolution.</code><code class="sig-name descname">FFTConv1</code><span class="sig-paren">(</span><em class="sig-param">nh</em>, <em class="sig-param">h=None</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">nfft=None</em>, <em class="sig-param">shape='same'</em>, <em class="sig-param">train=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.FFTConv1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.convolution.FFTConv1.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.FFTConv1.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.convolution.FFTConv1.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.convolution.FFTConv1.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.convolution.MaxPool1">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.convolution.</code><code class="sig-name descname">MaxPool1</code><span class="sig-paren">(</span><em class="sig-param">axis</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">return_indices=False</em>, <em class="sig-param">ceil_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.MaxPool1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.convolution.MaxPool1.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.MaxPool1.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.convolution.MaxPool1.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.convolution.MaxPool1.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.convolution.MaxPool2">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.convolution.</code><code class="sig-name descname">MaxPool2</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">return_indices=False</em>, <em class="sig-param">ceil_mode=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.MaxPool2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.convolution.MaxPool2.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.convolution.MaxPool2.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.convolution.MaxPool2.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.convolution.MaxPool2.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.edge">
+<span id="torchtool-nn-module-edge-module"></span><h2>torchtool.nn.module.edge module<a class="headerlink" href="#module-torchtool.nn.module.edge" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.module.edge.EdgeDetector">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.edge.</code><code class="sig-name descname">EdgeDetector</code><a class="headerlink" href="#torchtool.nn.module.edge.EdgeDetector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.edge.EdgeDetector.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.edge.EdgeDetector.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.edge.EdgeDetector.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.edge.EdgeDetector.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.edge.EdgeFeatureExtractor">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.edge.</code><code class="sig-name descname">EdgeFeatureExtractor</code><span class="sig-paren">(</span><em class="sig-param">Ci</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.edge.EdgeFeatureExtractor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.edge.EdgeFeatureExtractor.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.edge.EdgeFeatureExtractor.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.edge.EdgeFeatureExtractor.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.edge.EdgeFeatureExtractor.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.fft_layers">
+<span id="torchtool-nn-module-fft-layers-module"></span><h2>torchtool.nn.module.fft_layers module<a class="headerlink" href="#module-torchtool.nn.module.fft_layers" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.module.fft_layers.FFTLayer1d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.fft_layers.</code><code class="sig-name descname">FFTLayer1d</code><span class="sig-paren">(</span><em class="sig-param">nfft=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.fft_layers.FFTLayer1d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.fft_layers.FFTLayer1d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.fft_layers.FFTLayer1d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.fft_layers.FFTLayer1d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.fft_layers.FFTLayer1d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.gaborconv2d">
+<span id="torchtool-nn-module-gaborconv2d-module"></span><h2>torchtool.nn.module.gaborconv2d module<a class="headerlink" href="#module-torchtool.nn.module.gaborconv2d" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.module.gaborconv2d.GaborConv2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.gaborconv2d.</code><code class="sig-name descname">GaborConv2d</code><span class="sig-paren">(</span><em class="sig-param">channel_in</em>, <em class="sig-param">channel_out</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=1</em>, <em class="sig-param">padding=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.gaborconv2d.GaborConv2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.gaborconv2d.GaborConv2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.gaborconv2d.GaborConv2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.gaborconv2d.GaborConv2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.gaborconv2d.GaborConv2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="torchtool.nn.module.gaborconv2d.gabor_fn">
+<code class="sig-prename descclassname">torchtool.nn.module.gaborconv2d.</code><code class="sig-name descname">gabor_fn</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">channel_in</em>, <em class="sig-param">channel_out</em>, <em class="sig-param">sigma</em>, <em class="sig-param">theta</em>, <em class="sig-param">Lambda</em>, <em class="sig-param">psi</em>, <em class="sig-param">gamma</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.gaborconv2d.gabor_fn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module.pool">
+<span id="torchtool-nn-module-pool-module"></span><h2>torchtool.nn.module.pool module<a class="headerlink" href="#module-torchtool.nn.module.pool" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchtool.nn.module.pool.MeanSquarePool2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.pool.</code><code class="sig-name descname">MeanSquarePool2d</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">ceil_mode=False</em>, <em class="sig-param">count_include_pad=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.pool.MeanSquarePool2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.pool.MeanSquarePool2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.pool.MeanSquarePool2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.pool.MeanSquarePool2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.pool.MeanSquarePool2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchtool.nn.module.pool.PnormPool2d">
+<em class="property">class </em><code class="sig-prename descclassname">torchtool.nn.module.pool.</code><code class="sig-name descname">PnormPool2d</code><span class="sig-paren">(</span><em class="sig-param">kernel_size</em>, <em class="sig-param">p=2</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">ceil_mode=False</em>, <em class="sig-param">count_include_pad=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.pool.PnormPool2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<dl class="method">
+<dt id="torchtool.nn.module.pool.PnormPool2d.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.nn.module.pool.PnormPool2d.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchtool.nn.module.pool.PnormPool2d.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchtool.nn.module.pool.PnormPool2d.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchtool.nn.module">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchtool.nn.module" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="torchtool.spl.html" class="btn btn-neutral float-right" title="torchtool.spl package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torchtool.nn.loss.html" class="btn btn-neutral float-left" title="torchtool.nn.loss package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2019, Zhi Liu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

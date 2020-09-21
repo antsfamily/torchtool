@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,32 +11,34 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-        <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchtool.base package" href="torchtool.base.html" />
@@ -55,7 +56,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> IPRS
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
           
 
           
@@ -78,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,10 +93,12 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">torchtool package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.evaluation.html">torchtool.evaluation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.spl.html">torchtool.spl package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-torchtool">Module contents</a></li>
@@ -107,6 +111,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -145,7 +150,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="modules.html">torchtool</a> &raquo;</li>
         
@@ -176,17 +181,34 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.base.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.base.html#module-torchtool.base.arrayops">torchtool.base.arrayops module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.base.html#module-torchtool.base.mathops">torchtool.base.mathops module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.base.html#module-torchtool.base.ops">torchtool.base.ops module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.base.html#module-torchtool.base">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.diagnose.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.diagnose.html#module-torchtool.diagnose.plotgradflow">torchtool.diagnose.plotgradflow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.diagnose.html#module-torchtool.diagnose">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="torchtool.dip.html">torchtool.dip package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.dip.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dip.html#module-torchtool.dip.image_converter">torchtool.dip.image_converter module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.dip.html#module-torchtool.dip.transform">torchtool.dip.transform module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.dip.html#module-torchtool.dip">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.convolution">torchtool.dsp.convolution module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.entropy">torchtool.dsp.entropy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.ffts">torchtool.dsp.ffts module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.filters">torchtool.dsp.filters module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.interpolation">torchtool.dsp.interpolation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.kernels">torchtool.dsp.kernels module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp.normalsignals">torchtool.dsp.normalsignals module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.dsp.html#module-torchtool.dsp">Module contents</a></li>
 </ul>
 </li>
@@ -195,14 +217,49 @@
 <li class="toctree-l2"><a class="reference internal" href="torchtool.evaluation.html#module-torchtool.evaluation.classification">torchtool.evaluation.classification module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.evaluation.html#module-torchtool.evaluation.retrieval">torchtool.evaluation.retrieval module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.evaluation.html#module-torchtool.evaluation.similarity">torchtool.evaluation.similarity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.evaluation.html#module-torchtool.evaluation.ssims">torchtool.evaluation.ssims module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.evaluation.html#module-torchtool.evaluation">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="torchtool.nn.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torchtool.nn.html#module-torchtool.nn.cnn">torchtool.nn.cnn module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="torchtool.nn.html#module-torchtool.nn.loss">torchtool.nn.loss module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.nn.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="torchtool.nn.loss.html">torchtool.nn.loss package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.contrast">torchtool.nn.loss.contrast module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.entropy">torchtool.nn.loss.entropy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.norm">torchtool.nn.loss.norm module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.retrieval">torchtool.nn.loss.retrieval module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#torchtool-nn-loss-segmentation-module">torchtool.nn.loss.segmentation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.semantic">torchtool.nn.loss.semantic module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.ssims">torchtool.nn.loss.ssims module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss.variation">torchtool.nn.loss.variation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.loss.html#module-torchtool.nn.loss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchtool.nn.module.html">torchtool.nn.module package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.balanceconv2d">torchtool.nn.module.balanceconv2d module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.cnnsize">torchtool.nn.module.cnnsize module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.complex_functions">torchtool.nn.module.complex_functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.complex_layers">torchtool.nn.module.complex_layers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.convolution">torchtool.nn.module.convolution module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.edge">torchtool.nn.module.edge module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.fft_layers">torchtool.nn.module.fft_layers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.gaborconv2d">torchtool.nn.module.gaborconv2d module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module.pool">torchtool.nn.module.pool module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.nn.module.html#module-torchtool.nn.module">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="torchtool.nn.html#module-torchtool.nn">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="torchtool.spl.html">torchtool.spl package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.spl.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.spl.html#module-torchtool.spl.spfunction">torchtool.spl.spfunction module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.spl.html#module-torchtool.spl.voptimizer">torchtool.spl.voptimizer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="torchtool.spl.html#module-torchtool.spl">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -233,11 +290,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018-2019, Zhi Liu
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -248,7 +313,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

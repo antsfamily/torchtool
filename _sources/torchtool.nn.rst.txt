@@ -1,30 +1,18 @@
 torchtool.nn package
 ====================
 
-Submodules
-----------
+Subpackages
+-----------
 
-torchtool.nn.cnn module
------------------------
+.. toctree::
 
-.. automodule:: torchtool.nn.cnn
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-torchtool.nn.loss module
-------------------------
-
-.. automodule:: torchtool.nn.loss
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
+   torchtool.nn.loss
+   torchtool.nn.module
 
 Module contents
 ---------------
 
 .. automodule:: torchtool.nn
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:

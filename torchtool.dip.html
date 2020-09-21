@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
@@ -12,36 +11,38 @@
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
   
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"></script>
-        <script type="text/javascript" src="_static/katex_autorenderer.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" type="text/css" />
-  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchtool.dsp package" href="torchtool.dsp.html" />
-    <link rel="prev" title="torchtool.base package" href="torchtool.base.html" /> 
+    <link rel="prev" title="torchtool.diagnose package" href="torchtool.diagnose.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -55,7 +56,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> IPRS
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
           
 
           
@@ -78,6 +79,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,10 +93,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="torchtool.html">torchtool package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchtool.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchtool.base.html">torchtool.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.diagnose.html">torchtool.diagnose package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchtool.dip package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.dsp.html">torchtool.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.evaluation.html">torchtool.evaluation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchtool.nn.html">torchtool.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchtool.spl.html">torchtool.spl package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchtool.html#module-torchtool">Module contents</a></li>
@@ -107,6 +111,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -145,7 +150,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="modules.html">torchtool</a> &raquo;</li>
         
@@ -175,31 +180,52 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-torchtool.dip.image_converter">
+<span id="torchtool-dip-image-converter-module"></span><h2>torchtool.dip.image_converter module<a class="headerlink" href="#module-torchtool.dip.image_converter" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchtool.dip.image_converter.toimage">
+<code class="sig-prename descclassname">torchtool.dip.image_converter.</code><code class="sig-name descname">toimage</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">drange=(0.0</em>, <em class="sig-param">255.0)</em>, <em class="sig-param">method='2Sigma'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dip.image_converter.toimage" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert to image</p>
+<p>Convert data to image data <span class="math">\(\bm X\)</span> with dynamic range <span class="math">\(d=[min, max]\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{numpy ndarray}</em>) – data to be converted</p></li>
+<li><p><strong>drange</strong> (<em>{tuple}</em><em>, </em><em>optional</em>) – dynamic range (the default is (0., 255.))</p></li>
+<li><p><strong>method</strong> (<em>{str}</em><em>, </em><em>optional</em>) – converting method (the default is ‘2Sigma’, which means two-sigma)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>Y</strong> – converted image data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{numpy ndarray}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-torchtool.dip.transform">
 <span id="torchtool-dip-transform-module"></span><h2>torchtool.dip.transform module<a class="headerlink" href="#module-torchtool.dip.transform" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="torchtool.dip.transform.normalize">
-<code class="descclassname">torchtool.dip.transform.</code><code class="descname">normalize</code><span class="sig-paren">(</span><em>X</em>, <em>mean=None</em>, <em>std=None</em>, <em>axis=None</em>, <em>ver=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dip.transform.normalize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchtool.dip.transform.</code><code class="sig-name descname">normalize</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">mean=None</em>, <em class="sig-param">std=None</em>, <em class="sig-param">axis=None</em>, <em class="sig-param">ver=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchtool.dip.transform.normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>normalization</p>
 <div class="math">
 \[\bar{X} = \frac{X-\mu}{\sigma}
 
 \]</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>X</strong> (<em>{torch tensor}</em>) – data to be normalized,</li>
-<li><strong>mean</strong> (<em>{list</em><em> or </em><em>None}</em><em>, </em><em>optional</em>) – mean value (the default is None, which auto computed)</li>
-<li><strong>std</strong> (<em>{list</em><em> or </em><em>None}</em><em>, </em><em>optional</em>) – standard deviation (the default is None, which auto computed)</li>
-<li><strong>axis</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – specify the axis for computing mean value (the default is None, which all elements)</li>
-<li><strong>axis</strong> – if True, also return the mean and std (the default is False, which all elements)</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{torch tensor}</em>) – data to be normalized,</p></li>
+<li><p><strong>mean</strong> (<em>{list</em><em> or </em><em>None}</em><em>, </em><em>optional</em>) – mean value (the default is None, which auto computed)</p></li>
+<li><p><strong>std</strong> (<em>{list</em><em> or </em><em>None}</em><em>, </em><em>optional</em>) – standard deviation (the default is None, which auto computed)</p></li>
+<li><p><strong>axis</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – specify the axis for computing mean value (the default is None, which all elements)</p></li>
+<li><p><strong>axis</strong> – if True, also return the mean and std (the default is False, which all elements)</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -219,7 +245,7 @@
         <a href="torchtool.dsp.html" class="btn btn-neutral float-right" title="torchtool.dsp package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchtool.base.html" class="btn btn-neutral float-left" title="torchtool.base package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchtool.diagnose.html" class="btn btn-neutral float-left" title="torchtool.diagnose package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -228,11 +254,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2018-2019, Zhi Liu
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -243,7 +277,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
