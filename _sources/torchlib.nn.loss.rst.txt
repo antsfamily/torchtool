@@ -1,11 +1,11 @@
 torchlib.nn.loss package
-=========================
+========================
 
 Submodules
 ----------
 
 torchlib.nn.loss.contrast module
----------------------------------
+--------------------------------
 
 .. automodule:: torchlib.nn.loss.contrast
    :members:
@@ -13,7 +13,7 @@ torchlib.nn.loss.contrast module
    :show-inheritance:
 
 torchlib.nn.loss.entropy module
---------------------------------
+-------------------------------
 
 .. automodule:: torchlib.nn.loss.entropy
    :members:
@@ -21,7 +21,7 @@ torchlib.nn.loss.entropy module
    :show-inheritance:
 
 torchlib.nn.loss.norm module
------------------------------
+----------------------------
 
 .. automodule:: torchlib.nn.loss.norm
    :members:
@@ -29,7 +29,7 @@ torchlib.nn.loss.norm module
    :show-inheritance:
 
 torchlib.nn.loss.retrieval module
-----------------------------------
+---------------------------------
 
 .. automodule:: torchlib.nn.loss.retrieval
    :members:
@@ -37,7 +37,7 @@ torchlib.nn.loss.retrieval module
    :show-inheritance:
 
 torchlib.nn.loss.segmentation module
--------------------------------------
+------------------------------------
 
 .. automodule:: torchlib.nn.loss.segmentation
    :members:
@@ -45,7 +45,7 @@ torchlib.nn.loss.segmentation module
    :show-inheritance:
 
 torchlib.nn.loss.semantic module
----------------------------------
+--------------------------------
 
 .. automodule:: torchlib.nn.loss.semantic
    :members:
@@ -53,7 +53,7 @@ torchlib.nn.loss.semantic module
    :show-inheritance:
 
 torchlib.nn.loss.ssims module
-------------------------------
+-----------------------------
 
 .. automodule:: torchlib.nn.loss.ssims
    :members:
@@ -61,7 +61,7 @@ torchlib.nn.loss.ssims module
    :show-inheritance:
 
 torchlib.nn.loss.variation module
-----------------------------------
+---------------------------------
 
 .. automodule:: torchlib.nn.loss.variation
    :members:

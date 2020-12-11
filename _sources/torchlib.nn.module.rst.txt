@@ -1,11 +1,11 @@
 torchlib.nn.module package
-===========================
+==========================
 
 Submodules
 ----------
 
 torchlib.nn.module.balanceconv2d module
-----------------------------------------
+---------------------------------------
 
 .. automodule:: torchlib.nn.module.balanceconv2d
    :members:
@@ -13,7 +13,7 @@ torchlib.nn.module.balanceconv2d module
    :show-inheritance:
 
 torchlib.nn.module.cnnsize module
-----------------------------------
+---------------------------------
 
 .. automodule:: torchlib.nn.module.cnnsize
    :members:
@@ -21,7 +21,7 @@ torchlib.nn.module.cnnsize module
    :show-inheritance:
 
 torchlib.nn.module.complex\_functions module
----------------------------------------------
+--------------------------------------------
 
 .. automodule:: torchlib.nn.module.complex_functions
    :members:
@@ -29,7 +29,7 @@ torchlib.nn.module.complex\_functions module
    :show-inheritance:
 
 torchlib.nn.module.complex\_layers module
-------------------------------------------
+-----------------------------------------
 
 .. automodule:: torchlib.nn.module.complex_layers
    :members:
@@ -37,7 +37,7 @@ torchlib.nn.module.complex\_layers module
    :show-inheritance:
 
 torchlib.nn.module.convolution module
---------------------------------------
+-------------------------------------
 
 .. automodule:: torchlib.nn.module.convolution
    :members:
@@ -45,7 +45,7 @@ torchlib.nn.module.convolution module
    :show-inheritance:
 
 torchlib.nn.module.edge module
--------------------------------
+------------------------------
 
 .. automodule:: torchlib.nn.module.edge
    :members:
@@ -53,7 +53,7 @@ torchlib.nn.module.edge module
    :show-inheritance:
 
 torchlib.nn.module.fft\_layers module
---------------------------------------
+-------------------------------------
 
 .. automodule:: torchlib.nn.module.fft_layers
    :members:
@@ -61,7 +61,7 @@ torchlib.nn.module.fft\_layers module
    :show-inheritance:
 
 torchlib.nn.module.gaborconv2d module
---------------------------------------
+-------------------------------------
 
 .. automodule:: torchlib.nn.module.gaborconv2d
    :members:
@@ -69,7 +69,7 @@ torchlib.nn.module.gaborconv2d module
    :show-inheritance:
 
 torchlib.nn.module.pool module
--------------------------------
+------------------------------
 
 .. automodule:: torchlib.nn.module.pool
    :members:

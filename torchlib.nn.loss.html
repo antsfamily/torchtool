@@ -4,29 +4,29 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchlib.nn.loss package &mdash; torchlib 1.0 documentation</title>
+  
 
-  <title>torchlib.nn.loss package &mdash; IPRS 1.0 documentation</title>
-
-
-
+  
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
+  
+  
+  
+  
 
-
-
-
-
-
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-
+  
+    
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
@@ -35,39 +35,39 @@
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
-
+    
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
-
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchlib.nn.module package" href="torchlib.nn.module.html" />
-    <link rel="prev" title="torchlib.nn package" href="torchlib.nn.html" />
+    <link rel="prev" title="torchlib.nn package" href="torchlib.nn.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-
+   
   <div class="wy-grid-for-nav">
-
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchlib
+          
 
-
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
-
-
-
+          
           </a>
 
+          
+            
+            
+          
 
-
-
-
-
-
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,17 +76,17 @@
   </form>
 </div>
 
-
+          
         </div>
 
-
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-
-
-
+          
+            
+            
+              
+            
+            
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
@@ -94,11 +94,13 @@
 <li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.dip.html">torchlib.dip package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -108,29 +110,29 @@
 </li>
 </ul>
 
-
-
+            
+          
         </div>
-
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-
+      
       <nav class="wy-nav-top" aria-label="top navigation">
-
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IPRS</a>
-
+          <a href="index.html">torchlib</a>
+        
       </nav>
 
 
       <div class="wy-nav-content">
-
+        
         <div class="rst-content">
-
-
+        
+          
 
 
 
@@ -149,34 +151,34 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-
+        
           <li><a href="modules.html">torchlib</a> &raquo;</li>
-
+        
           <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
-
+        
           <li><a href="torchlib.nn.html">torchlib.nn package</a> &raquo;</li>
-
+        
       <li>torchlib.nn.loss package</li>
-
-
+    
+    
       <li class="wy-breadcrumbs-aside">
-
-
+        
+            
             <a href="_sources/torchlib.nn.loss.rst.txt" rel="nofollow"> View page source</a>
-
-
+          
+        
       </li>
-
+    
   </ul>
 
-
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
+            
   <div class="section" id="torchlib-nn-loss-package">
 <h1>torchlib.nn.loss package<a class="headerlink" href="#torchlib-nn-loss-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
@@ -282,6 +284,26 @@
 <dl class="attribute">
 <dt id="torchlib.nn.loss.norm.Frobenius.training">
 <code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.norm.Frobenius.training" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="torchlib.nn.loss.norm.LogFrobenius">
+<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.norm.</code><code class="sig-name descname">LogFrobenius</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em>, <em class="sig-param">p=2</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.norm.LogFrobenius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
+<div class="math">
+\[{\log}{\||\bm X|\|_p^p} = \log {\left((\sum{|x|^p})^{1/p}\right)}
+
+\]</div>
+<dl class="method">
+<dt id="torchlib.nn.loss.norm.LogFrobenius.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.norm.LogFrobenius.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="torchlib.nn.loss.norm.LogFrobenius.training">
+<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.norm.LogFrobenius.training" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -518,37 +540,37 @@
 
 
            </div>
-
+           
           </div>
           <footer>
-
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-
+      
         <a href="torchlib.nn.module.html" class="btn btn-neutral float-right" title="torchlib.nn.module package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-
-
+      
+      
         <a href="torchlib.nn.html" class="btn btn-neutral float-left" title="torchlib.nn package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-
+      
     </div>
-
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-
-        &copy; Copyright 2018-2019, Zhi Liu
+        
+        &copy; Copyright 2018-2020, Zhi Liu
 
     </p>
   </div>
-
-
-
+    
+    
+    
     Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-
+    
     <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -558,7 +580,7 @@
     </section>
 
   </div>
-
+  
 
   <script type="text/javascript">
       jQuery(function () {
@@ -566,10 +588,10 @@
       });
   </script>
 
-
-
-
-
+  
+  
+    
+   
 
 </body>
 </html>

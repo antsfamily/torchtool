@@ -1,21 +1,21 @@
-torchlib.dip package
+torchlib.misc package
 =====================
 
 Submodules
 ----------
 
-torchlib.dip.image\_converter module
--------------------------------------
+torchlib.misc.mapping\_operation module
+---------------------------------------
 
-.. automodule:: torchlib.dip.image_converter
+.. automodule:: torchlib.misc.mapping_operation
    :members:
    :undoc-members:
    :show-inheritance:
 
-torchlib.dip.transform module
+torchlib.misc.transform module
 ------------------------------
 
-.. automodule:: torchlib.dip.transform
+.. automodule:: torchlib.misc.transform
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +24,7 @@ torchlib.dip.transform module
 Module contents
 ---------------
 
-.. automodule:: torchlib.dip
+.. automodule:: torchlib.misc
    :members:
    :undoc-members:
    :show-inheritance:

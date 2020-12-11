@@ -1,27 +1,19 @@
 torchlib.dsp package
-=====================
+====================
 
 Submodules
 ----------
 
 torchlib.dsp.convolution module
---------------------------------
+-------------------------------
 
 .. automodule:: torchlib.dsp.convolution
    :members:
    :undoc-members:
    :show-inheritance:
 
-torchlib.dsp.entropy module
-----------------------------
-
-.. automodule:: torchlib.dsp.entropy
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 torchlib.dsp.ffts module
--------------------------
+------------------------
 
 .. automodule:: torchlib.dsp.ffts
    :members:
@@ -29,7 +21,7 @@ torchlib.dsp.ffts module
    :show-inheritance:
 
 torchlib.dsp.filters module
-----------------------------
+---------------------------
 
 .. automodule:: torchlib.dsp.filters
    :members:
@@ -37,7 +29,7 @@ torchlib.dsp.filters module
    :show-inheritance:
 
 torchlib.dsp.interpolation module
-----------------------------------
+---------------------------------
 
 .. automodule:: torchlib.dsp.interpolation
    :members:
@@ -45,7 +37,7 @@ torchlib.dsp.interpolation module
    :show-inheritance:
 
 torchlib.dsp.kernels module
-----------------------------
+---------------------------
 
 .. automodule:: torchlib.dsp.kernels
    :members:
@@ -53,7 +45,7 @@ torchlib.dsp.kernels module
    :show-inheritance:
 
 torchlib.dsp.normalsignals module
-----------------------------------
+---------------------------------
 
 .. automodule:: torchlib.dsp.normalsignals
    :members:

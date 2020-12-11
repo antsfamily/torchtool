@@ -4,29 +4,29 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchlib.evaluation package &mdash; torchlib 1.0 documentation</title>
+  
 
-  <title>torchlib.evaluation package &mdash; IPRS 1.0 documentation</title>
-
-
-
+  
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
+  
+  
+  
+  
 
-
-
-
-
-
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-
+  
+    
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
@@ -35,39 +35,39 @@
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
-
+    
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
-
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.nn package" href="torchlib.nn.html" />
-    <link rel="prev" title="torchlib.dsp package" href="torchlib.dsp.html" />
+    <link rel="next" title="torchlib.misc package" href="torchlib.misc.html" />
+    <link rel="prev" title="torchlib.dsp package" href="torchlib.dsp.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-
+   
   <div class="wy-grid-for-nav">
-
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchlib
+          
 
-
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
-
-
-
+          
           </a>
 
+          
+            
+            
+          
 
-
-
-
-
-
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,17 +76,17 @@
   </form>
 </div>
 
-
+          
         </div>
 
-
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-
-
-
+          
+            
+            
+              
+            
+            
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
@@ -94,11 +94,13 @@
 <li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.dip.html">torchlib.dip package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -108,29 +110,29 @@
 </li>
 </ul>
 
-
-
+            
+          
         </div>
-
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-
+      
       <nav class="wy-nav-top" aria-label="top navigation">
-
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IPRS</a>
-
+          <a href="index.html">torchlib</a>
+        
       </nav>
 
 
       <div class="wy-nav-content">
-
+        
         <div class="rst-content">
-
-
+        
+          
 
 
 
@@ -149,32 +151,32 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-
+        
           <li><a href="modules.html">torchlib</a> &raquo;</li>
-
+        
           <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
-
+        
       <li>torchlib.evaluation package</li>
-
-
+    
+    
       <li class="wy-breadcrumbs-aside">
-
-
+        
+            
             <a href="_sources/torchlib.evaluation.rst.txt" rel="nofollow"> View page source</a>
-
-
+          
+        
       </li>
-
+    
   </ul>
 
-
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
+            
   <div class="section" id="torchlib-evaluation-package">
 <h1>torchlib.evaluation package<a class="headerlink" href="#torchlib-evaluation-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
@@ -191,8 +193,33 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – Predicted one hot matrix, <span class="math">\(\{0, 1\}\)</span></p></li>
 <li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – Referenced one hot matrix, <span class="math">\(\{0, 1\}\)</span></p></li>
-<li><p><strong>TH</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.8)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – threshold: X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
+<li><p><strong>TH</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – threshold: X &gt; TH –&gt; 1, X &lt;= TH –&gt; 0</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.evaluation.entropy">
+<span id="torchlib-evaluation-entropy-module"></span><h2>torchlib.evaluation.entropy module<a class="headerlink" href="#module-torchlib.evaluation.entropy" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.evaluation.entropy.entropy">
+<code class="sig-prename descclassname">torchlib.evaluation.entropy.</code><code class="sig-name descname">entropy</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">mode='shannon'</em>, <em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.entropy.entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>compute the entropy of the inputs</p>
+<p>[description]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>{torch tensor}</em>) – The complex or real inputs, for complex inputs, both complex and real representations are surpported.</p></li>
+<li><p><strong>mode</strong> (<em>{str}</em><em>, </em><em>optional</em>) – The entropy mode: <code class="docutils literal notranslate"><span class="pre">'shannon'</span></code> or <code class="docutils literal notranslate"><span class="pre">'natural'</span></code> (the default is ‘shannon’)</p></li>
+<li><p><strong>reduction</strong> (<em>{str}</em><em>, </em><em>optional</em>) – The operation in batch dim, <code class="docutils literal notranslate"><span class="pre">'None'</span></code>, <code class="docutils literal notranslate"><span class="pre">'mean'</span></code> or <code class="docutils literal notranslate"><span class="pre">'sum'</span></code> (the default is ‘mean’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>S</strong> – The entropy of the inputs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch tensor}</p>
 </dd>
 </dl>
 </dd></dl>
@@ -581,7 +608,7 @@ c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\si
 <dd class="field-even"><p>IF <code class="docutils literal notranslate"><span class="pre">full</span></code> is True, returns SSIM, luminance, contrast and structure index, otherwise, only returns SSIM.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)">float</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -594,37 +621,37 @@ c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\si
 
 
            </div>
-
+           
           </div>
           <footer>
-
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-
-        <a href="torchlib.nn.html" class="btn btn-neutral float-right" title="torchlib.nn package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-
-
+      
+        <a href="torchlib.misc.html" class="btn btn-neutral float-right" title="torchlib.misc package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
         <a href="torchlib.dsp.html" class="btn btn-neutral float-left" title="torchlib.dsp package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-
+      
     </div>
-
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-
-        &copy; Copyright 2018-2019, Zhi Liu
+        
+        &copy; Copyright 2018-2020, Zhi Liu
 
     </p>
   </div>
-
-
-
+    
+    
+    
     Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-
+    
     <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -634,7 +661,7 @@ c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\si
     </section>
 
   </div>
-
+  
 
   <script type="text/javascript">
       jQuery(function () {
@@ -642,10 +669,10 @@ c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\si
       });
   </script>
 
-
-
-
-
+  
+  
+    
+   
 
 </body>
 </html>

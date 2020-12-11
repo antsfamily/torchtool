@@ -4,29 +4,29 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchlib.summary package &mdash; torchlib 1.0 documentation</title>
+  
 
-  <title>torchlib.diagnose package &mdash; IPRS 1.0 documentation</title>
-
-
-
+  
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
+  
+  
+  
+  
 
-
-
-
-
-
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-
+  
+    
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
@@ -35,39 +35,38 @@
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
-
+    
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
-
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.dip package" href="torchlib.dip.html" />
-    <link rel="prev" title="torchlib.base package" href="torchlib.base.html" />
+    <link rel="prev" title="torchlib.spl package" href="torchlib.spl.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-
+   
   <div class="wy-grid-for-nav">
-
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchlib
+          
 
-
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
-
-
-
+          
           </a>
 
+          
+            
+            
+          
 
-
-
-
-
-
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,29 +75,31 @@
   </form>
 </div>
 
-
+          
         </div>
 
-
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-
-
-
+          
+            
+            
+              
+            
+            
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="torchlib.html">torchlib package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.diagnose package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.dip.html">torchlib.dip package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.summary package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -108,29 +109,29 @@
 </li>
 </ul>
 
-
-
+            
+          
         </div>
-
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-
+      
       <nav class="wy-nav-top" aria-label="top navigation">
-
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IPRS</a>
-
+          <a href="index.html">torchlib</a>
+        
       </nav>
 
 
       <div class="wy-nav-content">
-
+        
         <div class="rst-content">
-
-
+        
+          
 
 
 
@@ -149,92 +150,102 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-
+        
           <li><a href="modules.html">torchlib</a> &raquo;</li>
-
+        
           <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
-
-      <li>torchlib.diagnose package</li>
-
-
+        
+      <li>torchlib.summary package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
-
-
-            <a href="_sources/torchlib.diagnose.rst.txt" rel="nofollow"> View page source</a>
-
-
+        
+            
+            <a href="_sources/torchlib.summary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
-
+    
   </ul>
 
-
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
-  <div class="section" id="torchlib-diagnose-package">
-<h1>torchlib.diagnose package<a class="headerlink" href="#torchlib-diagnose-package" title="Permalink to this headline">¶</a></h1>
+            
+  <div class="section" id="torchlib-summary-package">
+<h1>torchlib.summary package<a class="headerlink" href="#torchlib-summary-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.diagnose.plotgradflow">
-<span id="torchlib-diagnose-plotgradflow-module"></span><h2>torchlib.diagnose.plotgradflow module<a class="headerlink" href="#module-torchlib.diagnose.plotgradflow" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchlib.diagnose.plotgradflow.plot_gradflow_v1">
-<code class="sig-prename descclassname">torchlib.diagnose.plotgradflow.</code><code class="sig-name descname">plot_gradflow_v1</code><span class="sig-paren">(</span><em class="sig-param">named_parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.diagnose.plotgradflow.plot_gradflow_v1" title="Permalink to this definition">¶</a></dt>
+<div class="section" id="module-torchlib.summary.loss_log">
+<span id="torchlib-summary-loss-log-module"></span><h2>torchlib.summary.loss_log module<a class="headerlink" href="#module-torchlib.summary.loss_log" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchlib.summary.loss_log.LossLog">
+<em class="property">class </em><code class="sig-prename descclassname">torchlib.summary.loss_log.</code><code class="sig-name descname">LossLog</code><span class="sig-paren">(</span><em class="sig-param">plotdir=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="torchlib.summary.loss_log.LossLog.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.add" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
-<dt id="torchlib.diagnose.plotgradflow.plot_gradflow_v2">
-<code class="sig-prename descclassname">torchlib.diagnose.plotgradflow.</code><code class="sig-name descname">plot_gradflow_v2</code><span class="sig-paren">(</span><em class="sig-param">named_parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.diagnose.plotgradflow.plot_gradflow_v2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Plots the gradients flowing through different layers in the net during training.
-Can be used for checking for possible gradient vanishing / exploding problems.</p>
-<p>Usage: Plug this function in Trainer class after loss.backwards() as
-“plot_grad_flow(self.model.named_parameters())” to visualize the gradient flow</p>
+<dl class="method">
+<dt id="torchlib.summary.loss_log.LossLog.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchlib.summary.loss_log.LossLog.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.plot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="torchlib.summary.loss_log.LossLog.updir">
+<code class="sig-name descname">updir</code><span class="sig-paren">(</span><em class="sig-param">plotdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.updir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
-<div class="section" id="module-torchlib.diagnose">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.diagnose" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchlib.summary">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.summary" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
 
            </div>
-
+           
           </div>
           <footer>
-
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-
-        <a href="torchlib.dip.html" class="btn btn-neutral float-right" title="torchlib.dip package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-
-
-        <a href="torchlib.base.html" class="btn btn-neutral float-left" title="torchlib.base package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-
+      
+      
+        <a href="torchlib.spl.html" class="btn btn-neutral float-left" title="torchlib.spl package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-
-        &copy; Copyright 2018-2019, Zhi Liu
+        
+        &copy; Copyright 2018-2020, Zhi Liu
 
     </p>
   </div>
-
-
-
+    
+    
+    
     Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-
+    
     <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -244,7 +255,7 @@ Can be used for checking for possible gradient vanishing / exploding problems.</
     </section>
 
   </div>
-
+  
 
   <script type="text/javascript">
       jQuery(function () {
@@ -252,10 +263,10 @@ Can be used for checking for possible gradient vanishing / exploding problems.</
       });
   </script>
 
-
-
-
-
+  
+  
+    
+   
 
 </body>
 </html>

@@ -4,29 +4,29 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchlib.dsp package &mdash; torchlib 1.0 documentation</title>
+  
 
-  <title>torchlib.dsp package &mdash; IPRS 1.0 documentation</title>
-
-
-
+  
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
   <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
 
+  
+  
+  
+  
 
-
-
-
-
-
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-
-
+  
+    
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
@@ -35,39 +35,39 @@
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
         <script src="_static/katex_autorenderer.js"></script>
-
+    
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
-
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchlib.evaluation package" href="torchlib.evaluation.html" />
-    <link rel="prev" title="torchlib.dip package" href="torchlib.dip.html" />
+    <link rel="prev" title="torchlib.diagnose package" href="torchlib.diagnose.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-
+   
   <div class="wy-grid-for-nav">
-
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchlib
+          
 
-
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> IPRS
-
-
-
+          
           </a>
 
+          
+            
+            
+          
 
-
-
-
-
-
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -76,17 +76,17 @@
   </form>
 </div>
 
-
+          
         </div>
 
-
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-
-
-
+          
+            
+            
+              
+            
+            
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
@@ -94,11 +94,13 @@
 <li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.dip.html">torchlib.dip package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -108,29 +110,29 @@
 </li>
 </ul>
 
-
-
+            
+          
         </div>
-
+        
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-
+      
       <nav class="wy-nav-top" aria-label="top navigation">
-
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">IPRS</a>
-
+          <a href="index.html">torchlib</a>
+        
       </nav>
 
 
       <div class="wy-nav-content">
-
+        
         <div class="rst-content">
-
-
+        
+          
 
 
 
@@ -149,32 +151,32 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-
+    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-
+        
           <li><a href="modules.html">torchlib</a> &raquo;</li>
-
+        
           <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
-
+        
       <li>torchlib.dsp package</li>
-
-
+    
+    
       <li class="wy-breadcrumbs-aside">
-
-
+        
+            
             <a href="_sources/torchlib.dsp.rst.txt" rel="nofollow"> View page source</a>
-
-
+          
+        
       </li>
-
+    
   </ul>
 
-
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
+            
   <div class="section" id="torchlib-dsp-package">
 <h1>torchlib.dsp package<a class="headerlink" href="#torchlib-dsp-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
@@ -200,7 +202,7 @@
 3. <code class="docutils literal notranslate"><span class="pre">'full'</span> <span class="pre">--&gt;</span> <span class="pre">full</span> <span class="pre">convolution</span> <span class="pre">output</span></code>, <span class="math">\(N_x+N_h-1\)</span>
 (the default is ‘same’)</p></li>
 <li><p><strong>axis</strong> (<em>{number}</em>) – convolution axis (the default is 0)</p></li>
-<li><p><strong>ftshift</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.8)"><em>type</em></a><em>]</em><em>}</em>) – whether to shift the frequencies (the default is False)</p></li>
+<li><p><strong>ftshift</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em>) – whether to shift the frequencies (the default is False)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -244,19 +246,6 @@ note that <code class="xref py py-attr docutils literal notranslate"><span class
 </dd></dl>
 
 </div>
-<div class="section" id="module-torchlib.dsp.entropy">
-<span id="torchlib-dsp-entropy-module"></span><h2>torchlib.dsp.entropy module<a class="headerlink" href="#module-torchlib.dsp.entropy" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="torchlib.dsp.entropy.natural_entropy">
-<code class="sig-prename descclassname">torchlib.dsp.entropy.</code><code class="sig-name descname">natural_entropy</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.entropy.natural_entropy" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="torchlib.dsp.entropy.shannon_entropy">
-<code class="sig-prename descclassname">torchlib.dsp.entropy.</code><code class="sig-name descname">shannon_entropy</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.entropy.shannon_entropy" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</div>
 <div class="section" id="module-torchlib.dsp.ffts">
 <span id="torchlib-dsp-ffts-module"></span><h2>torchlib.dsp.ffts module<a class="headerlink" href="#module-torchlib.dsp.ffts" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -285,14 +274,14 @@ in real formation(last dimension is 2, real, imag), after FFT, it will be change
 <dd class="field-odd"><p>{torch array}</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – nfft is small than signal dimension.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – nfft is small than signal dimension.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchlib.dsp.ffts.fftfreq">
-<code class="sig-prename descclassname">torchlib.dsp.ffts.</code><code class="sig-name descname">fftfreq</code><span class="sig-paren">(</span><em class="sig-param">fs</em>, <em class="sig-param">n</em>, <em class="sig-param">shift</em>, <em class="sig-param">norm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.ffts.fftfreq" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchlib.dsp.ffts.</code><code class="sig-name descname">fftfreq</code><span class="sig-paren">(</span><em class="sig-param">fs</em>, <em class="sig-param">n</em>, <em class="sig-param">norm=False</em>, <em class="sig-param">shift=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.ffts.fftfreq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the Discrete Fourier Transform sample frequencies</p>
 <p>Return the Discrete Fourier Transform sample frequencies.</p>
 <p>The returned float array <cite>f</cite> contains the frequency bin centers in cycles
@@ -314,16 +303,77 @@ the sample spacing is in seconds, then the frequency unit is cycles/second.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>fs</strong> (<em>{float}</em>) – Sampling rate.</p></li>
 <li><p><strong>n</strong> (<em>{integer}</em>) – Number of samples.</p></li>
-<li><p><strong>shift</strong> (<em>{bool}</em>) – Does shift the zero frequency to center.</p></li>
+<li><p><strong>norm</strong> (<em>{bool}</em>) – Normalize the frequencies.</p></li>
+<li><p><strong>shift</strong> (<em>{bool}</em>) – Does shift the zero frequency to center (Default is <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>frequency array with size <span class="math">\(n×1\)</span>.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>numpy array</p>
+<dd class="field-odd"><p>torch tensor</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.dsp.ffts.fftshift">
+<code class="sig-prename descclassname">torchlib.dsp.ffts.</code><code class="sig-name descname">fftshift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.ffts.fftshift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift the zero-frequency component to the center of the spectrum.</p>
+<p>This function swaps half-spaces for all axes listed (defaults to all).
+Note that <code class="docutils literal notranslate"><span class="pre">y[0]</span></code> is the Nyquist component only if <code class="docutils literal notranslate"><span class="pre">len(x)</span></code> is even.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>{torch tensor}</em>) – Input tensor.</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – Axes over which to shift. (Default is None, which shifts all axes.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – The shifted tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch tensor}</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#torchlib.dsp.ffts.ifftshift" title="torchlib.dsp.ffts.ifftshift"><code class="xref py py-func docutils literal notranslate"><span class="pre">ifftshift()</span></code></a></dt><dd><p>The inverse of <cite>fftshift</cite>.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>import numpy as np
+import torchlib as tl
+import torch as th</p>
+<p>x = [1, 2, 3, 4, 5, 6]
+y = np.fft.fftshift(x)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x)
+print(y)</p>
+<p>x = [1, 2, 3, 4, 5, 6, 7]
+y = np.fft.fftshift(x)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x)
+print(y)</p>
+<p>axis = (0, 1)  # axis = 0, axis = 1
+x = [[1, 2, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6]]
+y = np.fft.fftshift(x, axis)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x, axis)
+print(y)</p>
+<blockquote>
+<div><p>x = [[1, 2, 3, 4, 5, 6, 7], [0, 2, 3, 4, 5, 6, 7]]
+y = np.fft.fftshift(x, axis)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x, axis)
+print(y)</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -352,9 +402,69 @@ in real formation(last dimension is 2, real, imag), after IFFT, it will be chang
 <dd class="field-odd"><p>{torch array}</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – nfft is small than signal dimension.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – nfft is small than signal dimension.</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.dsp.ffts.ifftshift">
+<code class="sig-prename descclassname">torchlib.dsp.ffts.</code><code class="sig-name descname">ifftshift</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.ffts.ifftshift" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shift the zero-frequency component back.</p>
+<p>The inverse of <cite>fftshift</cite>. Although identical for even-length <cite>x</cite>, the
+functions differ by one sample for odd-length <cite>x</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>{torch tensor}</em>) – The input tensor.</p></li>
+<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – Axes over which to shift. (Default is None, which shifts all axes.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – The shifted tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch tensor}</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#torchlib.dsp.ffts.fftshift" title="torchlib.dsp.ffts.fftshift"><code class="xref py py-func docutils literal notranslate"><span class="pre">fftshift()</span></code></a></dt><dd><p>The inverse of <cite>ifftshift</cite>.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>import numpy as np
+import torchlib as tl
+import torch as th</p>
+<p>x = [1, 2, 3, 4, 5, 6]
+y = np.fft.fftshift(x)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x)
+print(y)</p>
+<p>x = [1, 2, 3, 4, 5, 6, 7]
+y = np.fft.fftshift(x)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x)
+print(y)</p>
+<p>axis = (0, 1)  # axis = 0, axis = 1
+x = [[1, 2, 3, 4, 5, 6], [0, 2, 3, 4, 5, 6]]
+y = np.fft.fftshift(x, axis)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x, axis)
+print(y)</p>
+<blockquote>
+<div><p>x = [[1, 2, 3, 4, 5, 6, 7], [0, 2, 3, 4, 5, 6, 7]]
+y = np.fft.fftshift(x, axis)
+print(y)
+x = th.tensor(x)
+y = tl.fftshift(x, axis)
+print(y)</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -489,12 +599,12 @@ expected inputs are 3-D, 4-D or 5-D in shape.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input</strong> (<em>Tensor</em>) – the input tensor</p></li>
-<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>]</em>) – output spatial size.</p></li>
-<li><p><strong>scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a><em>]</em>) – multiplier for spatial size. Has to match input size if it is a tuple.</p></li>
-<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – algorithm used for upsampling:
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>]</em>) – output spatial size.</p></li>
+<li><p><strong>scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>]</em>) – multiplier for spatial size. Has to match input size if it is a tuple.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – algorithm used for upsampling:
 <code class="docutils literal notranslate"><span class="pre">'nearest'</span></code> | <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'bilinear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'bicubic'</span></code> |
 <code class="docutils literal notranslate"><span class="pre">'trilinear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'area'</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">'nearest'</span></code></p></li>
-<li><p><strong>align_corners</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – Geometrically, we consider the pixels of the
+<li><p><strong>align_corners</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Geometrically, we consider the pixels of the
 input and output as squares rather than points.
 If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the input and output tensors are aligned by the
 center points of their corner pixels, preserving the values at the corner pixels.
@@ -504,7 +614,84 @@ for out-of-boundary values, making this operation <em>independent</em> of input 
 when <code class="xref py py-attr docutils literal notranslate"><span class="pre">scale_factor</span></code> is kept the same. This only has an effect when <code class="xref py py-attr docutils literal notranslate"><span class="pre">mode</span></code>
 is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bilinear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bicubic'</span></code> or <code class="docutils literal notranslate"><span class="pre">'trilinear'</span></code>.
 Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
-<li><p><strong>recompute_scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a><em>, </em><em>optional</em>) – recompute the scale_factor for use in the
+<li><p><strong>recompute_scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – recompute the scale_factor for use in the
+interpolation calculation.  When <cite>scale_factor</cite> is passed as a parameter, it is used
+to compute the <cite>output_size</cite>.  If <cite>recompute_scale_factor</cite> is <code class="docutils literal notranslate"><span class="pre">`False</span></code> or not specified,
+the passed-in <cite>scale_factor</cite> will be used in the interpolation computation.
+Otherwise, a new <cite>scale_factor</cite> will be computed based on the output and input sizes for
+use in the interpolation computation (i.e. the computation will be identical to if the computed
+<cite>output_size</cite> were passed-in explicitly).  Note that when <cite>scale_factor</cite> is floating-point,
+the recomputed scale_factor may differ from the one passed in due to rounding and precision
+issues.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">mode='bicubic'</span></code>, it’s possible to cause overshoot, in other words it can produce
+negative values or values greater than 255 for images.
+Explicitly call <code class="docutils literal notranslate"><span class="pre">result.clamp(min=0,</span> <span class="pre">max=255)</span></code> if you want to reduce the overshoot
+when displaying the image.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">align_corners</span> <span class="pre">=</span> <span class="pre">True</span></code>, the linearly interpolating modes
+(<cite>linear</cite>, <cite>bilinear</cite>, and <cite>trilinear</cite>) don’t proportionally align the
+output and input pixels, and thus the output values can depend on the
+input size. This was the default behavior for these modes up to version
+0.3.1. Since then, the default behavior is <code class="docutils literal notranslate"><span class="pre">align_corners</span> <span class="pre">=</span> <span class="pre">False</span></code>.
+See <code class="xref py py-class docutils literal notranslate"><span class="pre">Upsample</span></code> for concrete examples on how this
+affects the outputs.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When scale_factor is specified, if recompute_scale_factor=True,
+scale_factor is used to compute the output_size which will then
+be used to infer new scales for the interpolation.
+The default behavior for recompute_scale_factor changed to False
+in 1.6.0, and scale_factor is used in the interpolation
+calculation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using the CUDA backend, this operation may induce nondeterministic
+behaviour in its backward pass that is not easily switched off.
+Please see the notes on <span class="xref std std-doc">/notes/randomness</span> for background.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.dsp.interpolation.interpolatec">
+<code class="sig-prename descclassname">torchlib.dsp.interpolation.</code><code class="sig-name descname">interpolatec</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">size=None</em>, <em class="sig-param">scale_factor=None</em>, <em class="sig-param">mode='nearest'</em>, <em class="sig-param">align_corners=None</em>, <em class="sig-param">recompute_scale_factor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.dsp.interpolation.interpolatec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Down/up samples the input to either the given <code class="xref py py-attr docutils literal notranslate"><span class="pre">size</span></code> or the given
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">scale_factor</span></code></p>
+<p>The algorithm used for complex valued interpolation is determined by <code class="xref py py-attr docutils literal notranslate"><span class="pre">mode</span></code>.</p>
+<p>Currently temporal, spatial and volumetric sampling are supported, i.e.
+expected inputs are 3-D, 4-D or 5-D in shape.</p>
+<p>The input dimensions are interpreted in the form:
+<cite>mini-batch x [optional channels] x [optional height] x width x 2</cite>.</p>
+<p>The modes available for resizing are: <cite>nearest</cite>, <cite>linear</cite> (3D-only),
+<cite>bilinear</cite>, <cite>bicubic</cite> (4D-only), <cite>trilinear</cite> (5D-only), <cite>area</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> (<em>Tensor</em>) – the input tensor</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>] or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>]</em>) – output spatial size.</p></li>
+<li><p><strong>scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><em>Tuple</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>]</em>) – multiplier for spatial size. Has to match input size if it is a tuple.</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a>) – algorithm used for upsampling:
+<code class="docutils literal notranslate"><span class="pre">'nearest'</span></code> | <code class="docutils literal notranslate"><span class="pre">'linear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'bilinear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'bicubic'</span></code> |
+<code class="docutils literal notranslate"><span class="pre">'trilinear'</span></code> | <code class="docutils literal notranslate"><span class="pre">'area'</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">'nearest'</span></code></p></li>
+<li><p><strong>align_corners</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Geometrically, we consider the pixels of the
+input and output as squares rather than points.
+If set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the input and output tensors are aligned by the
+center points of their corner pixels, preserving the values at the corner pixels.
+If set to <code class="docutils literal notranslate"><span class="pre">False</span></code>, the input and output tensors are aligned by the corner
+points of their corner pixels, and the interpolation uses edge value padding
+for out-of-boundary values, making this operation <em>independent</em> of input size
+when <code class="xref py py-attr docutils literal notranslate"><span class="pre">scale_factor</span></code> is kept the same. This only has an effect when <code class="xref py py-attr docutils literal notranslate"><span class="pre">mode</span></code>
+is <code class="docutils literal notranslate"><span class="pre">'linear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bilinear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'bicubic'</span></code> or <code class="docutils literal notranslate"><span class="pre">'trilinear'</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong>recompute_scale_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – recompute the scale_factor for use in the
 interpolation calculation.  When <cite>scale_factor</cite> is passed as a parameter, it is used
 to compute the <cite>output_size</cite>.  If <cite>recompute_scale_factor</cite> is <code class="docutils literal notranslate"><span class="pre">`False</span></code> or not specified,
 the passed-in <cite>scale_factor</cite> will be used in the interpolation computation.
@@ -582,37 +769,37 @@ Please see the notes on <span class="xref std std-doc">/notes/randomness</span> 
 
 
            </div>
-
+           
           </div>
           <footer>
-
+  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-
+      
         <a href="torchlib.evaluation.html" class="btn btn-neutral float-right" title="torchlib.evaluation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-
-
-        <a href="torchlib.dip.html" class="btn btn-neutral float-left" title="torchlib.dip package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-
+      
+      
+        <a href="torchlib.diagnose.html" class="btn btn-neutral float-left" title="torchlib.diagnose package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
-
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-
-        &copy; Copyright 2018-2019, Zhi Liu
+        
+        &copy; Copyright 2018-2020, Zhi Liu
 
     </p>
   </div>
-
-
-
+    
+    
+    
     Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-
+    
     <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -622,7 +809,7 @@ Please see the notes on <span class="xref std std-doc">/notes/randomness</span> 
     </section>
 
   </div>
-
+  
 
   <script type="text/javascript">
       jQuery(function () {
@@ -630,10 +817,10 @@ Please see the notes on <span class="xref std std-doc">/notes/randomness</span> 
       });
   </script>
 
-
-
-
-
+  
+  
+    
+   
 
 </body>
 </html>

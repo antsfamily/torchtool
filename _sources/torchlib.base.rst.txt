@@ -1,11 +1,11 @@
 torchlib.base package
-======================
+=====================
 
 Submodules
 ----------
 
 torchlib.base.arrayops module
-------------------------------
+-----------------------------
 
 .. automodule:: torchlib.base.arrayops
    :members:
@@ -13,7 +13,7 @@ torchlib.base.arrayops module
    :show-inheritance:
 
 torchlib.base.mathops module
------------------------------
+----------------------------
 
 .. automodule:: torchlib.base.mathops
    :members:
@@ -21,7 +21,7 @@ torchlib.base.mathops module
    :show-inheritance:
 
 torchlib.base.ops module
--------------------------
+------------------------
 
 .. automodule:: torchlib.base.ops
    :members:

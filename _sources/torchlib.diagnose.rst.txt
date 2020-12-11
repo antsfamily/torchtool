@@ -1,11 +1,11 @@
 torchlib.diagnose package
-==========================
+=========================
 
 Submodules
 ----------
 
 torchlib.diagnose.plotgradflow module
---------------------------------------
+-------------------------------------
 
 .. automodule:: torchlib.diagnose.plotgradflow
    :members:

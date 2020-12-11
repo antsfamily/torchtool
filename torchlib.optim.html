@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchlib.optim package &mdash; torchlib 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="torchlib.spl package" href="torchlib.spl.html" />
+    <link rel="prev" title="torchlib.nn.module package" href="torchlib.nn.module.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchlib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchlib.html">torchlib package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.optim package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">torchlib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">torchlib</a> &raquo;</li>
+        
+          <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
+        
+      <li>torchlib.optim package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchlib.optim.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchlib-optim-package">
+<h1>torchlib.optim package<a class="headerlink" href="#torchlib-optim-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchlib.optim.learning_rate">
+<span id="torchlib-optim-learning-rate-module"></span><h2>torchlib.optim.learning_rate module<a class="headerlink" href="#module-torchlib.optim.learning_rate" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="torchlib.optim.learning_rate.LrFinder">
+<em class="property">class </em><code class="sig-prename descclassname">torchlib.optim.learning_rate.</code><code class="sig-name descname">LrFinder</code><span class="sig-paren">(</span><em class="sig-param">device='cpu'</em>, <em class="sig-param">plotdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.learning_rate.LrFinder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="torchlib.optim.learning_rate.LrFinder.find">
+<code class="sig-name descname">find</code><span class="sig-paren">(</span><em class="sig-param">dataloader</em>, <em class="sig-param">model</em>, <em class="sig-param">optimizer</em>, <em class="sig-param">criterion</em>, <em class="sig-param">nin=1</em>, <em class="sig-param">nbgc=1</em>, <em class="sig-param">lr_init=1e-08</em>, <em class="sig-param">lr_final=100.0</em>, <em class="sig-param">beta=0.98</em>, <em class="sig-param">gamma=4.0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.learning_rate.LrFinder.find" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find learning rate</p>
+<p>Find learning rate, see <a class="reference external" href="https://sgugger.github.io/how-do-you-find-a-good-learning-rate.html">How Do You Find A Good Learning Rate</a> .</p>
+<p>During traing, two types losses are computed</p>
+<p>The average loss is:</p>
+<div class="math">
+\[\rm{avg\_loss}_i=\beta * \rm{avg\_loss}_{i-1}+(1-\beta) * \rm{loss}_i
+
+\]</div>
+<p>The smoothed loss is:</p>
+<div class="math">
+\[\rm{smt\_loss }_{i}=\frac{\rm{avg\_loss}_{i}}{1-\beta^{i+1}}
+
+\]</div>
+<p>If <span class="math">\(i &gt; 1\)</span> and <span class="math">\(\rm{smt\_loss} &gt; \gamma * \rm{best\_loss}\)</span>, stop.</p>
+<p>If <span class="math">\(\rm{smt\_loss} &lt; \rm{best\_loss}\)</span> or <span class="math">\(i = 1\)</span>, let <span class="math">\(\rm{best\_loss} = \rm{smt\_loss}\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dataloader</strong> (<em>{torch.DataLoader}</em>) – The dataloader that contains a dataset for training.</p></li>
+<li><p><strong>model</strong> (<em>{torch.Module}</em>) – Your network module.</p></li>
+<li><p><strong>optimizer</strong> (<em>{torch.Optimizer}</em>) – The optimizer such as SGD, Adam…</p></li>
+<li><p><strong>criterion</strong> (<em>{torch.Loss}</em>) – The criterion/loss used for training model.</p></li>
+<li><p><strong>nin</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The number of inputs in dataloder, the first <code class="xref py py-attr docutils literal notranslate"><span class="pre">nin</span></code> elements are inputs, the rest are targets(can be None). (the default is 1)</p></li>
+<li><p><strong>nbgc</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The number of batches for grad cumulation (the default is 1, which means no cumulation)</p></li>
+<li><p><strong>lr_init</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The initial learning rate (the default is 1e-8)</p></li>
+<li><p><strong>lr_final</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The final learning rate (the default is 1e-8)</p></li>
+<li><p><strong>beta</strong> (<em>{float}</em><em>, </em><em>optional</em>) – [description] (the default is 0.98)</p></li>
+<li><p><strong>gamma</strong> (<em>{float}</em><em>, </em><em>optional</em>) – The exploding factor <span class="math">\(\gamma\)</span>. (the default is 4.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>lrs</strong> (<em>{list}</em>) – Learning rates during training.</p></li>
+<li><p><strong>smt_losses</strong> (<em>{list}</em>) – Smoothed losses during training.</p></li>
+<li><p><strong>avg_losses</strong> (<em>{list}</em>) – Average losses during training.</p></li>
+<li><p><strong>losses</strong> (<em>{list}</em>) – Original losses during training.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">device</span> <span class="o">=</span> <span class="s1">&#39;cuda:1&#39;</span>
+<span class="c1"># device = &#39;cpu&#39;</span>
+
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="n">trainds</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="c1"># trainds = TensorDataset(X)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+<span class="n">trainld</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">trainds</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">(</span><span class="n">reduction</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">lrfinder</span> <span class="o">=</span> <span class="n">LrFinder</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="c1"># lrfinder = LrFinder(device, plotdir=&#39;./&#39;)</span>
+
+<span class="n">lrfinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">trainld</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">nin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+              <span class="n">nbgc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lr_init</span><span class="o">=</span><span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="n">lr_final</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.98</span><span class="p">)</span>
+
+<span class="n">lrfinder</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lrmod</span><span class="o">=</span><span class="s1">&#39;Linear&#39;</span><span class="p">)</span>
+<span class="n">lrfinder</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lrmod</span><span class="o">=</span><span class="s1">&#39;Log&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="torchlib.optim.learning_rate.LrFinder.plot">
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">lrmod='log'</em>, <em class="sig-param">loss='smoothed'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.learning_rate.LrFinder.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot the loss-lr curve</p>
+<p>Plot the loss-learning rate curve.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lrmod</strong> (<em>{str}</em><em>, </em><em>optional</em>) – <code class="docutils literal notranslate"><span class="pre">'log'</span></code> –&gt; use log scale, i.e. log10(lr) instead lr. (default)
+<code class="docutils literal notranslate"><span class="pre">'linear'</span></code> –&gt; use original lr.</p></li>
+<li><p><strong>loss</strong> (<em>{str}</em><em>, </em><em>optional</em>) – Specify which type of loss will be ploted. (the default is ‘smoothed’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.optim">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.optim" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="torchlib.spl.html" class="btn btn-neutral float-right" title="torchlib.spl package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="torchlib.nn.module.html" class="btn btn-neutral float-left" title="torchlib.nn.module package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Zhi Liu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
