@@ -12,6 +12,14 @@ torchlib.optim.learning\_rate module
    :undoc-members:
    :show-inheritance:
 
+torchlib.optim.untitled module
+------------------------------
+
+.. automodule:: torchlib.optim.untitled
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Module contents
 ---------------
