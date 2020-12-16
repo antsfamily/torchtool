@@ -12,10 +12,10 @@ torchlib.optim.learning\_rate module
    :undoc-members:
    :show-inheritance:
 
-torchlib.optim.untitled module
-------------------------------
+torchlib.optim.lr\_scheduler module
+-----------------------------------
 
-.. automodule:: torchlib.optim.untitled
+.. automodule:: torchlib.optim.lr_scheduler
    :members:
    :undoc-members:
    :show-inheritance:

@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>torchlib.utils package &mdash; torchlib 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/katex-math.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script>
+        <script src="_static/katex_autorenderer.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="torchlib.summary package" href="torchlib.summary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> torchlib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="torchlib.html">torchlib package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">torchlib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">torchlib</a> &raquo;</li>
+        
+          <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
+        
+      <li>torchlib.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/torchlib.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="torchlib-utils-package">
+<h1>torchlib.utils package<a class="headerlink" href="#torchlib-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchlib.utils.const">
+<span id="torchlib-utils-const-module"></span><h2>torchlib.utils.const module<a class="headerlink" href="#module-torchlib.utils.const" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-torchlib.utils.file">
+<span id="torchlib-utils-file-module"></span><h2>torchlib.utils.file module<a class="headerlink" href="#module-torchlib.utils.file" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.utils.file.fileparts">
+<code class="sig-prename descclassname">torchlib.utils.file.</code><code class="sig-name descname">fileparts</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.file.fileparts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filename parts</p>
+<p>Returns the path, file name, and file name extension for the specified <code class="xref py py-attr docutils literal notranslate"><span class="pre">file</span></code>.
+The <code class="xref py py-attr docutils literal notranslate"><span class="pre">file</span></code> input is the name of a file or folder, and can include a path and
+file name extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file</strong> (<em>{str}</em>) – The name of a file or folder.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>filepath</strong> (<em>{str}</em>) – The path of a file or folder.</p></li>
+<li><p><strong>name</strong> (<em>{str}</em>) – The name of a file or folder.</p></li>
+<li><p><strong>ext</strong> (<em>{str}</em>) – The ext of a file.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.file.listxfile">
+<code class="sig-prename descclassname">torchlib.utils.file.</code><code class="sig-name descname">listxfile</code><span class="sig-paren">(</span><em class="sig-param">listdir=None</em>, <em class="sig-param">exts=None</em>, <em class="sig-param">issubdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.file.listxfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>listdir: lists of string
+exts: list of string, such as [‘.png’, ‘jpg’]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.file.pathjoin">
+<code class="sig-prename descclassname">torchlib.utils.file.</code><code class="sig-name descname">pathjoin</code><span class="sig-paren">(</span><em class="sig-param">*kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.file.pathjoin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.file.readtxt">
+<code class="sig-prename descclassname">torchlib.utils.file.</code><code class="sig-name descname">readtxt</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.file.readtxt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.utils.image">
+<span id="torchlib-utils-image-module"></span><h2>torchlib.utils.image module<a class="headerlink" href="#module-torchlib.utils.image" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.utils.image.histeq">
+<code class="sig-prename descclassname">torchlib.utils.image.</code><code class="sig-name descname">histeq</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">nbins=256</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.image.histeq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.image.imadjust">
+<code class="sig-prename descclassname">torchlib.utils.image.</code><code class="sig-name descname">imadjust</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">lhin</em>, <em class="sig-param">lhout</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.image.imadjust" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.image.imadjustlog">
+<code class="sig-prename descclassname">torchlib.utils.image.</code><code class="sig-name descname">imadjustlog</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">lhin=None</em>, <em class="sig-param">lhout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.image.imadjustlog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.image.imread">
+<code class="sig-prename descclassname">torchlib.utils.image.</code><code class="sig-name descname">imread</code><span class="sig-paren">(</span><em class="sig-param">imgfile</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.image.imread" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.image.imresize">
+<code class="sig-prename descclassname">torchlib.utils.image.</code><code class="sig-name descname">imresize</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">oshape=None</em>, <em class="sig-param">odtype=None</em>, <em class="sig-param">order=1</em>, <em class="sig-param">mode='constant'</em>, <em class="sig-param">cval=0</em>, <em class="sig-param">clip=True</em>, <em class="sig-param">preserve_range=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.image.imresize" title="Permalink to this definition">¶</a></dt>
+<dd><p>resize image to oshape</p>
+<p>see <code class="xref py py-func docutils literal notranslate"><span class="pre">skimage.transform.resize()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>{ndarray}</em>) – Input image.</p></li>
+<li><p><strong>oshape</strong> (<em>{tulpe}</em><em>, </em><em>optional</em>) – output shape (the default is None, which is the same as the input)</p></li>
+<li><p><strong>odtype</strong> (<em>{string}</em><em>, </em><em>optional</em>) – output data type, <code class="docutils literal notranslate"><span class="pre">'uint8',</span> <span class="pre">'uint16',</span> <span class="pre">'int8',</span> <span class="pre">...</span></code> (the default is None, float)</p></li>
+<li><p><strong>order</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The order of the spline interpolation, default is 1. The order has to
+be in the range 0-5. See <cite>skimage.transform.warp</cite> for detail.</p></li>
+<li><p><strong>mode</strong> (<em>{'constant'</em><em>, </em><em>'edge'</em><em>, </em><em>'symmetric'</em><em>, </em><em>'reflect'</em><em>, </em><em>'wrap'}</em><em>, </em><em>optional</em>) – Points outside the boundaries of the input are filled according
+to the given mode.  Modes match the behaviour of <cite>numpy.pad</cite>.  The
+default mode is ‘constant’.</p></li>
+<li><p><strong>cval</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Used in conjunction with mode ‘constant’, the value outside
+the image boundaries.</p></li>
+<li><p><strong>clip</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to clip the output to the range of values of the input image.
+This is enabled by default, since higher order interpolation may
+produce values outside the given input range.</p></li>
+<li><p><strong>preserve_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to keep the original range of values. Otherwise, the input
+image is converted according to the conventions of <cite>img_as_float</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>resized</strong> – Resized version of the input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Modes ‘reflect’ and ‘symmetric’ are similar, but differ in whether the edge
+pixels are duplicated during the reflection.  As an example, if an array
+has values [0, 1, 2] and was padded to the right by four values using
+symmetric, the result would be [0, 1, 2, 2, 1, 0, 0], while for reflect it
+would be [0, 1, 2, 1, 0, 1, 2].</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skimage</span> <span class="k">import</span> <span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">skimage.transform</span> <span class="k">import</span> <span class="n">resize</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">image</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">camera</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;reflect&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(100, 100)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.image.imsave">
+<code class="sig-prename descclassname">torchlib.utils.image.</code><code class="sig-name descname">imsave</code><span class="sig-paren">(</span><em class="sig-param">outfile</em>, <em class="sig-param">img</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.image.imsave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.utils.ios">
+<span id="torchlib-utils-ios-module"></span><h2>torchlib.utils.ios module<a class="headerlink" href="#module-torchlib.utils.ios" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.utils.ios.loadh5">
+<code class="sig-prename descclassname">torchlib.utils.ios.</code><code class="sig-name descname">loadh5</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.ios.loadh5" title="Permalink to this definition">¶</a></dt>
+<dd><p>load h5 file</p>
+<p>load all the data from a h5 file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>{str}</em>) – File’s full path string.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>D</strong> – The loaded data in <code class="docutils literal notranslate"><span class="pre">dict</span></code> type.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{dict}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.ios.loadmat">
+<code class="sig-prename descclassname">torchlib.utils.ios.</code><code class="sig-name descname">loadmat</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.ios.loadmat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.ios.saveh5">
+<code class="sig-prename descclassname">torchlib.utils.ios.</code><code class="sig-name descname">saveh5</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">mdict</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.ios.saveh5" title="Permalink to this definition">¶</a></dt>
+<dd><p>save data to h5 file</p>
+<p>save data to h5 file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>{str}</em>) – filename string</p></li>
+<li><p><strong>mdict</strong> (<em>{dict}</em>) – each dict is store in group, the elements in dict are store in dataset</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>0 –&gt; all is well.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.ios.savemat">
+<code class="sig-prename descclassname">torchlib.utils.ios.</code><code class="sig-name descname">savemat</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">mdict</em>, <em class="sig-param">fmt='5'</em>, <em class="sig-param">dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.ios.savemat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.utils.randomfunc">
+<span id="torchlib-utils-randomfunc-module"></span><h2>torchlib.utils.randomfunc module<a class="headerlink" href="#module-torchlib.utils.randomfunc" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.utils.randomfunc.randgrid">
+<code class="sig-prename descclassname">torchlib.utils.randomfunc.</code><code class="sig-name descname">randgrid</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">stop</em>, <em class="sig-param">step</em>, <em class="sig-param">number</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.randomfunc.randgrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates non-repeated random integers</p>
+<p>Generates <code class="xref py py-attr docutils literal notranslate"><span class="pre">number</span></code> non-repeated random integers from <code class="xref py py-attr docutils literal notranslate"><span class="pre">start</span></code> to <code class="xref py py-attr docutils literal notranslate"><span class="pre">stop</span></code> with stepsize <code class="xref py py-attr docutils literal notranslate"><span class="pre">step</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>{integer}</em>) – start sampling point</p></li>
+<li><p><strong>stop</strong> (<em>{integer}</em>) – stop sampling point</p></li>
+<li><p><strong>step</strong> (<em>{integer}</em>) – sampling stepsize</p></li>
+<li><p><strong>number</strong> (<em>{integer}</em>) – the number of samples</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.randomfunc.randgrid2d">
+<code class="sig-prename descclassname">torchlib.utils.randomfunc.</code><code class="sig-name descname">randgrid2d</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">stop</em>, <em class="sig-param">step</em>, <em class="sig-param">number</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.randomfunc.randgrid2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates non-repeated random integers</p>
+<p>Generates <code class="xref py py-attr docutils literal notranslate"><span class="pre">number</span></code> non-repeated random integers from <code class="xref py py-attr docutils literal notranslate"><span class="pre">start</span></code> to <code class="xref py py-attr docutils literal notranslate"><span class="pre">stop</span></code> with stepsize <code class="xref py py-attr docutils literal notranslate"><span class="pre">step</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>{integer list}</em>) – start sampling point in both two dimensions.</p></li>
+<li><p><strong>stop</strong> (<em>{integer list}</em>) – stop sampling point in both two dimensions.</p></li>
+<li><p><strong>step</strong> (<em>{integer list}</em>) – sampling stepsize in both two dimensions.</p></li>
+<li><p><strong>number</strong> (<em>{integer}</em>) – the number of samples</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">randperm</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+
+<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">mask</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">mask</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">randperm2d</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">randperm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8192</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">randperm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8192</span><span class="p">,</span> <span class="mi">800</span><span class="p">)</span>
+
+<span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">randgrid2d</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">8192</span><span class="p">,</span> <span class="mi">8192</span><span class="p">],</span> <span class="p">[</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">],</span> <span class="mi">2048</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.randomfunc.randperm">
+<code class="sig-prename descclassname">torchlib.utils.randomfunc.</code><code class="sig-name descname">randperm</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">end</em>, <em class="sig-param">number</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.randomfunc.randperm" title="Permalink to this definition">¶</a></dt>
+<dd><p>randperm function like matlab</p>
+<p>genarates diffrent random interges in range [start, end)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>{integer}</em>) – start sampling point</p></li>
+<li><p><strong>end</strong> (<em>{integer}</em>) – end sampling point</p></li>
+<li><p><strong>number</strong> (<em>{integer}</em>) – random numbers</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.randomfunc.randperm2d">
+<code class="sig-prename descclassname">torchlib.utils.randomfunc.</code><code class="sig-name descname">randperm2d</code><span class="sig-paren">(</span><em class="sig-param">H</em>, <em class="sig-param">W</em>, <em class="sig-param">number</em>, <em class="sig-param">population=None</em>, <em class="sig-param">mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.randomfunc.randperm2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>randperm 2d function</p>
+<p>genarates diffrent random interges in range [start, end)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>H</strong> (<em>{integer}</em>) – height</p></li>
+<li><p><strong>W</strong> (<em>{integer}</em>) – width</p></li>
+<li><p><strong>number</strong> (<em>{integer}</em>) – random numbers</p></li>
+<li><p><strong>population</strong> (<em>{list</em><em> or </em><em>numpy array</em><em>(</em><em>1d</em><em> or </em><em>2d</em><em>)</em><em>}</em>) – part of population in range(0, H*W)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.utils.randomfunc.setseed">
+<code class="sig-prename descclassname">torchlib.utils.randomfunc.</code><code class="sig-name descname">setseed</code><span class="sig-paren">(</span><em class="sig-param">seed=None</em>, <em class="sig-param">target='numpy'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.utils.randomfunc.setseed" title="Permalink to this definition">¶</a></dt>
+<dd><p>set seed</p>
+<p>Set numpy / torch / torch.random / torch.cuda seed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seed</strong> (<em>{</em><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a><em>]</em><em>}</em><em>, </em><em>optional</em>) – [description] (the default is None, which [default_description])</p></li>
+<li><p><strong>target</strong> (<em>{str}</em><em>, </em><em>optional</em>) – <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">'numpy'</span></code>: <code class="docutils literal notranslate"><span class="pre">np.random.seed(seed)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'random'</span></code>: <code class="docutils literal notranslate"><span class="pre">torch.random.manual_seed(seed)</span></code> (the default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'torch'</span></code>: <code class="docutils literal notranslate"><span class="pre">torch.manual_seed(seed)</span></code> (the default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'cuda'</span></code>: <code class="docutils literal notranslate"><span class="pre">torch.cuda.manual_seed(seed)</span></code> (the default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'cudaall'</span></code>: <code class="docutils literal notranslate"><span class="pre">torch.cuda.manual_seed_all(seed)</span></code> (the default)</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="torchlib.summary.html" class="btn btn-neutral float-left" title="torchlib.summary package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Zhi Liu
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

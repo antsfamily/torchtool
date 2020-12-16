@@ -16,6 +16,7 @@ Subpackages
    torchlib.optim
    torchlib.spl
    torchlib.summary
+   torchlib.utils
 
 Module contents
 ---------------

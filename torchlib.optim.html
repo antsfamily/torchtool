@@ -289,110 +289,53 @@ the rest are ignored. (the default is 1)</p></li>
 
 </dd></dl>
 
+<dl class="function">
+<dt id="torchlib.optim.learning_rate.gammalr">
+<code class="sig-prename descclassname">torchlib.optim.learning_rate.</code><code class="sig-name descname">gammalr</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">k=2</em>, <em class="sig-param">t=2</em>, <em class="sig-param">a=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.learning_rate.gammalr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="module-torchlib.optim.untitled">
-<span id="torchlib-optim-untitled-module"></span><h2>torchlib.optim.untitled module<a class="headerlink" href="#module-torchlib.optim.untitled" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchlib.optim.lr_scheduler">
+<span id="torchlib-optim-lr-scheduler-module"></span><h2>torchlib.optim.lr_scheduler module<a class="headerlink" href="#module-torchlib.optim.lr_scheduler" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="torchlib.optim.untitled.LrFinder">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.optim.untitled.</code><code class="sig-name descname">LrFinder</code><span class="sig-paren">(</span><em class="sig-param">device='cpu'</em>, <em class="sig-param">plotdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.untitled.LrFinder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="torchlib.optim.untitled.LrFinder.find">
-<code class="sig-name descname">find</code><span class="sig-paren">(</span><em class="sig-param">dataloader</em>, <em class="sig-param">model</em>, <em class="sig-param">optimizer</em>, <em class="sig-param">criterion</em>, <em class="sig-param">nin=1</em>, <em class="sig-param">nout=1</em>, <em class="sig-param">nbgc=1</em>, <em class="sig-param">lr_init=1e-08</em>, <em class="sig-param">lr_final=100.0</em>, <em class="sig-param">beta=0.98</em>, <em class="sig-param">gamma=4.0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.untitled.LrFinder.find" title="Permalink to this definition">¶</a></dt>
-<dd><p>Find learning rate</p>
-<p>Find learning rate, see <a class="reference external" href="https://sgugger.github.io/how-do-you-find-a-good-learning-rate.html">How Do You Find A Good Learning Rate</a> .</p>
-<p>During traing, two types losses are computed</p>
-<p>The average loss is:</p>
+<dt id="torchlib.optim.lr_scheduler.DoubleGaussianKernelLR">
+<em class="property">class </em><code class="sig-prename descclassname">torchlib.optim.lr_scheduler.</code><code class="sig-name descname">DoubleGaussianKernelLR</code><span class="sig-paren">(</span><em class="sig-param">optimizer</em>, <em class="sig-param">t_eta_max</em>, <em class="sig-param">sigma1</em>, <em class="sig-param">sigma2</em>, <em class="sig-param">eta_start=1e-06</em>, <em class="sig-param">eta_stop=1e-05</em>, <em class="sig-param">last_epoch=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.lr_scheduler.DoubleGaussianKernelLR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler._LRScheduler</span></code></p>
+<p>Set the learning rate of each parameter group using a double gaussian kernel
+schedule, where <span class="math">\(\eta_{max}\)</span> is set to the initial lr and
+<span class="math">\(T_{cur}\)</span> is the number of epochs since the last restart in SGDR:</p>
 <div class="math">
-\[\rm{avg\_loss}_i=\beta * \rm{avg\_loss}_{i-1}+(1-\beta) * \rm{loss}_i
+\[\eta_{t}=\left\{\begin{array}{l}
+\left(\eta_{\max }-\eta_{\text {start }}\right) \exp \left(\frac{-\left(t-t_{\eta_{\
+max }}\right)^{2}}{2 \sigma_{1}^{2}}\right)+\eta_{\text {start }}, \text { if } t<t
+_{\eta_{\max}} \\
+\left(\eta_{\max }-\eta_{\text {stop }}\right) \exp \left(\frac{-\left(t-t_{\eta_{\
+max }}\right)^{2}}{2 \sigma_{2}^{2}}\right)+\eta_{\text {stop }}, \text { otherwi
+se }
+\end{array}\right.
 
 \]</div>
-<p>The smoothed loss is:</p>
-<div class="math">
-\[\rm{smt\_loss }_{i}=\frac{\rm{avg\_loss}_{i}}{1-\beta^{i+1}}
-
-\]</div>
-<p>If <span class="math">\(i &gt; 1\)</span> and <span class="math">\(\rm{smt\_loss} &gt; \gamma * \rm{best\_loss}\)</span>, stop.</p>
-<p>If <span class="math">\(\rm{smt\_loss} &lt; \rm{best\_loss}\)</span> or <span class="math">\(i = 1\)</span>, let <span class="math">\(\rm{best\_loss} = \rm{smt\_loss}\)</span>.</p>
+<p>When last_epoch=-1, sets initial lr as lr. Notice that because the schedule
+is defined recursively, the learning rate can be simultaneously modified
+outside this scheduler by other operators.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dataloader</strong> (<em>{torch.DataLoader}</em>) – The dataloader that contains a dataset for training.</p></li>
-<li><p><strong>model</strong> (<em>{torch.Module}</em>) – Your network module.</p></li>
-<li><p><strong>optimizer</strong> (<em>{torch.Optimizer}</em>) – The optimizer such as SGD, Adam…</p></li>
-<li><p><strong>criterion</strong> (<em>{torch.Loss}</em>) – The criterion/loss used for training model.</p></li>
-<li><p><strong>nin</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The number of inputs of the model,
-the first <code class="xref py py-attr docutils literal notranslate"><span class="pre">nin</span></code> elements are inputs,
-the rest are targets(can be None) used for computing loss. (the default is 1)</p></li>
-<li><p><strong>nou</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The number of outputs of the model used for computing loss,
-it works only when the model has multiple outputs, i.e.
-the outputs is a tuple or list which has several tensor elements (&gt;=1).
-the first <code class="xref py py-attr docutils literal notranslate"><span class="pre">nout</span></code> elements are used for computing loss,
-the rest are ignored. (the default is 1)</p></li>
-<li><p><strong>nbgc</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The number of batches for grad cumulation (the default is 1, which means no cumulation)</p></li>
-<li><p><strong>lr_init</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The initial learning rate (the default is 1e-8)</p></li>
-<li><p><strong>lr_final</strong> (<em>{number}</em><em>, </em><em>optional</em>) – The final learning rate (the default is 1e-8)</p></li>
-<li><p><strong>beta</strong> (<em>{float}</em><em>, </em><em>optional</em>) – [description] (the default is 0.98)</p></li>
-<li><p><strong>gamma</strong> (<em>{float}</em><em>, </em><em>optional</em>) – The exploding factor <span class="math">\(\gamma\)</span>. (the default is 4.)</p></li>
+<li><p><strong>optimizer</strong> (<em>{Optimizer}</em>) – Wrapped optimizer.</p></li>
+<li><p><strong>t_eta_max</strong> (<em>{int}</em>) – Iterations when the learning rate reach to the maximum value <span class="math">\(\eta_{\max}\)</span>.</p></li>
+<li><p><strong>sigma1</strong> (<em>{int}</em>) – Controls the shape of warming up phase.</p></li>
+<li><p><strong>sigma2</strong> (<em>{int}</em>) – Controls the shape of annealing phase.</p></li>
+<li><p><strong>eta_start</strong> (<em>{float}</em>) – Starting learning rate. Default: 0.</p></li>
+<li><p><strong>eta_stop</strong> (<em>{float}</em>) – Stopping learning rate. Default: 0.</p></li>
+<li><p><strong>last_epoch</strong> (<em>{int}</em>) – The index of last epoch. Default: -1.</p></li>
 </ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>lrs</strong> (<em>{list}</em>) – Learning rates during training.</p></li>
-<li><p><strong>smt_losses</strong> (<em>{list}</em>) – Smoothed losses during training.</p></li>
-<li><p><strong>avg_losses</strong> (<em>{list}</em>) – Average losses during training.</p></li>
-<li><p><strong>losses</strong> (<em>{list}</em>) – Original losses during training.</p></li>
-</ul>
-</p>
 </dd>
 </dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">device</span> <span class="o">=</span> <span class="s1">&#39;cuda:1&#39;</span>
-<span class="c1"># device = &#39;cpu&#39;</span>
-
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-
-<span class="n">trainds</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
-<span class="c1"># trainds = TensorDataset(X)</span>
-
-<span class="n">model</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
-
-<span class="n">trainld</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">trainds</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="n">criterion</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">(</span><span class="n">reduction</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>
-
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">lrfinder</span> <span class="o">=</span> <span class="n">LrFinder</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
-<span class="c1"># lrfinder = LrFinder(device, plotdir=&#39;./&#39;)</span>
-
-<span class="n">lrfinder</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">trainld</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">nin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-              <span class="n">nbgc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">lr_init</span><span class="o">=</span><span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="n">lr_final</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.98</span><span class="p">)</span>
-
-<span class="n">lrfinder</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lrmod</span><span class="o">=</span><span class="s1">&#39;Linear&#39;</span><span class="p">)</span>
-<span class="n">lrfinder</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lrmod</span><span class="o">=</span><span class="s1">&#39;Log&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
+<p>:param .. note::: The maximum learning rate are the base learning rate setted in Optimizer.</p>
 <dl class="method">
-<dt id="torchlib.optim.untitled.LrFinder.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">lrmod='log'</em>, <em class="sig-param">loss='smoothed'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.untitled.LrFinder.plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>plot the loss-lr curve</p>
-<p>Plot the loss-learning rate curve.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>lrmod</strong> (<em>{str}</em><em>, </em><em>optional</em>) – <code class="docutils literal notranslate"><span class="pre">'log'</span></code> –&gt; use log scale, i.e. log10(lr) instead lr. (default)
-<code class="docutils literal notranslate"><span class="pre">'linear'</span></code> –&gt; use original lr.</p></li>
-<li><p><strong>loss</strong> (<em>{str}</em><em>, </em><em>optional</em>) – Specify which type of loss will be ploted. (the default is ‘smoothed’)</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
+<dt id="torchlib.optim.lr_scheduler.DoubleGaussianKernelLR.get_lr">
+<code class="sig-name descname">get_lr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.lr_scheduler.DoubleGaussianKernelLR.get_lr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

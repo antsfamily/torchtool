@@ -209,7 +209,7 @@
 </dl>
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">torchlib</span> <span class="k">as</span> <span class="nn">tl</span>
-<span class="n">ts</span><span class="o">.</span><span class="n">setseed</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">2020</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;torch&#39;</span><span class="p">)</span>
+<span class="n">tl</span><span class="o">.</span><span class="n">setseed</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">2020</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;torch&#39;</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="n">f</span> <span class="o">=</span> <span class="n">Standardization</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">unbiased</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>

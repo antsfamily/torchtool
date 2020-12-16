@@ -12,6 +12,14 @@ torchlib.misc.mapping\_operation module
    :undoc-members:
    :show-inheritance:
 
+torchlib.misc.sampling module
+-----------------------------
+
+.. automodule:: torchlib.misc.sampling
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 torchlib.misc.transform module
 ------------------------------
 
