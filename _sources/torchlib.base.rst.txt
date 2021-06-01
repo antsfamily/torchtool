@@ -12,6 +12,14 @@ torchlib.base.arrayops module
    :undoc-members:
    :show-inheritance:
 
+torchlib.base.baseops module
+----------------------------
+
+.. automodule:: torchlib.base.baseops
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 torchlib.base.mathops module
 ----------------------------
 
@@ -20,10 +28,10 @@ torchlib.base.mathops module
    :undoc-members:
    :show-inheritance:
 
-torchlib.base.ops module
-------------------------
+torchlib.base.randomfunc module
+-------------------------------
 
-.. automodule:: torchlib.base.ops
+.. automodule:: torchlib.base.randomfunc
    :members:
    :undoc-members:
    :show-inheritance:

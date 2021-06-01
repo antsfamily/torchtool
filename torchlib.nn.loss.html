@@ -40,9 +40,7 @@
 
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.nn.module package" href="torchlib.nn.module.html" />
-    <link rel="prev" title="torchlib.nn package" href="torchlib.nn.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -88,28 +86,8 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">torchlib</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="torchlib.html">torchlib package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="torchlib.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="torchlib.base.html">torchlib.base package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">torchlib</a></li>
 </ul>
 
             
@@ -156,12 +134,6 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="modules.html">torchlib</a> &raquo;</li>
-        
-          <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
-        
-          <li><a href="torchlib.nn.html">torchlib.nn package</a> &raquo;</li>
-        
       <li>torchlib.nn.loss package</li>
     
     
@@ -186,357 +158,32 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.contrast">
-<span id="torchlib-nn-loss-contrast-module"></span><h2>torchlib.nn.loss.contrast module<a class="headerlink" href="#module-torchlib.nn.loss.contrast" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.contrast.Contrast0">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.contrast.</code><code class="sig-name descname">Contrast0</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.contrast.Contrast0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Contrast</p>
-<dl class="method">
-<dt id="torchlib.nn.loss.contrast.Contrast0.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.contrast.Contrast0.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.contrast.Contrast0.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.contrast.Contrast0.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.contrast.ContrastLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.contrast.</code><code class="sig-name descname">ContrastLoss</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.contrast.ContrastLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<div class="math">
-\[C = \frac{{\rm E}(|I|^2)}{[E(|I|)]^2}
-
-\]</div>
-<p>see section 13.4.1 in “Ian G. Cumming’s SAR book”</p>
-<div class="math">
-\[l = -\log(C)
-
-\]</div>
-<dl class="method">
-<dt id="torchlib.nn.loss.contrast.ContrastLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.contrast.ContrastLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.contrast.ContrastLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.contrast.ContrastLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-contrast-module">
+<h2>torchlib.nn.loss.contrast module<a class="headerlink" href="#torchlib-nn-loss-contrast-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.entropy">
-<span id="torchlib-nn-loss-entropy-module"></span><h2>torchlib.nn.loss.entropy module<a class="headerlink" href="#module-torchlib.nn.loss.entropy" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.entropy.NaturalEntropy">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.entropy.</code><code class="sig-name descname">NaturalEntropy</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.entropy.NaturalEntropy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Natural entropy</p>
-<dl class="method">
-<dt id="torchlib.nn.loss.entropy.NaturalEntropy.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.entropy.NaturalEntropy.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.entropy.NaturalEntropy.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.entropy.NaturalEntropy.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.entropy.ShannonEntropy">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.entropy.</code><code class="sig-name descname">ShannonEntropy</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.entropy.ShannonEntropy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Shannon entropy</p>
-<dl class="method">
-<dt id="torchlib.nn.loss.entropy.ShannonEntropy.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.entropy.ShannonEntropy.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.entropy.ShannonEntropy.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.entropy.ShannonEntropy.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-entropy-module">
+<h2>torchlib.nn.loss.entropy module<a class="headerlink" href="#torchlib-nn-loss-entropy-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.norm">
-<span id="torchlib-nn-loss-norm-module"></span><h2>torchlib.nn.loss.norm module<a class="headerlink" href="#module-torchlib.nn.loss.norm" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.norm.Frobenius">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.norm.</code><code class="sig-name descname">Frobenius</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em>, <em class="sig-param">p=2</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.norm.Frobenius" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<div class="math">
-\[\|\bm X\|_p^p = (\sum{x^p})^{1/p}
-
-\]</div>
-<dl class="method">
-<dt id="torchlib.nn.loss.norm.Frobenius.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.norm.Frobenius.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.norm.Frobenius.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.norm.Frobenius.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.norm.LogFrobenius">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.norm.</code><code class="sig-name descname">LogFrobenius</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em>, <em class="sig-param">p=2</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.norm.LogFrobenius" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<div class="math">
-\[{\log}{\||\bm X|\|_p^p} = \log {\left((\sum{|x|^p})^{1/p}\right)}
-
-\]</div>
-<dl class="method">
-<dt id="torchlib.nn.loss.norm.LogFrobenius.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.norm.LogFrobenius.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.norm.LogFrobenius.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.norm.LogFrobenius.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-norm-module">
+<h2>torchlib.nn.loss.norm module<a class="headerlink" href="#torchlib-nn-loss-norm-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.retrieval">
-<span id="torchlib-nn-loss-retrieval-module"></span><h2>torchlib.nn.loss.retrieval module<a class="headerlink" href="#module-torchlib.nn.loss.retrieval" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.retrieval.DiceLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.retrieval.</code><code class="sig-name descname">DiceLoss</code><span class="sig-paren">(</span><em class="sig-param">size_average=True</em>, <em class="sig-param">reduce=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.DiceLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="torchlib.nn.loss.retrieval.DiceLoss.soft_dice_coeff">
-<code class="sig-name descname">soft_dice_coeff</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.DiceLoss.soft_dice_coeff" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.retrieval.DiceLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.retrieval.DiceLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.retrieval.F1Loss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.retrieval.</code><code class="sig-name descname">F1Loss</code><span class="sig-paren">(</span><em class="sig-param">size_average=True</em>, <em class="sig-param">reduce=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.F1Loss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>F1 distance Loss</p>
-<div class="math" id="equation-equ-f-measure">
-<span class="eqno">(1)<a class="headerlink" href="#equation-equ-f-measure" title="Permalink to this equation">¶</a></span>\[F_{\beta} = 1 -\frac{(1+\beta^2)鈰匬鈰匯}{\beta^2鈰匬 + R}
-
-\]</div>
-<p>where,</p>
-<div class="math" id="equation-equ-precision">
-<span class="eqno">(2)<a class="headerlink" href="#equation-equ-precision" title="Permalink to this equation">¶</a></span>\[{\rm PPV} = {P} = \frac{\rm TP}{{\rm TP} + {\rm FP}}
-
-\]</div>
-<div class="math" id="equation-equ-recall">
-<span class="eqno">(3)<a class="headerlink" href="#equation-equ-recall" title="Permalink to this equation">¶</a></span>\[{\rm TPR} = {R} = \frac{\rm TP}{{\rm TP} + {\rm FN}}
-
-\]</div>
-<dl class="method">
-<dt id="torchlib.nn.loss.retrieval.F1Loss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.F1Loss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.retrieval.F1Loss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.retrieval.F1Loss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.retrieval.IridescentLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.retrieval.</code><code class="sig-name descname">IridescentLoss</code><span class="sig-paren">(</span><em class="sig-param">size_average=True</em>, <em class="sig-param">reduce=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.IridescentLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Iridescent Distance Loss</p>
-<div class="math">
-\[d_{J}({\mathbb A}, {\mathbb B})=1-J({\mathbb A}, {\mathbb B})=\frac{|{\mathbb A} \cup {\mathbb B}|-|{\mathbb A} \cap {\mathbb B}|}{|{\mathbb A} \cup {\mathbb B}|}
-
-\]</div>
-<dl class="method">
-<dt id="torchlib.nn.loss.retrieval.IridescentLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.IridescentLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.retrieval.IridescentLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.retrieval.IridescentLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.retrieval.JaccardLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.retrieval.</code><code class="sig-name descname">JaccardLoss</code><span class="sig-paren">(</span><em class="sig-param">size_average=True</em>, <em class="sig-param">reduce=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.JaccardLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Jaccard distance</p>
-<div class="math">
-\[d_{J}({\mathbb A}, {\mathbb B})=1-J({\mathbb A}, {\mathbb B})=\frac{|{\mathbb A} \cup {\mathbb B}|-|{\mathbb A} \cap {\mathbb B}|}{|{\mathbb A} \cup {\mathbb B}|}
-
-\]</div>
-<dl class="method">
-<dt id="torchlib.nn.loss.retrieval.JaccardLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">P</em>, <em class="sig-param">G</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.retrieval.JaccardLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.retrieval.JaccardLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.retrieval.JaccardLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-retrieval-module">
+<h2>torchlib.nn.loss.retrieval module<a class="headerlink" href="#torchlib-nn-loss-retrieval-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="torchlib-nn-loss-segmentation-module">
 <h2>torchlib.nn.loss.segmentation module<a class="headerlink" href="#torchlib-nn-loss-segmentation-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.semantic">
-<span id="torchlib-nn-loss-semantic-module"></span><h2>torchlib.nn.loss.semantic module<a class="headerlink" href="#module-torchlib.nn.loss.semantic" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.semantic.</code><code class="sig-name descname">EdgeAwareLoss</code><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss.backward">
-<code class="sig-name descname">backward</code><span class="sig-paren">(</span><em class="sig-param">retain_variables=True</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss.backward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">actual</em>, <em class="sig-param">desire</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss.evaluate" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss.fit">
-<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">actual</em>, <em class="sig-param">desire</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss.fit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">actual</em>, <em class="sig-param">desire</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss.meta_optimize">
-<code class="sig-name descname">meta_optimize</code><span class="sig-paren">(</span><em class="sig-param">lossD</em>, <em class="sig-param">length</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss.meta_optimize" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.semantic.EdgeAwareLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeAwareLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.semantic.EdgeLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.semantic.</code><code class="sig-name descname">EdgeLoss</code><span class="sig-paren">(</span><em class="sig-param">window='normsobel'</em>, <em class="sig-param">Ci=1</em>, <em class="sig-param">dtype=torch.float32</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Semantic Edge Loss Object</p>
-<p>Semantic Edge Loss</p>
-<dl class="method">
-<dt id="torchlib.nn.loss.semantic.EdgeLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.semantic.EdgeLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.semantic.EdgeLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-semantic-module">
+<h2>torchlib.nn.loss.semantic module<a class="headerlink" href="#torchlib-nn-loss-semantic-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.ssims">
-<span id="torchlib-nn-loss-ssims-module"></span><h2>torchlib.nn.loss.ssims module<a class="headerlink" href="#module-torchlib.nn.loss.ssims" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.ssims.MSSSIMLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.ssims.</code><code class="sig-name descname">MSSSIMLoss</code><span class="sig-paren">(</span><em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">L=None</em>, <em class="sig-param">alpha=1</em>, <em class="sig-param">beta=1</em>, <em class="sig-param">gamma=1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.ssims.MSSSIMLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="torchlib.nn.loss.ssims.MSSSIMLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.ssims.MSSSIMLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.ssims.MSSSIMLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.ssims.MSSSIMLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.ssims.SSIMLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.ssims.</code><code class="sig-name descname">SSIMLoss</code><span class="sig-paren">(</span><em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">L=None</em>, <em class="sig-param">alpha=1</em>, <em class="sig-param">beta=1</em>, <em class="sig-param">gamma=1</em>, <em class="sig-param">full=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.ssims.SSIMLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Structural similarity Object</p>
-<p>[description]</p>
-<dl class="method">
-<dt id="torchlib.nn.loss.ssims.SSIMLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.ssims.SSIMLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.ssims.SSIMLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.ssims.SSIMLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="torchlib.nn.loss.ssims.StructureLoss">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.ssims.</code><code class="sig-name descname">StructureLoss</code><span class="sig-paren">(</span><em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">channel=3</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.ssims.StructureLoss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<dl class="method">
-<dt id="torchlib.nn.loss.ssims.StructureLoss.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.ssims.StructureLoss.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.ssims.StructureLoss.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.ssims.StructureLoss.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-ssims-module">
+<h2>torchlib.nn.loss.ssims module<a class="headerlink" href="#torchlib-nn-loss-ssims-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss.variation">
-<span id="torchlib-nn-loss-variation-module"></span><h2>torchlib.nn.loss.variation module<a class="headerlink" href="#module-torchlib.nn.loss.variation" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.nn.loss.variation.TotalVariation">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.nn.loss.variation.</code><code class="sig-name descname">TotalVariation</code><span class="sig-paren">(</span><em class="sig-param">reduction='mean'</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.variation.TotalVariation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.module.Module</span></code></p>
-<p>Total Variarion</p>
-<dl class="method">
-<dt id="torchlib.nn.loss.variation.TotalVariation.forward">
-<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">X</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.nn.loss.variation.TotalVariation.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="torchlib.nn.loss.variation.TotalVariation.training">
-<code class="sig-name descname">training</code><em class="property"> = None</em><a class="headerlink" href="#torchlib.nn.loss.variation.TotalVariation.training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<div class="section" id="torchlib-nn-loss-variation-module">
+<h2>torchlib.nn.loss.variation module<a class="headerlink" href="#torchlib-nn-loss-variation-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.nn.loss">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.nn.loss" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -545,15 +192,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="torchlib.nn.module.html" class="btn btn-neutral float-right" title="torchlib.nn.module package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="torchlib.nn.html" class="btn btn-neutral float-left" title="torchlib.nn package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

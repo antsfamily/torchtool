@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.nn package" href="torchlib.nn.html" />
-    <link rel="prev" title="torchlib.module package" href="torchlib.module.html" /> 
+    <link rel="next" title="torchlib.optim package" href="torchlib.optim.html" />
+    <link rel="prev" title="torchlib.module.loss package" href="torchlib.module.loss.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +96,14 @@
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.layerfunction.html">torchlib.layerfunction package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.linalg.html">torchlib.linalg package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -273,7 +275,16 @@
 <dl class="method">
 <dt id="torchlib.module.misc.transform.Standardization.forward">
 <code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.module.misc.transform.Standardization.forward" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the recipe for forward pass needs to be defined within
+this function, one should call the <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code> instance afterwards
+instead of this since the former takes care of running the
+registered hooks while the latter silently ignores them.</p>
+</div>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="torchlib.module.misc.transform.Standardization.training">
@@ -296,10 +307,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchlib.nn.html" class="btn btn-neutral float-right" title="torchlib.nn package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="torchlib.optim.html" class="btn btn-neutral float-right" title="torchlib.optim package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchlib.module.html" class="btn btn-neutral float-left" title="torchlib.module package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchlib.module.loss.html" class="btn btn-neutral float-left" title="torchlib.module.loss package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

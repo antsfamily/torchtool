@@ -41,7 +41,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.misc package" href="torchlib.misc.html" />
+    <link rel="next" title="torchlib.layerfunction package" href="torchlib.layerfunction.html" />
     <link rel="prev" title="torchlib.dsp package" href="torchlib.dsp.html" /> 
 </head>
 
@@ -96,11 +96,14 @@
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.layerfunction.html">torchlib.layerfunction package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.linalg.html">torchlib.linalg package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -200,6 +203,26 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-torchlib.evaluation.contrast">
+<span id="torchlib-evaluation-contrast-module"></span><h2>torchlib.evaluation.contrast module<a class="headerlink" href="#module-torchlib.evaluation.contrast" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.evaluation.contrast.contrast">
+<code class="sig-prename descclassname">torchlib.evaluation.contrast.</code><code class="sig-name descname">contrast</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">mode='way1'</em>, <em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.contrast.contrast" title="Permalink to this definition">¶</a></dt>
+<dd><p>way1 is defined as follows, see [1]:</p>
+<div class="math">
+\[C = \frac{\sqrt{{\rm E}\left(|I|^2 - {\rm E}(|I|^2)\right)^2}}{{\rm E}(|I|^2)}
+
+\]</div>
+<p>way2 is defined as follows, see [2]:</p>
+<div class="math">
+\[C = \frac{{\rm E}(|I|^2)}{\left({\rm E}(|I|)\right)^2}
+
+\]</div>
+<p>[1] Efficient Nonparametric ISAR Autofocus Algorithm Based on Contrast Maximization and Newton
+[2] section 13.4.1 in “Ian G. Cumming’s SAR book”</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-torchlib.evaluation.entropy">
 <span id="torchlib-evaluation-entropy-module"></span><h2>torchlib.evaluation.entropy module<a class="headerlink" href="#module-torchlib.evaluation.entropy" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
@@ -222,6 +245,19 @@
 <dd class="field-odd"><p>{torch tensor}</p>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.evaluation.norm">
+<span id="torchlib-evaluation-norm-module"></span><h2>torchlib.evaluation.norm module<a class="headerlink" href="#module-torchlib.evaluation.norm" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.evaluation.norm.frobenius">
+<code class="sig-prename descclassname">torchlib.evaluation.norm.</code><code class="sig-name descname">frobenius</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">p=2</em>, <em class="sig-param">reduction='mean'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.norm.frobenius" title="Permalink to this definition">¶</a></dt>
+<dd><p>frobenius norm</p>
+<div class="math">
+\[\|\bm X\|_p^p = (\sum{x^p})^{1/p}
+
+\]</div>
 </dd></dl>
 
 </div>
@@ -552,63 +588,79 @@ In TP, true positive elements are ones, while others are zeros.</p>
 <div class="section" id="module-torchlib.evaluation.ssims">
 <span id="torchlib-evaluation-ssims-module"></span><h2>torchlib.evaluation.ssims module<a class="headerlink" href="#module-torchlib.evaluation.ssims" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="torchlib.evaluation.ssims.create_window">
-<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">create_window</code><span class="sig-paren">(</span><em class="sig-param">winsize</em>, <em class="sig-param">channel</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.create_window" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
-<dt id="torchlib.evaluation.ssims.gaussian">
-<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">gaussian</code><span class="sig-paren">(</span><em class="sig-param">winsize</em>, <em class="sig-param">sigma</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.gaussian" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="torchlib.evaluation.ssims.gaussian_filter">
+<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">gaussian_filter</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">win</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.gaussian_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blur input with 1-D kernel
+:param input: a batch of tensors to be blurred
+:type input: torch.Tensor
+:param window: 1-D gauss kernel
+:type window: torch.Tensor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>blurred tensors</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="torchlib.evaluation.ssims.msssim">
-<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">msssim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">L=255</em>, <em class="sig-param">alpha=1</em>, <em class="sig-param">beta=1</em>, <em class="sig-param">gamma=1</em>, <em class="sig-param">normalize=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.msssim" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">msssim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">data_range=255</em>, <em class="sig-param">size_average=True</em>, <em class="sig-param">win_size=11</em>, <em class="sig-param">win_sigma=1.5</em>, <em class="sig-param">win=None</em>, <em class="sig-param">weights=None</em>, <em class="sig-param">K=(0.01</em>, <em class="sig-param">0.03)</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.msssim" title="Permalink to this definition">¶</a></dt>
+<dd><p>interface of ms-ssim
+:param X: a batch of images, (N,C,[T,]H,W)
+:type X: torch.Tensor
+:param Y: a batch of images, (N,C,[T,]H,W)
+:type Y: torch.Tensor
+:param data_range: value range of input images. (usually 1.0 or 255)
+:type data_range: float or int, optional
+:param size_average: if size_average=True, ssim of all images will be averaged as a scalar
+:type size_average: bool, optional
+:param win_size: (int, optional): the size of gauss kernel
+:param win_sigma: (float, optional): sigma of normal distribution
+:param win: 1-D gauss kernel. if None, a new kernel will be created according to win_size and win_sigma
+:type win: torch.Tensor, optional
+:param weights: weights for different levels
+:type weights: list, optional
+:param K: scalar constants (K1, K2). Try a larger K2 constant (e.g. 0.4) if you get a negative or NaN results.
+:type K: list or tuple, optional</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>msssim results</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="torchlib.evaluation.ssims.ssim">
-<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">ssim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">winsize=11</em>, <em class="sig-param">sizeavg=True</em>, <em class="sig-param">L=255</em>, <em class="sig-param">alpha=1</em>, <em class="sig-param">beta=1</em>, <em class="sig-param">gamma=1</em>, <em class="sig-param">full=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.ssim" title="Permalink to this definition">¶</a></dt>
-<dd><p>Structural similarity</p>
-<div class="math">
-\[\begin{aligned} l(x, y) &=\frac{2 \mu_{x} \mu_{y}+c_{1}}{\mu_{x}^{2}+\mu_{y}^{2}+c_{1}} \\
-c(x, y) &=\frac{2 \sigma_{x} \sigma_{y}+c_{2}}{\sigma_{x}^{2}+\sigma_{y}^{2}+c_{2}} \\
-s(x, y) &=\frac{\sigma_{x y}+c_{3}}{\sigma_{x} \sigma_{y}+c_{3}} \end{aligned}
-
-\]</div>
-<p>where, <span class="math">\(c_1 = (k_1 L)^2, c_2 = (k_2 L)^2, c_3 = c_2 / 2\)</span>,
-<span class="math">\(L\)</span> is the dynamic range of the pixel-values (typically this is <span class="math">\(2 ^{\# \text { bits per pixel }}-1\)</span>.
-The structure similarity index is expressed as</p>
-<div class="math">
-\[\operatorname{SSIM}(x, y)=\left[l(x, y)^{\alpha} \cdot c(x, y)^{\beta} \cdot s(x, y)^{\gamma}\right].
-
-\]</div>
-<p>When <span class="math">\(\alpha=\beta=\gamma=1\)</span>, SSIM is equal to</p>
-<div class="math">
-\[\operatorname{SSIM}(x, y)=\frac{\left(2 \mu_{x} \mu_{y}+c_{1}\right)\left(2 \sigma_{x y}+
-c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\sigma_{y}^{2}+c_{2}\right)}
-
-\]</div>
-<p>see <a class="reference external" href="http://wikipedia.moesalih.com/SSIM">http://wikipedia.moesalih.com/SSIM</a> for more details.</p>
+<code class="sig-prename descclassname">torchlib.evaluation.ssims.</code><code class="sig-name descname">ssim</code><span class="sig-paren">(</span><em class="sig-param">X</em>, <em class="sig-param">Y</em>, <em class="sig-param">data_range=255</em>, <em class="sig-param">size_average=True</em>, <em class="sig-param">win_size=11</em>, <em class="sig-param">win_sigma=1.5</em>, <em class="sig-param">win=None</em>, <em class="sig-param">K=(0.01</em>, <em class="sig-param">0.03)</em>, <em class="sig-param">nonnegative_ssim=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.evaluation.ssims.ssim" title="Permalink to this definition">¶</a></dt>
+<dd><p>interface of ssim
+:param X: a batch of images, (N,C,H,W)
+:type X: torch.Tensor
+:param Y: a batch of images, (N,C,H,W)
+:type Y: torch.Tensor
+:param data_range: value range of input images. (usually 1.0 or 255)
+:type data_range: float or int, optional
+:param size_average: if size_average=True, ssim of all images will be averaged as a scalar
+:type size_average: bool, optional
+:param win_size: (int, optional): the size of gauss kernel
+:param win_sigma: (float, optional): sigma of normal distribution
+:param win: 1-D gauss kernel. if None, a new kernel will be created according to win_size and win_sigma
+:type win: torch.Tensor, optional
+:param K: scalar constants (K1, K2). Try a larger K2 constant (e.g. 0.4) if you get a negative or NaN results.
+:type K: list or tuple, optional
+:param nonnegative_ssim: force the ssim response to be nonnegative with relu
+:type nonnegative_ssim: bool, optional</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>X</strong> (<em>{Torch Tensor}</em>) – data 1</p></li>
-<li><p><strong>Y</strong> (<em>{Torch Tensor}</em>) – data 2</p></li>
-<li><p><strong>winsize</strong> (<em>{int}</em>) – window size</p></li>
-<li><p><strong>sizeavg</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – whether to average (the default is True, which average the result)</p></li>
-<li><p><strong>L</strong> (<em>{integer}</em><em>, </em><em>optional</em>) – the dynamic range of the pixel-values (typically this is <span class="math">\(2 ^{\# \text { bits per pixel }}-1\)</span>. (the default is 255)</p></li>
-<li><p><strong>alpha</strong> (<em>{number}</em><em>, </em><em>optional</em>) – luminance weight (the default is 1)</p></li>
-<li><p><strong>beta</strong> (<em>{number}</em><em>, </em><em>optional</em>) – contrast weight (the default is 1)</p></li>
-<li><p><strong>gamma</strong> (<em>{number}</em><em>, </em><em>optional</em>) – structure weight (the default is 1)</p></li>
-<li><p><strong>full</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – IF True, return SSIM, luminance, contrast and structure index (the default is False, which only return SSIM)</p></li>
-</ul>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ssim results</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>IF <code class="docutils literal notranslate"><span class="pre">full</span></code> is True, returns SSIM, luminance, contrast and structure index, otherwise, only returns SSIM.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>torch.Tensor</p>
 </dd>
 </dl>
 </dd></dl>
@@ -627,7 +679,7 @@ c_{2}\right)}{\left(\mu_{x}^{2}+\mu_{y}^{2}+c_{1}\right)\left(\sigma_{x}^{2}+\si
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchlib.misc.html" class="btn btn-neutral float-right" title="torchlib.misc package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="torchlib.layerfunction.html" class="btn btn-neutral float-right" title="torchlib.layerfunction package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="torchlib.dsp.html" class="btn btn-neutral float-left" title="torchlib.dsp package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

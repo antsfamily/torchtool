@@ -20,6 +20,14 @@ torchlib.optim.lr\_scheduler module
    :undoc-members:
    :show-inheritance:
 
+torchlib.optim.save\_load module
+--------------------------------
+
+.. automodule:: torchlib.optim.save_load
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Module contents
 ---------------

@@ -4,10 +4,26 @@ torchlib.utils package
 Submodules
 ----------
 
+torchlib.utils.colors module
+----------------------------
+
+.. automodule:: torchlib.utils.colors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 torchlib.utils.const module
 ---------------------------
 
 .. automodule:: torchlib.utils.const
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+torchlib.utils.convert module
+-----------------------------
+
+.. automodule:: torchlib.utils.convert
    :members:
    :undoc-members:
    :show-inheritance:
@@ -36,10 +52,10 @@ torchlib.utils.ios module
    :undoc-members:
    :show-inheritance:
 
-torchlib.utils.randomfunc module
+torchlib.utils.plot\_show module
 --------------------------------
 
-.. automodule:: torchlib.utils.randomfunc
+.. automodule:: torchlib.utils.plot_show
    :members:
    :undoc-members:
    :show-inheritance:

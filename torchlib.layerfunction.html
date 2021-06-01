@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>torchlib.summary package &mdash; torchlib 1.0 documentation</title>
+  <title>torchlib.layerfunction package &mdash; torchlib 1.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.utils package" href="torchlib.utils.html" />
-    <link rel="prev" title="torchlib.spl package" href="torchlib.spl.html" /> 
+    <link rel="next" title="torchlib.linalg package" href="torchlib.linalg.html" />
+    <link rel="prev" title="torchlib.evaluation package" href="torchlib.evaluation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,13 +96,13 @@
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.layerfunction.html">torchlib.layerfunction package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.layerfunction package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.linalg.html">torchlib.linalg package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.summary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
 </ul>
 </li>
@@ -161,13 +161,13 @@
         
           <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
         
-      <li>torchlib.summary package</li>
+      <li>torchlib.layerfunction package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/torchlib.summary.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/torchlib.layerfunction.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,52 +180,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torchlib-summary-package">
-<h1>torchlib.summary package<a class="headerlink" href="#torchlib-summary-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="torchlib-layerfunction-package">
+<h1>torchlib.layerfunction package<a class="headerlink" href="#torchlib-layerfunction-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.summary.loss_log">
-<span id="torchlib-summary-loss-log-module"></span><h2>torchlib.summary.loss_log module<a class="headerlink" href="#module-torchlib.summary.loss_log" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.summary.loss_log.LossLog">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.summary.loss_log.</code><code class="sig-name descname">LossLog</code><span class="sig-paren">(</span><em class="sig-param">plotdir=None</em>, <em class="sig-param">xlabel='Epoch'</em>, <em class="sig-param">ylabel='Loss'</em>, <em class="sig-param">title=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">logdict=None</em>, <em class="sig-param">lom='min'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.add" title="Permalink to this definition">¶</a></dt>
+<div class="section" id="module-torchlib.layerfunction.complex_functions">
+<span id="torchlib-layerfunction-complex-functions-module"></span><h2>torchlib.layerfunction.complex_functions module<a class="headerlink" href="#module-torchlib.layerfunction.complex_functions" title="Permalink to this headline">¶</a></h2>
+<p>&#64;author: spopoff</p>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_dropout">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_dropout</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">p=0.5</em>, <em class="sig-param">training=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_dropout" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.assign">
-<code class="sig-name descname">assign</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.assign" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_dropout2d">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_dropout2d</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">p=0.5</em>, <em class="sig-param">training=True</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_dropout2d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.get" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_leaky_relu">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_leaky_relu</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">negative_slope=(0.01</em>, <em class="sig-param">0.01)</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_leaky_relu" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.judge">
-<code class="sig-name descname">judge</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">n1=50</em>, <em class="sig-param">n2=10</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.judge" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_max_pool1d">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_max_pool1d</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">ceil_mode=False</em>, <em class="sig-param">return_indices=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_max_pool1d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">x=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.plot" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_max_pool2d">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_max_pool2d</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">kernel_size</em>, <em class="sig-param">stride=None</em>, <em class="sig-param">padding=0</em>, <em class="sig-param">dilation=1</em>, <em class="sig-param">ceil_mode=False</em>, <em class="sig-param">return_indices=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_max_pool2d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.updir">
-<code class="sig-name descname">updir</code><span class="sig-paren">(</span><em class="sig-param">plotdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.updir" title="Permalink to this definition">¶</a></dt>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_relu">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_relu</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_relu" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
+<dl class="function">
+<dt id="torchlib.layerfunction.complex_functions.complex_upsample">
+<code class="sig-prename descclassname">torchlib.layerfunction.complex_functions.</code><code class="sig-name descname">complex_upsample</code><span class="sig-paren">(</span><em class="sig-param">input</em>, <em class="sig-param">size=None</em>, <em class="sig-param">scale_factor=None</em>, <em class="sig-param">mode='nearest'</em>, <em class="sig-param">align_corners=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.layerfunction.complex_functions.complex_upsample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
-<div class="section" id="module-torchlib.summary">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.summary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchlib.layerfunction">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.layerfunction" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -237,10 +237,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchlib.utils.html" class="btn btn-neutral float-right" title="torchlib.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="torchlib.linalg.html" class="btn btn-neutral float-right" title="torchlib.linalg package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchlib.spl.html" class="btn btn-neutral float-left" title="torchlib.spl package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchlib.evaluation.html" class="btn btn-neutral float-left" title="torchlib.evaluation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

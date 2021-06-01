@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>torchlib.summary package &mdash; torchlib 1.0 documentation</title>
+  <title>torchlib.linalg package &mdash; torchlib 1.0 documentation</title>
   
 
   
@@ -41,8 +41,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="torchlib.utils package" href="torchlib.utils.html" />
-    <link rel="prev" title="torchlib.spl package" href="torchlib.spl.html" /> 
+    <link rel="next" title="torchlib.misc package" href="torchlib.misc.html" />
+    <link rel="prev" title="torchlib.layerfunction package" href="torchlib.layerfunction.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,12 +97,12 @@
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.layerfunction.html">torchlib.layerfunction package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.linalg.html">torchlib.linalg package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.linalg package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.summary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
 </ul>
 </li>
@@ -161,13 +161,13 @@
         
           <li><a href="torchlib.html">torchlib package</a> &raquo;</li>
         
-      <li>torchlib.summary package</li>
+      <li>torchlib.linalg package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/torchlib.summary.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/torchlib.linalg.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -180,52 +180,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="torchlib-summary-package">
-<h1>torchlib.summary package<a class="headerlink" href="#torchlib-summary-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="torchlib-linalg-package">
+<h1>torchlib.linalg package<a class="headerlink" href="#torchlib-linalg-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-torchlib.summary.loss_log">
-<span id="torchlib-summary-loss-log-module"></span><h2>torchlib.summary.loss_log module<a class="headerlink" href="#module-torchlib.summary.loss_log" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="torchlib.summary.loss_log.LossLog">
-<em class="property">class </em><code class="sig-prename descclassname">torchlib.summary.loss_log.</code><code class="sig-name descname">LossLog</code><span class="sig-paren">(</span><em class="sig-param">plotdir=None</em>, <em class="sig-param">xlabel='Epoch'</em>, <em class="sig-param">ylabel='Loss'</em>, <em class="sig-param">title=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">logdict=None</em>, <em class="sig-param">lom='min'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.add" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.assign">
-<code class="sig-name descname">assign</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.assign" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.get" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.judge">
-<code class="sig-name descname">judge</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">n1=50</em>, <em class="sig-param">n2=10</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.judge" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">x=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.plot" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="torchlib.summary.loss_log.LossLog.updir">
-<code class="sig-name descname">updir</code><span class="sig-paren">(</span><em class="sig-param">plotdir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.summary.loss_log.LossLog.updir" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
+<div class="section" id="module-torchlib.linalg.orthogonalization">
+<span id="torchlib-linalg-orthogonalization-module"></span><h2>torchlib.linalg.orthogonalization module<a class="headerlink" href="#module-torchlib.linalg.orthogonalization" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.linalg.orthogonalization.orth">
+<code class="sig-prename descclassname">torchlib.linalg.orthogonalization.</code><code class="sig-name descname">orth</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.linalg.orthogonalization.orth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Orthogonalization</p>
+<p>A function like MATLAB’s <code class="docutils literal notranslate"><span class="pre">orth</span></code>. After orthogonalizing,
+each column is a orthogonal basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>Tensor</em>) – The matrix to be orthogonalized.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">orth</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:])</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">y</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">y</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">tensor</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">],</span>
+        <span class="p">[</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">]])</span>
+<span class="n">tensor</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.2298</span><span class="p">,</span>  <span class="mf">0.8835</span><span class="p">],</span>
+        <span class="p">[</span><span class="o">-</span><span class="mf">0.5247</span><span class="p">,</span>  <span class="mf">0.2408</span><span class="p">],</span>
+        <span class="p">[</span><span class="o">-</span><span class="mf">0.8196</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4019</span><span class="p">]])</span>
+<span class="n">tensor</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1844</span><span class="p">)</span>
+<span class="n">tensor</span><span class="p">(</span><span class="o">-</span><span class="mf">1.7881e-07</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
-<div class="section" id="module-torchlib.summary">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.summary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-torchlib.linalg">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.linalg" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -237,10 +235,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="torchlib.utils.html" class="btn btn-neutral float-right" title="torchlib.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="torchlib.misc.html" class="btn btn-neutral float-right" title="torchlib.misc package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchlib.spl.html" class="btn btn-neutral float-left" title="torchlib.spl package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchlib.layerfunction.html" class="btn btn-neutral float-left" title="torchlib.layerfunction package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

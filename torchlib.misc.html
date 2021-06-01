@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchlib.module package" href="torchlib.module.html" />
-    <link rel="prev" title="torchlib.evaluation package" href="torchlib.evaluation.html" /> 
+    <link rel="prev" title="torchlib.linalg package" href="torchlib.linalg.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +96,14 @@
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.layerfunction.html">torchlib.layerfunction package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.linalg.html">torchlib.linalg package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.optim.html">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -212,8 +214,168 @@ If the type of <code class="xref py py-attr docutils literal notranslate"><span 
 </dd></dl>
 
 </div>
+<div class="section" id="module-torchlib.misc.noising">
+<span id="torchlib-misc-noising-module"></span><h2>torchlib.misc.noising module<a class="headerlink" href="#module-torchlib.misc.noising" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.misc.noising.awgn">
+<code class="sig-prename descclassname">torchlib.misc.noising.</code><code class="sig-name descname">awgn</code><span class="sig-paren">(</span><em class="sig-param">sig</em>, <em class="sig-param">snr=30</em>, <em class="sig-param">peak=1</em>, <em class="sig-param">pmode='db'</em>, <em class="sig-param">measMode='measured'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.noising.awgn" title="Permalink to this definition">¶</a></dt>
+<dd><p>AWGN Add white Gaussian noise to a signal.</p>
+<p>Y = AWGN(X,snr) adds white Gaussian noise to X.  The snr is in dB.
+The power of X is assumed to be 0 dBW.  If X is complex, then
+AWGN adds complex noise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sig</strong> (<em>{torch.Tensor}</em>) – Signal that will be noised.</p></li>
+<li><p><strong>snr</strong> (<em>{float number}</em><em>, </em><em>optional</em>) – Signal Noise Ratio (the default is 30)</p></li>
+<li><p><strong>peak</strong> (<em>{float number}</em><em>, </em><em>optional</em>) – Peak value (the default is 1)</p></li>
+<li><p><strong>pmode</strong> (<em>{string}</em><em>, </em><em>optional</em>) – Power mode <code class="docutils literal notranslate"><span class="pre">'linear'</span></code>, <code class="docutils literal notranslate"><span class="pre">'db'</span></code> (the default is ‘db’)</p></li>
+<li><p><strong>measMode</strong> (<em>{string}</em><em>, </em><em>optional</em>) – [description] (the default is ‘measured’, which [default_description])</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>noised data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch.Tensor}</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#IOError" title="(in Python v3.9)"><strong>IOError</strong></a> – No input signal</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.9)"><strong>TypeError</strong></a> – Input signal shape wrong</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.noising.imnoise">
+<code class="sig-prename descclassname">torchlib.misc.noising.</code><code class="sig-name descname">imnoise</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">noise='wgn'</em>, <em class="sig-param">snr=30</em>, <em class="sig-param">peak=None</em>, <em class="sig-param">fmt='chnllast'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.noising.imnoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add noise to image</p>
+<p>Add noise to image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>{torch.Tensor}</em>) – image aray</p></li>
+<li><p><strong>noise</strong> (<em>{string}</em><em>, </em><em>optional</em>) – noise type (the default is ‘wgn’, which [default_description])</p></li>
+<li><p><strong>snr</strong> (<em>{float number}</em><em>, </em><em>optional</em>) – Signal-to-noise ratio (the default is 30, which [default_description])</p></li>
+<li><p><strong>peak</strong> (<em>{None</em><em>, </em><em>string</em><em> or </em><em>float}</em>) – Peak value in input, if None, auto detected (default), if <code class="docutils literal notranslate"><span class="pre">'maxv'</span></code>, use the maximum value as peak value.</p></li>
+<li><p><strong>fmt</strong> (<em>{string</em><em> or </em><em>None}</em><em>, </em><em>optional</em>) – for color image, <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmt</span></code> should be specified with <code class="docutils literal notranslate"><span class="pre">'chnllast'</span></code> or <code class="docutils literal notranslate"><span class="pre">'chnlfirst'</span></code>, for gray image, <code class="xref py py-attr docutils literal notranslate"><span class="pre">fmt</span></code> should be setted to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Images with added noise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>{torch.Tensor}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.noising.matnoise">
+<code class="sig-prename descclassname">torchlib.misc.noising.</code><code class="sig-name descname">matnoise</code><span class="sig-paren">(</span><em class="sig-param">mat</em>, <em class="sig-param">noise='wgn'</em>, <em class="sig-param">snr=30</em>, <em class="sig-param">peak='maxv'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.noising.matnoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>add noise to an matrix</p>
+<p>Add noise to an matrix (real or complex)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mat</strong> (<em>{torch.Tensor}</em>) – can be real or complex valued</p>
+</dd>
+<dt class="field-even">Keyword Arguments</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>noise</strong> (<em>{string}</em>) – type of noise (default: {‘wgn’})</p></li>
+<li><p><strong>snr</strong> (<em>{float number}</em>) – Signal-to-noise ratio (default: {30})</p></li>
+<li><p><strong>peak</strong> (<em>{None</em><em> or </em><em>float}</em>) – Peak value in input, for complex data, <code class="docutils literal notranslate"><span class="pre">peak=[peakr,</span> <span class="pre">peaki]</span></code>, if None, auto detected, if <code class="docutils literal notranslate"><span class="pre">'maxv'</span></code>, use the maximum value as peak value. (default)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.noising.wgn">
+<code class="sig-prename descclassname">torchlib.misc.noising.</code><code class="sig-name descname">wgn</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">p</em>, <em class="sig-param">peak=1</em>, <em class="sig-param">pmode='dbw'</em>, <em class="sig-param">dtype='real'</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.noising.wgn" title="Permalink to this definition">¶</a></dt>
+<dd><p>WGN Generate white Gaussian noise.</p>
+<p>Y = WGN((M,N),P) generates an M-by-N matrix of white Gaussian noise. P
+specifies the power of the output noise in dBW. The unit of measure for
+the output of the wgn function is Volts. For power calculations, it is
+assumed that there is a load of 1 Ohm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shape</strong> (<em>{tulpe}</em>) – Shape of noising matrix</p></li>
+<li><p><strong>p</strong> (<em>{float number}</em>) – P specifies the power of the output noise in dBW.</p></li>
+<li><p><strong>peak</strong> (<em>{float number}</em><em>, </em><em>optional</em>) – Peak value (the default is 1)</p></li>
+<li><p><strong>pmode</strong> (<em>{string}</em><em>, </em><em>optional</em>) – Power mode of the output noise (the default is ‘dbw’)</p></li>
+<li><p><strong>dtype</strong> (<em>{string}</em><em>, </em><em>optional</em>) – data type, real or complex (the default is ‘real’, which means real-valued)</p></li>
+<li><p><strong>seed</strong> (<em>{integer}</em><em>, </em><em>optional</em>) – Seed for random number generator. (the default is None, which means different each time)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Matrix of white Gaussian noise (real or complex).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>torch.Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
 <div class="section" id="module-torchlib.misc.sampling">
 <span id="torchlib-misc-sampling-module"></span><h2>torchlib.misc.sampling module<a class="headerlink" href="#module-torchlib.misc.sampling" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.misc.sampling.dnsampling">
+<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">dnsampling</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ratio=1.0</em>, <em class="sig-param">axis=-1</em>, <em class="sig-param">smode='uniform'</em>, <em class="sig-param">omode='discard'</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">extra=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.dnsampling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Summary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Tensor</em>) – The Input tensor.</p></li>
+<li><p><strong>ratio</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – Downsampling ratio.</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Downsampling axis (default -1).</p></li>
+<li><p><strong>smode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – Downsampling mode: <code class="docutils literal notranslate"><span class="pre">'uniform'</span></code>, <code class="docutils literal notranslate"><span class="pre">'random'</span></code>, <code class="docutils literal notranslate"><span class="pre">'random2'</span></code>.</p></li>
+<li><p><strong>omode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – output mode: <code class="docutils literal notranslate"><span class="pre">'discard'</span></code> for discarding, <code class="docutils literal notranslate"><span class="pre">'zero'</span></code> for zero filling.</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em>, </em><em>optional</em>) – seed for torch’s random.</p></li>
+<li><p><strong>extra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also return sampling mask.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Description</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Tensor)</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.9)"><strong>TypeError</strong></a> – <code class="xref py py-attr docutils literal notranslate"><span class="pre">axis</span></code></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – <code class="xref py py-attr docutils literal notranslate"><span class="pre">ratio</span></code>, attr:<cite>smode</cite>, attr:<cite>omode</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.sampling.patch2tensor">
+<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">patch2tensor</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">size=(256</em>, <em class="sig-param">256)</em>, <em class="sig-param">axis=(1</em>, <em class="sig-param">2)</em>, <em class="sig-param">mode='nfirst'</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.patch2tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>merge patch to a tensor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.9)"><em>type</em></a>) – A tensor of patches.</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em>, </em><em>optional</em>) – Merged tensor size in the dimension (the default is (256, 256)).</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em>, </em><em>optional</em>) – Merged axis of patch (the default is (1, 2))</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – Patch mode <code class="docutils literal notranslate"><span class="pre">'nfirst'</span></code> or <code class="docutils literal notranslate"><span class="pre">'nlast'</span></code> (the default is ‘nfirst’,
+which means the first dimension is the number of patches)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Merged tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="function">
 <dt id="torchlib.misc.sampling.sample_tensor">
 <code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">sample_tensor</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">n</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">mode='sequentially'</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">extra=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.sample_tensor" title="Permalink to this definition">¶</a></dt>
@@ -222,32 +384,35 @@ If the type of <code class="xref py py-attr docutils literal notranslate"><span 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>{torch tensor}</em>) – a torch tensor to be sampled</p></li>
-<li><p><strong>n</strong> (<em>{number}</em>) – sample number</p></li>
-<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – the axis to be sampled (the default is 0)</p></li>
-<li><p><strong>groups</strong> (<em>{number}</em><em>, </em><em>optional</em>) – number of groups in this tensor (the default is 1)</p></li>
-<li><p><strong>mode</strong> (<em>{str}</em><em>, </em><em>optional</em>) – <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">'sequentially'</span></code>: [0, int(n/groups)] (default)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">'uniformly'</span></code>: evenly spaced</p></li>
+<li><p><strong>x</strong> (<em>torch.Tensor</em>) – a torch tensor to be sampled</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – sample number</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – the axis to be sampled (the default is 0)</p></li>
+<li><p><strong>groups</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – number of groups in this tensor (the default is 1)</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">'sequentially'</span></code>: evenly spaced (default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'uniformly'</span></code>: [0, int(n/groups)]</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">'randomly'</span></code>: randomly selected, non-returned sampling</p></li>
 </ul>
 </p></li>
-<li><p><strong>seed</strong> (<em>{None</em><em> or </em><em>number}</em><em>, </em><em>optional</em>) – only work for <code class="docutils literal notranslate"><span class="pre">'randomly'</span></code> mode (the default is None)</p></li>
-<li><p><strong>extra</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also return the selected indexes, the default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – only work for <code class="docutils literal notranslate"><span class="pre">'randomly'</span></code> mode (the default is None)</p></li>
+<li><p><strong>extra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also return the selected indexes, the default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>y</strong> (<em>{torch tensor}</em>) – Sampled torch tensor.</p></li>
-<li><p><strong>idx</strong> (<em>{list}</em>) – Sampled indexes, if <code class="xref py py-attr docutils literal notranslate"><span class="pre">extra</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this will also be returned.</p></li>
-</ul>
-</p>
+<dd class="field-even"><p>Sampled torch tensor.
+idx (list): Sampled indexes, if <code class="xref py py-attr docutils literal notranslate"><span class="pre">extra</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this will also be returned.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>y (torch.Tensor)</p>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-<span class="n">y1</span><span class="p">,</span> <span class="n">idx1</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;sequentially&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">y2</span><span class="p">,</span> <span class="n">idx2</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;uniformly&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">y3</span><span class="p">,</span> <span class="n">idx3</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;randomly&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">setseed</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="s1">&#39;torch&#39;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">y1</span><span class="p">,</span> <span class="n">idx1</span> <span class="o">=</span> <span class="n">sample_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;sequentially&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y2</span><span class="p">,</span> <span class="n">idx2</span> <span class="o">=</span> <span class="n">sample_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;uniformly&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y3</span><span class="p">,</span> <span class="n">idx3</span> <span class="o">=</span> <span class="n">sample_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;randomly&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -268,22 +433,148 @@ If the type of <code class="xref py py-attr docutils literal notranslate"><span 
 <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 </pre></div>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><strong>ValueError</strong></a> – The tensor does not has enough samples.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.sampling.shuffle_tensor">
+<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">shuffle_tensor</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=0</em>, <em class="sig-param">groups=1</em>, <em class="sig-param">mode='inter'</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">extra=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.shuffle_tensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>shuffle a tensor</p>
+<p>Shuffle a tensor randomly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Tensor</em>) – A torch tensor to be shuffled.</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The axis to be shuffled (default 0)</p></li>
+<li><p><strong>groups</strong> (<em>number</em><em>, </em><em>optional</em>) – The number of groups in this tensor (default 1)</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – <ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">'inter'</span></code>: between groups (default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'intra'</span></code>: within group</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'whole'</span></code>: the whole</p></li>
+</ul>
+</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a><em> or </em><em>number</em><em>, </em><em>optional</em>) – random seed (the default is None)</p></li>
+<li><p><strong>extra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also returns the shuffle indexes, the default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Shuffled torch tensor.
+idx (list): Shuffled indexes, if <code class="xref py py-attr docutils literal notranslate"><span class="pre">extra</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, this will also be returned.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>y (Tensor)</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="n">setseed</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="s1">&#39;torch&#39;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">th</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">y1</span><span class="p">,</span> <span class="n">idx1</span> <span class="o">=</span> <span class="n">shuffle_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;intra&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y2</span><span class="p">,</span> <span class="n">idx2</span> <span class="o">=</span> <span class="n">shuffle_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;inter&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">y3</span><span class="p">,</span> <span class="n">idx3</span> <span class="o">=</span> <span class="n">shuffle_tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;whole&#39;</span><span class="p">,</span> <span class="n">extra</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y3</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">idx1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">idx2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">idx3</span><span class="p">)</span>
+
+<span class="n">the</span> <span class="n">outputs</span> <span class="n">are</span> <span class="k">as</span> <span class="n">follows</span><span class="p">:</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.sampling.slidegrid">
+<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">slidegrid</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">stop</em>, <em class="sig-param">step</em>, <em class="sig-param">shake=0</em>, <em class="sig-param">n=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.slidegrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates sliding grid indexes</p>
+<p>Generates <code class="xref py py-attr docutils literal notranslate"><span class="pre">n</span></code> sliding grid indexes from <code class="xref py py-attr docutils literal notranslate"><span class="pre">start</span></code> to <code class="xref py py-attr docutils literal notranslate"><span class="pre">stop</span></code>
+with step size <code class="xref py py-attr docutils literal notranslate"><span class="pre">step</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – start sampling point</p></li>
+<li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – stop sampling point</p></li>
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a>) – sampling stepsize</p></li>
+<li><p><strong>shake</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a>) – the shake rate, if <code class="xref py py-attr docutils literal notranslate"><span class="pre">shake</span></code> is 0, no shake, (default),
+if positive, add a positive shake, if negative, add a negative.</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><em>None</em></a>) – the number of samples (default None, int((stop0 - start0) / step0) * int((stop1 - start1) / step1)…).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>see <code class="xref py py-func docutils literal notranslate"><span class="pre">randperm()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">randgrid()</span></code>.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.9)"><strong>TypeError</strong></a> – The number of samples should be an integer or None.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="torchlib.misc.sampling.split_tensor">
-<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">split_tensor</code><span class="sig-paren">(</span><em class="sig-param">x, ratios=[0.7, 0.2, 0.1], axis=0, shuffle=False, seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.split_tensor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">split_tensor</code><span class="sig-paren">(</span><em class="sig-param">x, ratios=[0.7, 0.2, 0.1], axis=0, shuffle=False, seed=None, extra=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.split_tensor" title="Permalink to this definition">¶</a></dt>
 <dd><p>split tensor</p>
 <p>split a tensor into some parts.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>{torch Tensor}</em>) – A torch tensor.</p></li>
-<li><p><strong>ratios</strong> (<em>{list}</em><em>, </em><em>optional</em>) – split ratios (the default is [0.7, 0.2, 0.05])</p></li>
-<li><p><strong>axis</strong> (<em>{number}</em><em>, </em><em>optional</em>) – split axis (the default is 0)</p></li>
-<li><p><strong>shuffle</strong> (<em>{bool}</em><em>, </em><em>optional</em>) – whether shuffle (the default is False)</p></li>
-<li><p><strong>seed</strong> (<em>{number}</em><em>, </em><em>optional</em>) – shuffule seed (the default is None)</p></li>
+<li><p><strong>x</strong> (<em>Tensor</em>) – A torch tensor.</p></li>
+<li><p><strong>ratios</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>, </em><em>optional</em>) – Split ratios (the default is [0.7, 0.2, 0.05])</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Split axis (the default is 0)</p></li>
+<li><p><strong>shuffle</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether shuffle (the default is False)</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Shuffule seed (the default is None)</p></li>
+<li><p><strong>extra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a><em>, </em><em>optional</em>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also return the split indexes, the default is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Splitted tensors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(list of Tensor)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.sampling.tensor2patch">
+<code class="sig-prename descclassname">torchlib.misc.sampling.</code><code class="sig-name descname">tensor2patch</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">n=None</em>, <em class="sig-param">size=(256</em>, <em class="sig-param">256)</em>, <em class="sig-param">axis=(0</em>, <em class="sig-param">1)</em>, <em class="sig-param">start=(0</em>, <em class="sig-param">0)</em>, <em class="sig-param">stop=(None</em>, <em class="sig-param">None)</em>, <em class="sig-param">step=(1</em>, <em class="sig-param">1)</em>, <em class="sig-param">shake=(0</em>, <em class="sig-param">0)</em>, <em class="sig-param">mode='slidegrid'</em>, <em class="sig-param">seed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.sampling.tensor2patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>sample patch from a tensor</p>
+<p>Sample some patches from a tensor, tensor and patch can be any size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Tensor</em>) – Tensor to be sampled.</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The number of pactches, the default is None, auto computed,
+equals to the number of blocks with specified <code class="xref py py-attr docutils literal notranslate"><span class="pre">step</span></code></p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The size of patch (the default is (256, 256))</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – The sampling axis (the default is (0, 1))</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Start sampling index for each axis (the default is (0, 0))</p></li>
+<li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Stopp sampling index for each axis. (the default is (None, None), which [default_description])</p></li>
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Sampling stepsize for each axis  (the default is (1, 1), which [default_description])</p></li>
+<li><p><strong>shake</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em>, </em><em>optional</em>) – float for shake rate, int for shake points (the default is (0, 0), which means no shake)</p></li>
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><em>str</em></a><em>, </em><em>optional</em>) – Sampling mode, <code class="docutils literal notranslate"><span class="pre">'slidegrid'</span></code>, <code class="docutils literal notranslate"><span class="pre">'randgrid'</span></code>, <code class="docutils literal notranslate"><span class="pre">'randperm'</span></code> (the default is ‘slidegrid’)</p></li>
+<li><p><strong>seed</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a><em>, </em><em>optional</em>) – Random seed. (the default is None, which means no seed.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A Tensor of sampled patches.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(Tensor)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -291,6 +582,99 @@ If the type of <code class="xref py py-attr docutils literal notranslate"><span 
 </div>
 <div class="section" id="module-torchlib.misc.transform">
 <span id="torchlib-misc-transform-module"></span><h2>torchlib.misc.transform module<a class="headerlink" href="#module-torchlib.misc.transform" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.misc.transform.ct2rt">
+<code class="sig-prename descclassname">torchlib.misc.transform.</code><code class="sig-name descname">ct2rt</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.transform.ct2rt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a complex-valued tensor to a real-valued tensor</p>
+<p>Converts a complex-valued tensor <span class="math">\({\bf x}\)</span> to a real-valued tensor with FFT and conjugate symmetry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>Tensor</em>) – The input tensor <span class="math">\({\bf x}\in {\mathbb C}^{H×W}\)</span>.</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The axis for excuting FFT.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output tensor <span class="math">\({\bf y}\in {\mathbb R}^{2H×W}\)</span> ( <code class="xref py py-attr docutils literal notranslate"><span class="pre">axis</span></code> = 0 ), <span class="math">\({\bf y}\in {\mathbb R}^{H×2W}\)</span> ( <code class="xref py py-attr docutils literal notranslate"><span class="pre">axis</span></code> = 1 )</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.transform.db20">
+<code class="sig-prename descclassname">torchlib.misc.transform.</code><code class="sig-name descname">db20</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.transform.db20" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes dB value of a tensor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>Tensor</em>) – The input tensor.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output tensor (dB)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.transform.quantization">
+<code class="sig-prename descclassname">torchlib.misc.transform.</code><code class="sig-name descname">quantization</code><span class="sig-paren">(</span><em class="sig-param">X, idrange=None, odrange=[0, 31], odtype='auto', extra=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.transform.quantization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quantize data.</p>
+<div class="math">
+\[x \in [a, b] \rightarrow y \in [c, d]
+
+\]</div>
+<div class="math">
+\[y = (d-c)*(x-a) / (b-a) + c.
+
+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>tensor_like</em>) – The data to be quantized with shape <span class="math">\(N_a×N_r ∈ {\mathbb R}\)</span>, or <span class="math">\(N_a×N_r ∈ {\mathbb C}\)</span>.</p></li>
+<li><p><strong>idrange</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>, </em><em>optional</em>) – Specifies the range of data. Default [min(X), max(X)].</p></li>
+<li><p><strong>odrange</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.9)"><em>tuple</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><em>list</em></a><em>, </em><em>optional</em>) – Specifies the range of data after beening quantized. Default [0, 31].</p></li>
+<li><p><strong>odtype</strong> (<em>{str</em><em>, </em><em>None... }</em><em>, </em><em>optional</em>) – output data type, supportted are <code class="docutils literal notranslate"><span class="pre">'auto'</span></code> (auto infer, default), or torch tensor’s dtype string.
+If the type of <code class="xref py py-attr docutils literal notranslate"><span class="pre">odtype</span></code> is not string(such as None),
+the type of output data is the same with input.</p></li>
+<li><p><strong>extra</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, also return <code class="xref py py-attr docutils literal notranslate"><span class="pre">st</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">idrange</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>out</strong> (<em>tensor</em>) – Quantized data tensor, if the input is complex, will return a tensor with shape <span class="math">\(N_a×N_r×2 ∈ {\mathbb R}\)</span>.</p></li>
+<li><p><strong>idrange, odrange</strong> (<em>list or tuple</em>) – If <code class="xref py py-attr docutils literal notranslate"><span class="pre">extra</span></code> is true, also be returned</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="torchlib.misc.transform.rt2ct">
+<code class="sig-prename descclassname">torchlib.misc.transform.</code><code class="sig-name descname">rt2ct</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">axis=0</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.transform.rt2ct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a real-valued tensor to a complex-valued tensor</p>
+<p>Converts a real-valued tensor <span class="math">\({\bf y}\)</span> to a complex-valued tensor with FFT and conjugate symmetry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> (<em>Tensor</em>) – The input tensor <span class="math">\({\bf y}\in {\mathbb C}^{2H×W}\)</span>.</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><em>int</em></a>) – The axis for excuting FFT.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The output tensor <span class="math">\({\bf x}\in {\mathbb R}^{H×W}\)</span> ( <code class="xref py py-attr docutils literal notranslate"><span class="pre">axis</span></code> = 0 ), <span class="math">\({\bf x}\in {\mathbb R}^{H×W}\)</span> ( <code class="xref py py-attr docutils literal notranslate"><span class="pre">axis</span></code> = 1 )</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Tensor</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="function">
 <dt id="torchlib.misc.transform.scale">
 <code class="sig-prename descclassname">torchlib.misc.transform.</code><code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param">X, st=[0, 1], sf=None, istrunc=True, extra=False</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.misc.transform.scale" title="Permalink to this definition">¶</a></dt>
@@ -362,7 +746,7 @@ then X[X &lt; a] == a and X[X &gt; b] == b.</p></li>
         <a href="torchlib.module.html" class="btn btn-neutral float-right" title="torchlib.module package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchlib.evaluation.html" class="btn btn-neutral float-left" title="torchlib.evaluation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchlib.linalg.html" class="btn btn-neutral float-left" title="torchlib.linalg package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

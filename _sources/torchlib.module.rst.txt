@@ -6,6 +6,10 @@ Subpackages
 
 .. toctree::
 
+   torchlib.module.dsp
+   torchlib.module.evaluation
+   torchlib.module.layers
+   torchlib.module.loss
    torchlib.module.misc
 
 Module contents

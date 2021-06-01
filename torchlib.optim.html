@@ -42,7 +42,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="torchlib.spl package" href="torchlib.spl.html" />
-    <link rel="prev" title="torchlib.nn.module package" href="torchlib.nn.module.html" /> 
+    <link rel="prev" title="torchlib.module.misc package" href="torchlib.module.misc.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,12 +96,14 @@
 <li class="toctree-l4"><a class="reference internal" href="torchlib.diagnose.html">torchlib.diagnose package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.dsp.html">torchlib.dsp package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.evaluation.html">torchlib.evaluation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.layerfunction.html">torchlib.layerfunction package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.linalg.html">torchlib.linalg package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.misc.html">torchlib.misc package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.module.html">torchlib.module package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="torchlib.nn.html">torchlib.nn package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">torchlib.optim package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.spl.html">torchlib.spl package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="torchlib.summary.html">torchlib.summary package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="torchlib.utils.html">torchlib.utils package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="torchlib.html#module-torchlib">Module contents</a></li>
@@ -339,6 +341,49 @@ outside this scheduler by other operators.</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="torchlib.optim.lr_scheduler.MountainLR">
+<em class="property">class </em><code class="sig-prename descclassname">torchlib.optim.lr_scheduler.</code><code class="sig-name descname">MountainLR</code><span class="sig-paren">(</span><em class="sig-param">optimizer</em>, <em class="sig-param">total_epoch</em>, <em class="sig-param">peak_epoch</em>, <em class="sig-param">period_epoch</em>, <em class="sig-param">last_epoch=-1</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.lr_scheduler.MountainLR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.optim.lr_scheduler._LRScheduler</span></code></p>
+<p>Set the learning rate of each parameter group using a double gaussian kernel
+schedule, where <span class="math">\(\eta_{max}\)</span> is set to the initial lr and
+<span class="math">\(T_{cur}\)</span> is the number of epochs since the last restart in SGDR:</p>
+<div class="math">
+\[(|x-P| / N) .* (-2 + cos(2 * (x-P) / T))
+
+\]</div>
+<p>When last_epoch=-1, sets initial lr as lr. Notice that because the schedule
+is defined recursively, the learning rate can be simultaneously modified
+outside this scheduler by other operators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>optimizer</strong> (<em>{Optimizer}</em>) – Wrapped optimizer.</p></li>
+<li><p><strong>t_eta_max</strong> (<em>{int}</em>) – Iterations when the learning rate reach to the maximum value <span class="math">\(\eta_{\max}\)</span>.</p></li>
+<li><p><strong>sigma1</strong> (<em>{int}</em>) – Controls the shape of warming up phase.</p></li>
+<li><p><strong>sigma2</strong> (<em>{int}</em>) – Controls the shape of annealing phase.</p></li>
+<li><p><strong>eta_start</strong> (<em>{float}</em>) – Starting learning rate. Default: 0.</p></li>
+<li><p><strong>eta_stop</strong> (<em>{float}</em>) – Stopping learning rate. Default: 0.</p></li>
+<li><p><strong>last_epoch</strong> (<em>{int}</em>) – The index of last epoch. Default: -1.</p></li>
+</ul>
+</dd>
+</dl>
+<p>:param .. note::: The maximum learning rate are the base learning rate setted in Optimizer.</p>
+<dl class="method">
+<dt id="torchlib.optim.lr_scheduler.MountainLR.get_lr">
+<code class="sig-name descname">get_lr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.lr_scheduler.MountainLR.get_lr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-torchlib.optim.save_load">
+<span id="torchlib-optim-save-load-module"></span><h2>torchlib.optim.save_load module<a class="headerlink" href="#module-torchlib.optim.save_load" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="torchlib.optim.save_load.device_transfer">
+<code class="sig-prename descclassname">torchlib.optim.save_load.</code><code class="sig-name descname">device_transfer</code><span class="sig-paren">(</span><em class="sig-param">obj</em>, <em class="sig-param">name</em>, <em class="sig-param">device</em><span class="sig-paren">)</span><a class="headerlink" href="#torchlib.optim.save_load.device_transfer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-torchlib.optim">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-torchlib.optim" title="Permalink to this headline">¶</a></h2>
@@ -356,7 +401,7 @@ outside this scheduler by other operators.</p>
         <a href="torchlib.spl.html" class="btn btn-neutral float-right" title="torchlib.spl package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="torchlib.nn.module.html" class="btn btn-neutral float-left" title="torchlib.nn.module package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="torchlib.module.misc.html" class="btn btn-neutral float-left" title="torchlib.module.misc package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
